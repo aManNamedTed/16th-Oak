@@ -6,9 +6,11 @@ E-mail: davidamante17@yahoo.com
 -------------------------------
 Game: Day at a Party
 Language: C++
-Description: 'Day at a Party' is a Zork type text-based game. You are a tired twenty-something year old who just got home from work. You have the opportunity to indulge in some fun party shenanigans. 
-                    Are you up to the adventure?
------------------------------------------------------------------------------------------------------------------------------
+Description: 'Day at a Party' is a Zork type text-based game. You are a tired 
+twenty-something year old who just got home from work. You have the opportunity
+to indulge in some fun party shenanigans. 
+                				 Are you up to the adventure?
+----------------------------------------------------------------------------------------
 appendage log:
 	__________________________________________________11-3-14_INITIAL_IDEA____
 	[x] level one 
