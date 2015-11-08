@@ -14,6 +14,7 @@ using namespace std;
 
 string get_command();
 void check_saved_game();
+void tutorial();
 void description();
 void get_name(string p, string& name);
 void goodbye(string);
@@ -32,13 +33,13 @@ int main()
 	description();
 	
 	//check_saved_game();
-
+	
+	tutorial();
 	get_name("Before we begin, what is your name?", name);
 
 	//start of game
 	//level_one(name);
 
-		
 	//continue coding, yo!
 	level_two(name);
 	return 0;
@@ -434,7 +435,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	    command = get_command();
 	    while(command != "answer" && command != "Answer" && command != "get phone" && command != "answer phone" && command != "get the phone" && command != "answer the phone")
 	    {
-	        cout << "It might be important, " << name << ".";
+	        cout << "It might be important, " << name << "." << endl;
 	        cout << "I mean, you said you'd be there an hour ago and it's who-knows-when, right now!" << endl;
 	        command = get_command();
 	    }
@@ -444,7 +445,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	        getchar();
 	        cout << "Richard (in the distance): " << name << "?! I LOVE YOOOUUUU!! WOOOO!!!";
 	        getchar();
-	        cout << "???: Are you there, " << name << "?" << endl;
+	        cout << "???: Hello?" << endl;
 	        command = get_command();
 	        while(command != "hello?" && command != "hello" && command != "goodbye" && command != "Goodbye" && command != "bye" && command != "Bye")
 	        {
@@ -463,14 +464,14 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	        }
 	    	else if(command == "goodbye" || command == "Goodbye" || command == "bye" || command == "Bye")
 	    	{
-	    		cout << "???: But--" << endl;
+	    		cout << "???: ..." << endl;
 	    		cout << "*end call*" << endl;
 	    		getchar();
-	    		cout << "Really, " << name << "?" << endl;
+	    		cout << "Really, " << name << "?";
 	    		getchar();
-	    		cout << "That could have been oh.. I DON'T KNOW--SUPER IMPORTANTE??" << endl;
+	    		cout << "That could have been oh.. I DON'T KNOW--SUPER IMPORTANTE??";
 	    		getchar();
-	    		cout << "I hope you know what you're doing." << endl;
+	    		cout << "I hope you know what you're doing.";
 	    		goodbye(name);
 			}
 		}
@@ -491,9 +492,9 @@ void goodbye(string name)
 	
 	getchar();
 	cout << string(30, '\n');
-	cout << "00HR 01MIN SINCE YOU HUNG UP ON ???" << endl;
+	cout << "00HR 01MIN SINCE YOU HUNG UP ON ???";
 	getchar();
-	cout << "Y'know... I am SO disappointed in you, " << name << "." << endl;
+	cout << "Y'know... I am SO disappointed in you, " << name << ".";
 	getchar();
 	cout << "You could have just answered.." << endl;
 	cout << "I mean, the person obviously knew your name from SOMEWHERE." << endl;
@@ -521,6 +522,50 @@ void goodbye(string name)
 	getchar();
 	cout << "Turn on your T.V." << endl;
 	
+	command = get_command();
+	
+	while(command != "turn on tv" && command != "turn on t.v" && command != "turn on the tv" && command != "Turn on the tv" && command != "turn on the t.v" && command != "Turn on the T.V")
+	{
+		cout << "Turn on the T.V. Just.. do it." << endl;
+		cout << "For me." << endl;
+		command = get_command();
+	}
+	if(command == "turn on tv" || command == "turn on t.v" || command == "turn on the tv" || command == "Turn on the tv" || command == "turn on the t.v" || command != "Turn on the T.V")
+	{
+		cout << "*bzzz*" << endl;
+		getchar();
+		cout << "[Channel 4 News]: ... and that's all you need to know about stone crab!" << endl;
+		cout << "[Channel 4 News]: Back to you, Chelsea!" << endl;
+		getchar();
+		cout << "[Chelsea, C4N]: Thank you, Danielle!" << endl;
+		cout << "[Chelsea, C4N]: Good evening--" << endl;
+		getchar();
+		cout << "[???, C4N]: Please excuse this interruption." << endl;
+		cout << "[???, C4N]: Brick Krenk, Channel 4 News." << endl;
+		getchar();
+		cout << "[Brick, C4N]: Breaking news erupts from our neighboring county of De La Tona." << endl;
+		cout << "[Brick, C4N]: Notorious drug kingpin, codename 'Richard', FOUND after 6 years" << endl;
+		cout << "[Brick, C4N]: of fleeing the authorities." << endl;
+		getchar();
+		cout << "*you*: whhaaAAATT?!" << endl;
+		getchar();
+		cout << "[Brick, C4N]: 'Richard' was found after reportedly stealing a bottle of alcohol" << endl;
+		cout << "[Brick, C4N]: from a local house party. Authorities were notified by the--";
+		getchar();
+		cout << "[Briii, C4M]: --'Richard' allegedly brandished his weapon in a rage--";
+		getchar();
+		cout << "[Brrri, D3K]: ... proceeded to fire three shots--";
+		getchar();
+		cout << "[BRrrarzzzz]: five Wexingham students were--";
+		getchar();
+		cout << "[Brrajlk: lew/1x012l01100100.01100001";
+		getchar();
+		cout << "[Brkl01110110.01101001";
+		getchar();
+		cout << "[Bkw.01100100";
+		getchar();
+	}
+	
 }
 void level_three_determiner(string name, bool dress, bool teeth, bool shower, bool leave, bool nap)
 {
@@ -541,6 +586,40 @@ void description()
 	cout << "Are you up to the adventure?" << endl << endl;
 }
 
+void tutorial()
+{
+	string command;
+	cout << "In this text-based game, there are some things you need to know." << endl;
+	cout << "Commands will be prompted by '> '" << endl;
+	cout << "Understand? (yes/no)" << endl;
+	command = get_command();
+	while(command != "yes" && command != "Yes" && command != "no" && command != "No")
+	{
+		cout << "For the sake of the game, type 'yes' and press the enter key." << endl;
+		command = get_command();
+	}
+	
+	if(command == "yes" || command == "Yes")
+	{
+		cout << "Good job! Moving on." << endl;
+	}
+	else if(command == "no" || command == "No")
+	{
+		cout << "You get the point. Moving on." << endl;
+	}
+	
+	cout << "Commands may be listed, or unlisted." << endl;
+	cout << "When there is no '>', that means to press any character.";
+	getchar();
+	cout << "Delightful. Moving on.";
+	getchar();
+	cout << "There may be several responses to the same question. Be careful." << endl;
+	cout << "The story that is about to unfold may or may not be true.";
+	getchar();
+	cout << "Good luck." << endl;
+	getchar();
+	cout << string(30, '\n');
+}
 void check_saved_game()
 {
 	string response;
