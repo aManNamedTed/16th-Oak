@@ -1,49 +1,22 @@
 /*
-	created: nov 3, 2015 11:00am
+	created: nov 3, 2015. 11:00am
 	finished:
-
-	description: A text-based game about a day at a party.
-	
-	appendage log:
-		__________________________________________________11-3-14_INITIAL_IDEA____
-		[x] level one 
-			finished: nov 3, 2015 12:15pm
-		[x] level two
-			finished: nov 3, 2015 7:15pm
-		__________________________________________________11-7-15_VISIT_TO_SB_____
-		[x] "answer||Answer" only command for answering the phone at any time
-				finished: nov 7, 2015 4:45pm
-		[x] "why||Why" || "why?||Why?" response to richard saying, 'hey party?"
-				finished: nov 7, 2015 4:58pm
-		[] <upper case> command response 
-		[] SAVE FUNCTION
-		[] check leave conditions for accuracy and relevance
-		[] level 2.5: goodbye response to Q, Richard gets arrested and you 
-					  could have prevented it.
-		[] R-Rated "fap" option for Jonathan
-		__________________________________________________________________________
-		[] level two and a half
-		[] level three determiner
-		[] level three 
-		[] level four
-		[] level five
-		[] level six
-		[] level seven
-		[] level eight
-		[] level nine
-		
-	author: david amante
+	creator: david amante
 	email: davidamante17@yahoo.com
+	
+	future patches in readme.txt
 */
-
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 using namespace std;
 
 string get_command();
+void check_saved_game();
 void description();
 void get_name(string p, string& name);
+void goodbye(string);
 void level_one(string);
 void level_two(string);
 void level_two_and_a_half(string, bool, bool);
@@ -57,7 +30,10 @@ int main()
 	string name;
 	
 	description();
-	get_name("Before we begin--what is your name?", name);
+	
+	//check_saved_game();
+
+	get_name("Before we begin, what is your name?", name);
 
 	//start of game
 	//level_one(name);
@@ -144,8 +120,6 @@ void level_one(string name)
 				cout << "Richard: I guess that's what this generation's culture calls it nowadays." << endl;
 				cout << "Richard: Nevertheless, I better see you here tonight!" << endl;
 				cout << "*end call*" << endl;
-				cout << "(press any key)";
-				getchar();
 				level_two(name);
 			}
 			
@@ -166,7 +140,6 @@ void level_one(string name)
 				cout << "Richard: You've got an hour before I get too drunk!";
 				getchar();
 				cout << "*you, thinking*: Richard always prided himself on his tolerance of booze. >.>";
-				getchar();
 				level_two(name);
 			}
 		}	
@@ -186,6 +159,7 @@ void level_two(string name)
 	bool teeth = false;
 	bool dressb4shower = false;
 	bool nonap = false;
+	getchar();
 	cout << string(30, '\n');
 	
 	cout << "Upon hearing the news of an uproarious shindig occurring in the near future," << endl;
@@ -307,7 +281,6 @@ void level_two(string name)
 			cout << "Uhhhh...";
 			getchar();
 			cout << "Sleep tight!";
-			getchar();
 			level_two_and_a_half(name, teeth, shower);
 		}		
 
@@ -333,7 +306,7 @@ void level_two(string name)
 		    getchar();
 		    cout << "OKAY!";
 		    getchar();
-		    cout << "GOOD LUCK, DUDE!!" << endl;
+		    cout << "NAKEY " << name << " TO THE PARTY WE GO!" << endl;
 		    level_three_determiner(name, dress, teeth, shower, leave, nap);
 		}
 		
@@ -341,8 +314,10 @@ void level_two(string name)
 		{
 		    cout << "I mean Richard SAID it was gonna be a fun party..";
 		    getchar();
-		    cout << "What the hell! Good luck!" << endl;
-		    level_three_determiner(name, dress, teeth, shower, leave, nap);
+		    cout << "Why NOT go there 'au naturel'!";
+		    getchar();
+			cout << "What the hell! Good luck!" << endl;
+			level_three_determiner(name, dress, teeth, shower, leave, nap);
 		}
 		
 		else if((command == "leave" || command == "Leave") && (dress == true && teeth == false && shower == true))
@@ -350,7 +325,7 @@ void level_two(string name)
 		    cout << "Bad breath didn't stop Bill Gates from founding Microsoft, amirite??";
 		    getchar();
 		    cout << "Good luck out there, you fire breathing--but clean--dragon!" << endl;
-		    level_three_determiner(name, dress, teeth, shower, leave, nap);
+			level_three_determiner(name, dress, teeth, shower, leave, nap);
 		}
 		
 		else if((command == "leave" || command == "Leave") && (dress == true && teeth == true && shower == false))
@@ -360,27 +335,36 @@ void level_two(string name)
 			cout << "Your breath is fresh and you put on party attire," << endl;
 			cout << "Who WOULDN'T approach you!" << endl;
 			getchar();
+			cout << "I mean..";
+			getchar();
+			cout << "It's not like you had the option to SHOWER or anything...";
+			getchar();
+			cout << "...";
+			getchar();
 			cout << "(:" << endl;
 			level_three_determiner(name, dress, teeth, shower, leave, nap);
 		}
         else if((command == "leave" || command == "Leave") && (dress == true && teeth == false && shower == false))
         {
         	cout << "Aw c'moooon, you're not gonna brush your teeth?" << endl;
-        	cout << "I mean--you're twenty..three? Or something" << endl;
+        	cout << "I mean--you're twenty.. three? Or something?" << endl;
         	getchar();
         	cout << "I thought life after 7 was when brushing your teeth" << endl;
         	cout << "was cool to do.." << endl;
-        	cout << "Ah but nonetheless, have fun out there, champ!" << endl;
+        	getchar();
+			cout << "Ah but nonetheless, have fun out there, champ!" << endl;
             level_three_determiner(name, dress, teeth, shower, leave, nap);   
         }
         else if((command == "leave" || command == "Leave") && (dress == true && teeth == true && shower == true))
         {
         	cout << "You!";
         	getchar();
+        	cout << "A+";
+        	getchar();
         	cout << "You've got it together.";
         	getchar();
         	cout << "Proud 'a you." << endl;
-            level_three_determiner(name, dress, teeth, shower, leave, nap);
+			level_three_determiner(name, dress, teeth, shower, leave, nap);
         }
 		
 		getchar();
@@ -427,6 +411,8 @@ void level_two(string name)
 void level_two_and_a_half(string name, bool teeth, bool shower)
 {
 	string command;
+	getchar();
+	cout << string(30, '\n');
 	cout << "You hear a noise.";
 	getchar();
 	cout << "*you, thinking*: What is that??";
@@ -460,7 +446,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	        getchar();
 	        cout << "???: Are you there, " << name << "?" << endl;
 	        command = get_command();
-	        while(command != "hello?" && command != "hello")
+	        while(command != "hello?" && command != "hello" && command != "goodbye" && command != "Goodbye" && command != "bye" && command != "Bye")
 	        {
 	        	cout << "Say hello? Maybe that'll work?" << endl;
 	        	command = get_command();
@@ -475,7 +461,19 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	            getchar();
 	            cout << "Q: Richard said to call you in case he got too drunk." << endl;
 	        }
-	    }
+	    	else if(command == "goodbye" || command == "Goodbye" || command == "bye" || command == "Bye")
+	    	{
+	    		cout << "???: But--" << endl;
+	    		cout << "*end call*" << endl;
+	    		getchar();
+	    		cout << "Really, " << name << "?" << endl;
+	    		getchar();
+	    		cout << "That could have been oh.. I DON'T KNOW--SUPER IMPORTANTE??" << endl;
+	    		getchar();
+	    		cout << "I hope you know what you're doing." << endl;
+	    		goodbye(name);
+			}
+		}
 	}
 	else if(teeth == true && shower == false)
 	{
@@ -487,9 +485,47 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	}
 }
 
+void goodbye(string name)
+{
+	string command;
+	
+	getchar();
+	cout << string(30, '\n');
+	cout << "00HR 01MIN SINCE YOU HUNG UP ON ???" << endl;
+	getchar();
+	cout << "Y'know... I am SO disappointed in you, " << name << "." << endl;
+	getchar();
+	cout << "You could have just answered.." << endl;
+	cout << "I mean, the person obviously knew your name from SOMEWHERE." << endl;
+	cout << "It could have been important." << endl;
+	getchar();
+	
+	cout << "Eh, but none the wiser." << endl;
+	getchar();
+	cout << "...";
+	getchar();
+	cout << "....";
+	getchar();
+	cout << ".....";
+
+	getchar();
+	cout << string(30, '\n');
+	cout << "00HR 05MIN SINCE YOU HUNG UP ON ???" << endl;
+	getchar();
+	cout << "Hey." << endl;
+	getchar();
+	cout << "It's me again, Mr. Narrator." << endl;
+	getchar();
+	cout << "Y'know.. " << endl;
+	cout << "I just got some interesting intel from a reliable source." << endl;
+	getchar();
+	cout << "Turn on your T.V." << endl;
+	
+}
 void level_three_determiner(string name, bool dress, bool teeth, bool shower, bool leave, bool nap)
 {
 	getchar();
+	cout << string(30, '\n');
 	cout << "You are in level 3 determiner" << endl;
 }
 
@@ -503,6 +539,21 @@ void description()
 	cout << "tired twenty-something year old who just got home from work. You have the" << endl;
 	cout << "opportunity to indulge in some fun party shenanigans." << endl;
 	cout << "Are you up to the adventure?" << endl << endl;
+}
+
+void check_saved_game()
+{
+	string response;
+	//will be developed later; 11-7-15 9:45pm
+	cout << "Do you have a saved game file with us, yet?" << endl;
+	cout << "It's all the rage. (:" << endl;
+	cout << "> ";
+	cin >> response;
+	
+	if(response == "yes" || response == "Yes")
+	{
+		cout << "cool beans." << endl;
+	}
 }
 
 void get_name(string p, string& name)
