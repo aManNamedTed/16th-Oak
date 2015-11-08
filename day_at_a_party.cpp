@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /*
 	created: nov 3, 2015 11:00am
 	finished:
@@ -38,18 +36,11 @@
 	email: davidamante17@yahoo.com
 */
 
->>>>>>> b5afa3192ecc1d55c6f45688d58b04443af82ce9
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-<<<<<<< HEAD
-int main()
-{
-	return 0;
-}
-=======
 string get_command();
 void description();
 void get_name(string p, string& name);
@@ -519,7 +510,3 @@ void get_name(string p, string& name)
 	cout << p << endl;
 	getline(cin, name);
 }
-
-
-
->>>>>>> b5afa3192ecc1d55c6f45688d58b04443af82ce9
