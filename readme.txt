@@ -34,10 +34,13 @@ appendage log:
 	    	sufficient amount the game has been developed.
 	[x] check leave conditions for accuracy and relevance
 		finished: nov 7, 2015 9:56pm
-	[] level 2.5: goodbye response to Q--Richard gets arrested if you had 
+	[x] level 2.5: goodbye response to Q--Richard gets arrested if you had 
 		      answered the phone
-	[] R-Rated easter-egg "fap" option for jonAthan
-	[] tutorial for controls at the beginning before get_name
+		finished: nov 7, 2015 11:21pm
+	[-] M-Rated easter-egg "fap" option for JGAL
+		postpone: may include later due to M-rated nature
+	[x] tutorial for controls at the beginning before get_name
+		finished: nov 7, 2015 11:55pm
 	__________________________________________________________________________
 	[] level two and a half
 	[] level three determiner
@@ -49,3 +52,14 @@ appendage log:
 	[] level eight
 	[] level nine
 	
+	__________________________________________________________________________
+	ALL CONDITIONS TO FIND ALTERNATE METHODS TO:
+	[*] <upper case> command response
+		note: will be hard coded for now. 11-7-15; 9:44pm
+	__________________________________________________________________________
+	ALL CONDITIONS THAT HAVE BEEN POSTPONED:
+	[-] SAVE FUNCTION
+	    	postpone: save file function will be made after a 
+	    	sufficient amount the game has been developed.	
+	[-] M-Rated easter-egg "fap" option for JGAL
+		postpone: may include later due to M-rated nature	
