@@ -61,5 +61,11 @@ appendage log:
 	[-] SAVE FUNCTION
 	    	postpone: save file function will be made after a 
 	    	sufficient amount the game has been developed.	
+	    	note: the idea behind the save function is to use fstreams to 
+	    	open a .txt file, commit game data to the file, then allow at the
+	    	beginning of the game, to check if the user has a saved game file,
+	    	then use that file to read information into the game, and will
+	    	allow the user to continue playing from their previous saved
+	    	game spot.
 	[-] M-Rated easter-egg "fap" option for JGAL
 		postpone: may include later due to M-rated nature	
