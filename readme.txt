@@ -41,7 +41,12 @@ appendage log:
 		postpone: may include later due to M-rated nature
 	[x] tutorial for controls at the beginning before get_name
 		finished: nov 7, 2015 11:55pm
-	__________________________________________________________________________
+	__________________________________________________11-9-15_LEVEL_GOODBYE___
+	[x] credits thanking beta-testers
+		finished: nov 9, 2015 12:10pm
+	__________________________________________________11-9-15_LEVEL_GOODBYE___
+	__________________________________________________11-9-15_LEVEL_GOODBYE___
+	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	[] level two and a half
 	[] level three determiner
 	[] level three 
