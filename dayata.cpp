@@ -129,6 +129,7 @@ void level_one(string name)
 				cout << "and didn't go to the party?" << endl;
 				cout << "Get out." << endl << endl;
 				cout << "Game Over" << endl;
+				getchar();
 			}
 			
 			else if(command == "i guess")
