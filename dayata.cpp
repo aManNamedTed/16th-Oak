@@ -25,23 +25,22 @@ void level_three_determiner(string, bool, bool, bool, bool, bool);
 void level_four(string);
 void level_five(string);
 void level_six(string);
+string betas(int);
+void credits();
+
+const int NAMES = 11;
 
 int main()
 {
 	string name;
-	
+		
 	description();
-	
-	//check_saved_game();
-	
-	tutorial();
+		//check_saved_game();
+		//tutorial();
 	get_name("Before we begin, what is your name?", name);
-
-	//start of game
-	//level_one(name);
-
-	//continue coding, yo!
-	level_two(name);
+		//level_one(name);
+	level_two(name); //continue coding, yo!
+		//credits();
 	return 0;
 }
 
@@ -55,7 +54,7 @@ string get_command()
 	
 	if(command == "save" || command == "Save")
 	{
-		
+		;
 	}
 	return command;
 }
@@ -414,6 +413,8 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	string command;
 	getchar();
 	cout << string(30, '\n');
+	cout << "36 MINUTES LATER" << endl;
+	getchar();
 	cout << "You hear a noise.";
 	getchar();
 	cout << "*you, thinking*: What is that??";
@@ -447,20 +448,71 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	        getchar();
 	        cout << "???: Hello?" << endl;
 	        command = get_command();
-	        while(command != "hello?" && command != "hello" && command != "goodbye" && command != "Goodbye" && command != "bye" && command != "Bye")
+	        while(command != "hi" && command != "Hi" && command != "hi?" && command != "Hi?" && command != "hello?" && command != "hello" && command != "goodbye" && command != "Goodbye" && command != "bye" && command != "Bye")
 	        {
 	        	cout << "Say hello? Maybe that'll work?" << endl;
 	        	command = get_command();
 			}
-	        if(command == "hello?" || command == "hello")
+	        if(command == "hello?" || command == "hello" || command == "hi" || command == "Hi" || command == "Hi?" || command == "hi?")
 	        {
 	            cout << "???: " << name << "! It's Q." << endl;
 	            getchar();
 	            cout << name << ": ...";
 	            getchar();
-				cout << "*you*: AH! FROM SOCIOLOGY!" << endl;
+				cout << "*you*: AHH! FROM SOCIOLOGY!" << endl;
+				getchar();
+				cout << "*you*: Richard, you clever fig nut." << endl;
 	            getchar();
 	            cout << "Q: Richard said to call you in case he got too drunk." << endl;
+	            cout << "Q: He also said he loves you very much and is happy you're friends." << endl;
+	            getchar();
+	            cout << "Q: He's been saying that, more or less, for the last hour--" << endl;
+	            cout << "Q: Anyway! Richard is definitely going to need a nanny tonight." << endl;
+	            getchar();
+	            cout << "*you*: Nanny meaning someone to take care of them--" << endl;
+	            cout << "*you*: specifically during or after a night of drinking." << endl;
+	            getchar();
+	            cout << "Q: You're coming tonight, right?" << endl;
+	            command = get_command();
+	            while(command != "yes" && command != "Yes" && command != "No" && command != "no" && command != "No." && command != "no." && command != "Yes!" && command != "yes!")
+	            {
+	            	cout << "I'm pretty sure this question demands a yes or no answer." << endl;
+	            	cout << "Just a guess, though." << endl;
+	            	command = get_command();
+				}
+	            if(command == "yes" || command == "Yes" || command == "yes!" || command == "Yes!")
+	            {
+	            	cout << "Q: Oh fantastic! I was hoping to--" << endl;
+	            	cout << "Q: ...";
+	            	getchar();
+	            	cout << "Q: I'm looking forward to seeing you tonight. (:" << endl;
+	            	getchar();
+	            	cout << "*you*: OH.";
+	            	cout << "*you*: SNAP." << endl;
+	            	getchar();
+					cout << "Q: Well I'm happy to hear you're coming out tonight!" << endl;
+					cout << "Q: Richard is pretty tipsy." << endl;
+					
+				}
+				else if(command == "No" || command == "no" || command == "No." || command == "no.")
+				{
+					cout << "Q: Oh.";
+					getchar();
+					cout << "Q: Okay.";
+					getchar();
+					cout << "Q: Well I guess I will let him know you won't be coming out tonight.";
+					getchar();
+					cout << "Q: I was hoping you'd come out tonight..";
+					getchar();
+					cout << "Yeah. How do you feel, " << name << "?" << endl;
+					getchar();
+					cout << "Q: )':" << endl;
+					getchar();
+					cout << "*end call*" << endl;
+					getchar();
+					cout << "I hope you know what you're doing.";
+					goodbye(name);
+				}
 	        }
 	    	else if(command == "goodbye" || command == "Goodbye" || command == "bye" || command == "Bye")
 	    	{
@@ -489,10 +541,15 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 void goodbye(string name)
 {
 	string command;
+	bool dress = false;
+	bool teeth = false;
+	bool shower = false;
+	bool leave = false;
+	bool nap = false;
 	
 	getchar();
 	cout << string(30, '\n');
-	cout << "00HR 01MIN SINCE YOU HUNG UP ON ???";
+	cout << "00HR 01MIN SINCE YOU HUNG UP";
 	getchar();
 	cout << "Y'know... I am SO disappointed in you, " << name << ".";
 	getchar();
@@ -511,7 +568,7 @@ void goodbye(string name)
 
 	getchar();
 	cout << string(30, '\n');
-	cout << "00HR 05MIN SINCE YOU HUNG UP ON ???" << endl;
+	cout << "00HR 05MIN SINCE YOU HUNG UP" << endl;
 	getchar();
 	cout << "Hey." << endl;
 	getchar();
@@ -543,7 +600,7 @@ void goodbye(string name)
 		cout << "[???, C4N]: Please excuse this interruption." << endl;
 		cout << "[???, C4N]: Brick Krenk, Channel 4 News." << endl;
 		getchar();
-		cout << "[Brick, C4N]: Breaking news erupts from our neighboring county of De La Tona." << endl;
+		cout << "[Brick, C4N]: Breaking news erupts from our neighboring city of De La Tona." << endl;
 		cout << "[Brick, C4N]: Notorious drug kingpin, codename 'Richard', FOUND after 6 years" << endl;
 		cout << "[Brick, C4N]: of fleeing the authorities." << endl;
 		getchar();
@@ -558,12 +615,13 @@ void goodbye(string name)
 		getchar();
 		cout << "[BRrrarzzzz]: five Wexingham students were--";
 		getchar();
-		cout << "[Brrajlk: lew/1x012l01100100.01100001";
+		cout << "[Brrajlk: lew/1x012a01100100.01100001";
 		getchar();
 		cout << "[Brkl01110110.01101001";
 		getchar();
 		cout << "[Bkw.01100100";
 		getchar();
+		level_three_determiner(name, dress, teeth, shower, leave, nap);
 	}
 	
 }
@@ -611,7 +669,7 @@ void tutorial()
 	cout << "Commands may be listed, or unlisted." << endl;
 	cout << "When there is no '>', that means to press any character.";
 	getchar();
-	cout << "Delightful. Moving on.";
+	cout << "Delightful. Moving on." << endl;
 	getchar();
 	cout << "There may be several responses to the same question. Be careful." << endl;
 	cout << "The story that is about to unfold may or may not be true.";
@@ -635,6 +693,55 @@ void check_saved_game()
 	}
 }
 
+void credits()
+{
+	cout << "Special thanks to all the great people who beta-tested this game!" << endl << endl;
+	cout << "\t x: Name\t\t Date-of-first-play " << endl;
+	for(int i = 1; i < NAMES; i++)
+	{
+		cout << "\t " << i << ":" << betas(i) << endl;
+	}
+}
+
+string betas(int count)
+{
+	string name;
+	
+	switch(count)
+	{
+		case 1: 
+			name = " Nichole Hotrum\t November 7, 2015";
+			break;
+		case 2:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 3:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 4:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 5:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 6:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 7:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 8:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 9:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 10:
+			name = " Beta Tester\t Month 0, 201X";
+			break;				
+	}
+	return name;
+}
 void get_name(string p, string& name)
 {
 	cout << p << endl;
