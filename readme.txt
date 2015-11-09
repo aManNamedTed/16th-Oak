@@ -41,7 +41,14 @@ appendage log:
 		postpone: may include later due to M-rated nature
 	[x] tutorial for controls at the beginning before get_name
 		finished: nov 7, 2015 11:55pm
-	__________________________________________________________________________
+	__________________________________________________11-9-15_LEVEL_GOODBYE___
+	[x] credits thanking beta-testers
+		finished: nov 9, 2015 12:10pm
+	__________________________________________________11-9-15_LEVEL_GOODBYE___
+	__________________________________________________11-9-15_LEVEL_GOODBYE___
+	__________________________________________________11-9-15_LEVEL_GOODBYE___
+	__________________________________________________11-9-15_LEVEL_GOODBYE___
+	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	[] level two and a half
 	[] level three determiner
 	[] level three 
@@ -61,5 +68,11 @@ appendage log:
 	[-] SAVE FUNCTION
 	    	postpone: save file function will be made after a 
 	    	sufficient amount the game has been developed.	
+	    	note: the idea behind the save function is to use fstreams to 
+	    	open a .txt file, commit game data to the file, then allow at the
+	    	beginning of the game, to check if the user has a saved game file,
+	    	then use that file to read information into the game, and will
+	    	allow the user to continue playing from their previous saved
+	    	game spot.
 	[-] M-Rated easter-egg "fap" option for JGAL
 		postpone: may include later due to M-rated nature	
