@@ -693,6 +693,7 @@ void tutorial()
 	else if(command == "no" || command == "No")
 	{
 		cout << "You go, Glen Coco!" << endl;
+		getchar();
 		cout << string(30, '\n');
 	}
 }
