@@ -36,10 +36,10 @@ int main()
 		
 	description();
 		//check_saved_game();
-		//tutorial();
+	tutorial();
 	get_name("Before we begin, what is your name?", name);
-		//level_one(name);
-	level_two(name); //continue coding, yo!
+	level_one(name);
+		//level_two(name); //continue coding, yo!
 		//credits();
 	return 0;
 }
@@ -647,36 +647,53 @@ void description()
 void tutorial()
 {
 	string command;
-	cout << "In this text-based game, there are some things you need to know." << endl;
-	cout << "Commands will be prompted by '> '" << endl;
-	cout << "Understand? (yes/no)" << endl;
+	cout << "Do you want to play the tutorial?" << endl;
 	command = get_command();
 	while(command != "yes" && command != "Yes" && command != "no" && command != "No")
 	{
-		cout << "For the sake of the game, type 'yes' and press the enter key." << endl;
+		cout << "Yes/no question about a tutorial." << endl;
+		cout << "I think you MIGHT need to play it." << endl;
 		command = get_command();
 	}
-	
 	if(command == "yes" || command == "Yes")
 	{
-		cout << "Good job! Moving on." << endl;
+		cout << "In this text-based game, there are some things you need to know." << endl;
+		cout << "Commands will be prompted by '> '" << endl;
+		cout << "Understand? (type \"yes\" or \"no\", then press the enter/return key)" << endl;
+		command = get_command();
+		while(command != "yes" && command != "Yes" && command != "no" && command != "No")
+		{
+			cout << "For the sake of the game, type 'yes' and press the enter/return key." << endl;
+			command = get_command();
+		}
+		
+		if(command == "yes" || command == "Yes")
+		{
+			cout << "Good job! Moving on." << endl;
+		}
+		else if(command == "no" || command == "No")
+		{
+			cout << "Yes you do, you liar. Moving on." << endl << endl;
+		}
+		
+		cout << "Commands may be listed, or unlisted." << endl;
+		cout << "When there is no '>', that means to press the enter/return key.";
+		getchar();
+		cout << "Delightful. Moving on." << endl;
+		getchar();
+		cout << "There may be several responses to the same question. Be careful." << endl;
+		getchar();
+		cout << "The story that is about to unfold may or may not be true." << endl;
+		getchar();
+		cout << "Good luck." << endl;
+		getchar();
+		cout << string(30, '\n');
 	}
 	else if(command == "no" || command == "No")
 	{
-		cout << "You get the point. Moving on." << endl;
+		cout << "You go, Glen Coco!" << endl;
+		cout << string(30, '\n');
 	}
-	
-	cout << "Commands may be listed, or unlisted." << endl;
-	cout << "When there is no '>', that means to press any character.";
-	getchar();
-	cout << "Delightful. Moving on." << endl;
-	getchar();
-	cout << "There may be several responses to the same question. Be careful." << endl;
-	cout << "The story that is about to unfold may or may not be true.";
-	getchar();
-	cout << "Good luck." << endl;
-	getchar();
-	cout << string(30, '\n');
 }
 void check_saved_game()
 {
