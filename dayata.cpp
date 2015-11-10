@@ -36,10 +36,10 @@ int main()
 		
 	description();
 		//check_saved_game();
-	tutorial();
+		//tutorial();
 	get_name("Before we begin, what is your name?", name);
-	level_one(name);
-		//level_two(name); //continue coding, yo!
+		//level_one(name);
+		level_two(name); //continue coding, yo!
 		//credits();
 	return 0;
 }
@@ -412,6 +412,10 @@ void level_two(string name)
 void level_two_and_a_half(string name, bool teeth, bool shower)
 {
 	string command;
+	bool dress = false;
+	bool leave = false; 
+	bool nap = false;
+	
 	getchar();
 	cout << string(30, '\n');
 	cout << "36 MINUTES LATER" << endl;
@@ -493,6 +497,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	            	getchar();
 					cout << "Q: Well I'm happy to hear you're coming out tonight!" << endl;
 					cout << "Q: Richard is pretty tipsy." << endl;
+					level_three_determiner(name, dress, teeth, shower, leave, nap);
 					
 				}
 				else if(command == "No" || command == "no" || command == "No." || command == "no.")
