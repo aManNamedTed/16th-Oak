@@ -35,12 +35,12 @@ int main()
 	string name;
 		
 	description();
-		//check_saved_game();
-		//tutorial();
+	//check_saved_game();
+	tutorial();
 	get_name("Before we begin, what is your name?", name);
-		//level_one(name);
-		level_two(name); //continue coding, yo!
-		//credits();
+	level_one(name);
+	//level_two(name); //continue coding, yo!
+	//credits();
 	return 0;
 }
 
