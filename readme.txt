@@ -38,24 +38,25 @@ appendage log:
 		      answered the phone
 		finished: nov 7, 2015 11:21pm
 	[-] M-Rated easter-egg "fap" option for JGAL
-		postpone: may include later due to M-rated nature
+		postponed: may include later due to M-rated nature
 	[x] tutorial for controls at the beginning before get_name
 		finished: nov 7, 2015 11:55pm
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	[x] credits function thanking beta-testers
 		finished: nov 9, 2015 12:10pm
-	[] connect manager idea later to game maybe level 3 "slow"
-	[] connect goodbye to lvl 3
-	[] connect C4N "stone crab" later on in lvl 3 or 4
+	[-] connect manager idea later to game maybe level 3 "slow"
+		postponed: level 3 is not fully developed yet
+	[x] connect goodbye to lvl 3
+		finished: nov 9, 2015 1:38pm
+	[-] connect C4N "stone crab" later on in lvl 3 or 4
+		postponed: level 3/4 not fully developed yet
 	[x] finish lvl goodbye
 		finished: nov 9, 2015 12:37pm
 	[] finish level 2.5
-	[] connect binary code from goodbye to level 3 or 4
-	[x] update tutorial with yes/no answer
+	[-] connect binary code from goodbye to level 3 or 4
+		postponed: level 3/4 not fully developed yet
+	[x] update tutorial with yes/no answer + update for accuracy
 		finished: nov 9, 2015 1:16pm
-	[]
-	[]
-	
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
@@ -90,3 +91,9 @@ appendage log:
 	    	game spot.
 	[-] M-Rated easter-egg "fap" option for JGAL
 		postpone: may include later due to M-rated nature	
+	[-] connect binary code from goodbye to level 3 or 4
+		postponed: level 3/4 not fully developed yet
+	[-] connect C4N "stone crab" later on in lvl 3 or 4
+		postponed: level 3/4 not fully developed yet
+	[-] connect manager idea later to game maybe level 3 "slow"
+		postponed: level 3 is not fully developed yet
