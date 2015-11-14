@@ -38,8 +38,8 @@ int main()
 	//check_saved_game();
 	tutorial();
 	get_name("Before we begin, what is your name?", name);
-	level_one(name);
-	//level_two(name); //continue coding, yo!
+	//level_one(name);
+	level_two(name); //continue coding, yo!
 	//credits();
 	return 0;
 }
@@ -641,6 +641,8 @@ void level_three_determiner(string name, bool dress, bool teeth, bool shower, bo
 void description()
 {
 	cout << "Game: Day at a Party" << endl;
+	cout << "Created: November 3, 2015" << endl;
+	cout << "Finished: TBA" << endl;
 	cout << "Language: C++" << endl;
 	cout << "Author: David Amante" << endl;
 	cout << "Email: davidamante17@yahoo.com" << endl << endl;
