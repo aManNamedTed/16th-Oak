@@ -88,6 +88,20 @@ appendage log:
 			F T T
 		[]finish Teeth(T),Shower(F)
 		[]finish Teeth(F),Shower(T)
+			naked event, setting of apartment description?
+			best possible scenario for getting ready.
+			call from manager, "what did i say to take earlier?
+			"slow" if(slow),
+			thanks man!
+			Q arrives at front door w/ richard
+			"buzz buzz"
+			answer front door call
+			richard throws up in the bushes thru speaker
+			Q: he's drunk.
+			the party started to die down,
+			he said he had your adress on the inside of his 
+			phone case, so I helped walk him here.
+			Q: invite Q inside.
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
