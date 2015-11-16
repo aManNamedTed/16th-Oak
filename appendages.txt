@@ -52,7 +52,6 @@ appendage log:
 		postponed: level 3/4 not fully developed yet
 	[x] finish lvl goodbye
 		finished: nov 9, 2015 12:37pm
-	[] finish level 2.5
 	[-] connect binary code from goodbye to level 3 or 4
 		postponed: level 3/4 not fully developed yet
 	[x] update tutorial with yes/no answer + update for accuracy
@@ -71,6 +70,38 @@ appendage log:
 		[] Cheating
 		[] Bank account emptied
 		[] House robbed
+	Level 2.5:
+		if(yes), jump to get_ready_2.5 where you have similar
+		commands to level 2, but with new responses to the commands
+		  []dress
+		  []shower
+		  []teeth
+		  []leave
+			D S T
+			T T T
+			T T F
+			T F T
+			T F F
+			F F F
+			F F T
+			F T F
+			F T T
+		[]finish Teeth(T),Shower(F)
+		[]finish Teeth(F),Shower(T)
+			naked event, setting of apartment description?
+			best possible scenario for getting ready.
+			call from manager, "what did i say to take earlier?
+			"slow" if(slow),
+			thanks man!
+			Q arrives at front door w/ richard
+			"buzz buzz"
+			answer front door call
+			richard throws up in the bushes thru speaker
+			Q: he's drunk.
+			the party started to die down,
+			he said he had your adress on the inside of his 
+			phone case, so I helped walk him here.
+			Q: invite Q inside.
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
