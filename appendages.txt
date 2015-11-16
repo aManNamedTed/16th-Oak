@@ -57,7 +57,20 @@ appendage log:
 		postponed: level 3/4 not fully developed yet
 	[x] update tutorial with yes/no answer + update for accuracy
 		finished: nov 9, 2015 1:16pm
-	__________________________________________________11-9-15_LEVEL_GOODBYE___
+	_________________________________________________11-15-15_NEW_SCENARIOS___
+	LEVEL THREE, PEOPLE!
+		[]Heather - Depressed - History - Forgetful
+		[]Myrtle - Shy - Science - Acne
+		[]Willow - Grouchy - Math - Stutter
+		[]Ron - Angry - Art - Balding
+		[]Liz - Happy - Dance - Quick Temper
+	
+	SCENARIOS INVOLVING THE HELP OF THESE 5 PEOPLE
+		[] Someone dies
+		[] Throwing up on someone else
+		[] Cheating
+		[] Bank account emptied
+		[] House robbed
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
 	__________________________________________________11-9-15_LEVEL_GOODBYE___
