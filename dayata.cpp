@@ -435,6 +435,8 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	{
 	    cout << "*ring* *ring*";
 	    getchar();
+	    cout << "  Caller ID  " << endl;
+	    cout << "'Unavailable'" << endl;
 	    cout << "*riiiiingggg*";
 	    getchar();
 	    cout << "Your phone sure does ring a lot." << endl;
@@ -442,7 +444,6 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	    while(command != "answer" && command != "Answer" && command != "get phone" && command != "answer phone" && command != "get the phone" && command != "answer the phone")
 	    {
 	        cout << "It might be important, " << name << "." << endl;
-	        cout << "I mean, you said you'd be there an hour ago and it's who-knows-when, right now!" << endl;
 	        command = get_command();
 	    }
 	    if(command == "answer" || command == "Answer" || command == "get phone" || command == "answer phone" || command == "get the phone" || command == "answer the phone")
@@ -536,11 +537,38 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	}
 	else if(teeth == true && shower == false)
 	{
-	    
+		
+		cout << "*ring* *ring*";
+	    getchar();
+	    cout << "New Voicemail" << endl;
+	    cout << "    from     "
+	    cout << "  'Richard'  " << endl;
+		cout << "*riiiiingggg*";
+	    getchar();
+	    cout << "Your phone sure does ring a lot." << endl;
+	    command = get_command();
+	    while(command != "answer" && command != "Answer" && command != "get phone" && command != "answer phone" && command != "get the phone" && command != "answer the phone")
+	    {
+	        cout << "It might be important, " << name << "." << endl;
+	        command = get_command();
+	    }
+	    if(command == "answer" || command == "Answer" || command == "get phone" || command == "answer phone" || command == "get the phone" || command == "answer the phone")
+	    {
+	    	cout << "???: " << name << "!" << endl;
+	    	cout << "???: Richard tried to steal a bottle from the party!" << endl;
+	    	cout << "???: There was a bit of a scuffle between Richard and the hosts," << endl;
+	    	cout << "??? (breaking up): --he pulled out a GUN--" << endl;
+	    	cout << "??? (breaking up): --said you'd be a safe place to hide out at." << endl;
+		}
 	}
 	else if(teeth == false && shower == true)
 	{
-	       
+	    cout << "*ring* *ring*";
+	    getchar();
+	    cout << "*riiiiingggg*";
+	    getchar();
+	    cout << "Your phone sure does ring a lot." << endl;
+	    command = get_command();	       
 	}
 }
 
