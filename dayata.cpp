@@ -108,7 +108,7 @@ void level_one(string name)
 			getchar();
 			cout << "Richard: So are you coming or not?" << endl;
 			command = get_command();
-			while(command != "yes" && command != "Yes" && command != "Yeah" && command != "yeah" && command != "no" && command != "No" && command != "i guess")
+			while(command != "yes" && command != "Yes" && command != "Yeah" && command != "yeah" && command != "no" && command != "No" && command != "i guess" && command != "I guess")
 			{
 				cout << "Simple yes/no question here, " << name << "." << endl;
 				command = get_command();
@@ -132,7 +132,7 @@ void level_one(string name)
 				getchar();
 			}
 			
-			else if(command == "i guess")
+			else if(command == "i guess" || command == "I guess")
 			{
 				cout << "Richard: Aw c'mon, pally! Chin up!";
 				getchar();
@@ -428,19 +428,21 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	getchar();
 	cout << "*you*: THAT'S WHAT MY MANAGER WAS TALKING ABOUT AT WORK!";
 	getchar();
-	cout << "*you*: If I just take it slow.. maybe it'll work.";
+	cout << "*you*: If I just take it slow.. maybe it'll work." << endl;
 	getchar();
 	
 	if(teeth == false && shower == false)
 	{
 	    cout << "*ring* *ring*";
 	    getchar();
+	    cout << endl;
 	    cout << "  Caller ID  " << endl;
 	    cout << "'Unavailable'" << endl;
-	    cout << "*riiiiingggg*";
+	    cout << "*riiiiingggg*" << endl;
 	    getchar();
 	    cout << "Your phone sure does ring a lot." << endl;
-	    command = get_command();
+	    getchar();
+		command = get_command();
 	    while(command != "answer" && command != "Answer" && command != "get phone" && command != "answer phone" && command != "get the phone" && command != "answer the phone")
 	    {
 	        cout << "It might be important, " << name << "." << endl;
@@ -540,13 +542,14 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 		
 		cout << "*ring* *ring*";
 	    getchar();
+	    cout << endl;
 	    cout << "New Voicemail" << endl;
-	    cout << "    from     "
+	    cout << "    from     " << endl;
 	    cout << "  'Richard'  " << endl;
-		cout << "*riiiiingggg*";
+		cout << "*riiiiingggg*" << endl;
 	    getchar();
 	    cout << "Your phone sure does ring a lot." << endl;
-	    command = get_command();
+		command = get_command();
 	    while(command != "answer" && command != "Answer" && command != "get phone" && command != "answer phone" && command != "get the phone" && command != "answer the phone")
 	    {
 	        cout << "It might be important, " << name << "." << endl;
@@ -554,12 +557,65 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	    }
 	    if(command == "answer" || command == "Answer" || command == "get phone" || command == "answer phone" || command == "get the phone" || command == "answer the phone")
 	    {
+	    	cout << "*You have, one, new message.*" << endl;
+	    	getchar();
 	    	cout << "???: " << name << "!" << endl;
 	    	cout << "???: Richard tried to steal a bottle from the party!" << endl;
 	    	cout << "???: There was a bit of a scuffle between Richard and the hosts," << endl;
-	    	cout << "??? (breaking up): --he pulled out a GUN--" << endl;
-	    	cout << "??? (breaking up): --said you'd be a safe place to hide out at." << endl;
+	    	cout << "???: *skrr*--he pulled out a GUN--*skrr*" << endl;
+	    	cout << "???: *skrr*--said you'd be a safe place to hide out at." << endl;
+			getchar();
+			cout << "*you*: What the--" << endl;
+			getchar();
+			cout << "*gunshots in the distance*" << endl;
+			getchar();
+			cout << "???: " << name << "! We're on our way to your apartment, okay?";
+			getchar();
+			cout << "*you*: Wha--" << endl;
+			getchar();
+			cout << "I told you shit would hit the fan." << endl;
+			getchar();
+			cout << "*bzz*" << endl;
+			getchar();
+			cout << "*BZZZZZ*" << endl;
+			cout << "The call button buzzes violently." << endl;
+			command = get_command();
+			
+			while(command != "answer" && command != "Answer" && command != "answer call" && command != "Answer call" && command != "get phone" && command != "Get phone")
+			{
+				cout << "You should answer that, " << name << "." << endl;
+				command = get_command();
+			}
+			if(command == "answer" || command == "Answer" || command == "answer call" || command == "Answer call" || command == "get phone" || command == "Get phone")
+			{
+				cout << "*click*" << endl;
+				getchar();
+				cout << "???:" << name << "?! It's Q!" << endl;
+				getchar();
+				cout << "*you*: Who--" << endl;
+				getchar();
+				cout << "???: From sociology?!";
+				getchar();
+				cout << "*you*: Richard never said he knew Q?!?" << endl;
+				getchar();
+				cout << "Q: Will you let us in!?" << endl;
+				command = get_command();
+				while(command != "buzz" && command != "buzz them in" && command != "buzz in" && command != "Buzz" && command != "Buzz them in" && command != "Buzz in")
+				{
+					cout << "Um hello?! Buzz them in?" << endl;
+					command = get_command;
+				}
+				if(command == "buzz" || command == "buzz them in" || command == "buzz in" || command == "Buzz" || command == "Buzz them in" || command == "Buzz in")
+				{
+					cout << "*Bzzz*" << endl;
+					cout << "You hear hurried footsteps racing up the main staircase." << endl;
+					getchar();
+					cout << "*BAMBAMBAM*" << endl;
+					cout << "There came a rapping on your apartment door." << endl;
+				}
+			}
 		}
+		
 	}
 	else if(teeth == false && shower == true)
 	{
@@ -674,7 +730,7 @@ void description()
 	cout << "Language: C++" << endl;
 	cout << "Author: David Amante" << endl;
 	cout << "Email: davidamante17@yahoo.com" << endl << endl;
-	cout << "Description (of the game): This is a Zork type text-based game. You are a" << endl;
+	cout << "Description: 'Day at a Party' is a Zork type text-based game. You are a" << endl;
 	cout << "tired twenty-something year old who just got home from work. You have the" << endl;
 	cout << "opportunity to indulge in some fun party shenanigans." << endl;
 	cout << "Are you up to the adventure?" << endl << endl;
@@ -718,6 +774,10 @@ void tutorial()
 		cout << "Delightful. Moving on." << endl;
 		getchar();
 		cout << "There may be several responses to the same question. Be careful." << endl;
+		getchar();
+		cout << "When you see the following:" << endl;
+		cout << "*you*: ____________" << endl << endl;
+		cout << "It represents an aside, not literal dialogue." << endl;
 		getchar();
 		cout << "The story that is about to unfold may or may not be true." << endl;
 		getchar();
