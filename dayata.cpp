@@ -38,8 +38,8 @@ int main()
 	//check_saved_game();
 	tutorial();
 	get_name("Before we begin, what is your name?", name);
-	//level_one(name);
-	level_two(name); //continue coding, yo!
+	level_one(name);
+	//level_two(name); //continue coding, yo!
 	//credits();
 	return 0;
 }
@@ -433,12 +433,12 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	
 	if(teeth == false && shower == false)
 	{
-	    cout << "*ring* *ring*";
+	    cout << "\t\t*ring* *ring*";
 	    getchar();
 	    cout << endl;
-	    cout << "  Caller ID  " << endl;
-	    cout << "'Unavailable'" << endl;
-	    cout << "*riiiiingggg*" << endl;
+	    cout << "\t\t  Caller ID  " << endl;
+	    cout << "\t\t'Unavailable'" << endl;
+	    cout << "\t\t*riiiiingggg*" << endl;
 	    getchar();
 	    cout << "Your phone sure does ring a lot." << endl;
 	    getchar();
@@ -540,13 +540,13 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	else if(teeth == true && shower == false)
 	{
 		
-		cout << "*ring* *ring*";
+		cout << "\t\t*ring* *ring*";
 	    getchar();
 	    cout << endl;
-	    cout << "New Voicemail" << endl;
-	    cout << "    from     " << endl;
-	    cout << "  'Richard'  " << endl;
-		cout << "*riiiiingggg*" << endl;
+	    cout << "\t\tNew Voicemail" << endl;
+	    cout << "\t\t    from     " << endl;
+	    cout << "\t\t  'Richard'  " << endl;
+		cout << "\t\t*riiiiingggg*" << endl;
 	    getchar();
 	    cout << "Your phone sure does ring a lot." << endl;
 		command = get_command();
@@ -603,15 +603,40 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 				while(command != "buzz" && command != "buzz them in" && command != "buzz in" && command != "Buzz" && command != "Buzz them in" && command != "Buzz in")
 				{
 					cout << "Um hello?! Buzz them in?" << endl;
-					command = get_command;
+					command = get_command();
 				}
 				if(command == "buzz" || command == "buzz them in" || command == "buzz in" || command == "Buzz" || command == "Buzz them in" || command == "Buzz in")
 				{
 					cout << "*Bzzz*" << endl;
 					cout << "You hear hurried footsteps racing up the main staircase." << endl;
 					getchar();
-					cout << "*BAMBAMBAM*" << endl;
+					cout << "They get closer to your";
+					getchar();
+					cout << "*BAMBAMBAM*";
+					getchar();
+					cout << "... door." << endl;
+					getchar();
 					cout << "There came a rapping on your apartment door." << endl;
+					command = get_command();
+					while(command != "answer" && command != "Answer" && command != "answer door" && command != "Answer door" && command != "get door" && command != "get the door" && command != "Get door" && command != "Get the door")
+					{
+						cout << "Get the door!!" << endl;
+						command = get_command();
+					}
+					
+					if(command == "answer" || command == "Answer" || command == "answer door" || command == "Answer door" || command == "get door" || command == "get the door" || command == "Get door" || command == "Get the door")
+					{
+						cout << "The pressure from beyond the door overwhelms you." << endl;
+						getchar();
+						cout << "Richard slams into you and you both fall onto the ground." << endl;
+						getchar();
+						cout << "Q is bleeding from the knee down, and is holding their side tenderly." << endl;
+						getchar();
+						cout << "Q: You got a first aid kit?" << endl;
+						cout << name << ": WHAT THE HELL?!" << endl;
+						cout << "Q: Richard said it'd be okay to come here!" << endl;
+						
+					}
 				}
 			}
 		}
