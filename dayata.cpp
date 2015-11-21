@@ -40,7 +40,7 @@ int main()
 	get_name("Before we begin, what is your name?", name);
 	level_one(name);
 	//level_two(name); //continue coding, yo!
-	//credits();
+	credits();
 	return 0;
 }
 
@@ -79,7 +79,7 @@ void level_one(string name)
 		cout << "???: Dude! Party on 32nd and Elm! That cutie from your sociology class is here!! You coming??" << endl;
 		command = get_command();
 		
-		while(command != "who is this?")
+		while(command != "who is this?" && command != "Who is this?" && command != "Who's calling?" && command != "who's calling?" && command != "whos calling?" && command != "Whos calling?")
 		{
 			if(command == "yes" || command == "Yes")
 			{
@@ -96,13 +96,13 @@ void level_one(string name)
 			}
 			else if(command == "why?" || command == "why" || command == "Why?" || command == "Why")
 			{
-				cout << "Why? " << name << "! C'mon, it's a party!" << endl;
+				cout << "Why, " << name << "? C'mon, it's a party!" << endl;
 			}
 			cout << "Ask who's calling!" << endl;
 			command = get_command();
 		}
 		
-		if(command == "who is this?")
+		if(command == "who is this?" || command == "Who is this?" || command == "Who's calling?" || command == "who's calling?" || command == "whos calling?" || command == "Whos calling?")
 		{
 			cout << "???: It's Richard! C'mon man! Work couldn't've been THAT bad!";
 			getchar();
@@ -550,12 +550,12 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	    getchar();
 	    cout << "Your phone sure does ring a lot." << endl;
 		command = get_command();
-	    while(command != "answer" && command != "Answer" && command != "get phone" && command != "answer phone" && command != "get the phone" && command != "answer the phone")
+	    while(command != "answer" && command != "Answer" && command != "answer phone" && command != "Answer phone" && command != "get phone" && command != "answer phone" && command != "get the phone" && command != "answer the phone")
 	    {
 	        cout << "It might be important, " << name << "." << endl;
 	        command = get_command();
 	    }
-	    if(command == "answer" || command == "Answer" || command == "get phone" || command == "answer phone" || command == "get the phone" || command == "answer the phone")
+	    if(command == "answer" || command == "Answer" || command == "answer phone" || command == "Answer phone" || command == "get phone" || command == "answer phone" || command == "get the phone" || command == "answer the phone")
 	    {
 	    	cout << "*You have, one, new message.*" << endl;
 	    	getchar();
@@ -573,7 +573,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 			getchar();
 			cout << "*you*: Wha--" << endl;
 			getchar();
-			cout << "I told you shit would hit the fan." << endl;
+			cout << "I told you shit would hit the fan." << endl; //euphemism rotary machine
 			getchar();
 			cout << "*bzz*" << endl;
 			getchar();
@@ -581,12 +581,12 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 			cout << "The call button buzzes violently." << endl;
 			command = get_command();
 			
-			while(command != "answer" && command != "Answer" && command != "answer call" && command != "Answer call" && command != "get phone" && command != "Get phone")
+			while(command != "answer" && command != "Answer" && command != "answer phone" && command != "Answer phone" && command != "answer call" && command != "Answer call" && command != "get phone" && command != "Get phone")
 			{
 				cout << "You should answer that, " << name << "." << endl;
 				command = get_command();
 			}
-			if(command == "answer" || command == "Answer" || command == "answer call" || command == "Answer call" || command == "get phone" || command == "Get phone")
+			if(command == "answer" || command == "Answer" || command == "answer phone" || command == "Answer phone" || command == "answer call" || command == "Answer call" || command == "get phone" || command == "Get phone")
 			{
 				cout << "*click*" << endl;
 				getchar();
@@ -600,12 +600,12 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 				getchar();
 				cout << "Q: Will you let us in!?" << endl;
 				command = get_command();
-				while(command != "buzz" && command != "buzz them in" && command != "buzz in" && command != "Buzz" && command != "Buzz them in" && command != "Buzz in")
+				while(command != "buzz" && command != "buzz them in" && command != "buzz in" && command != "Buzz" && command != "Buzz them in" && command != "Buzz in" && command != "let them in" && command != "Let them in")
 				{
 					cout << "Um hello?! Buzz them in?" << endl;
 					command = get_command();
 				}
-				if(command == "buzz" || command == "buzz them in" || command == "buzz in" || command == "Buzz" || command == "Buzz them in" || command == "Buzz in")
+				if(command == "buzz" || command == "buzz them in" || command == "buzz in" || command == "Buzz" || command == "Buzz them in" || command == "Buzz in" || command == "let them in" || command == "Let them in")
 				{
 					cout << "*Bzzz*" << endl;
 					cout << "You hear hurried footsteps racing up the main staircase." << endl;
@@ -618,13 +618,13 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 					getchar();
 					cout << "There came a rapping on your apartment door." << endl;
 					command = get_command();
-					while(command != "answer" && command != "Answer" && command != "answer door" && command != "Answer door" && command != "get door" && command != "get the door" && command != "Get door" && command != "Get the door")
+					while(command != "answer" && command != "Answer" && command != "answer door" && command != "Answer the door" && command != "answer the door" && command != "Answer door" && command != "get door" && command != "get the door" && command != "Get door" && command != "Get the door")
 					{
 						cout << "Get the door!!" << endl;
 						command = get_command();
 					}
 					
-					if(command == "answer" || command == "Answer" || command == "answer door" || command == "Answer door" || command == "get door" || command == "get the door" || command == "Get door" || command == "Get the door")
+					if(command == "answer" || command == "Answer" || command == "answer door" || command == "Answer the door" || command == "answer the door" || command == "Answer door" || command == "get door" || command == "get the door" || command == "Get door" || command == "Get the door")
 					{
 						cout << "The pressure from beyond the door overwhelms you." << endl;
 						getchar();
@@ -849,10 +849,10 @@ string betas(int count)
 	switch(count)
 	{
 		case 1: 
-			name = " Nichole Hotrum\t November 7, 2015";
+			name = " Nichole Hotrum\t November 07, 2015";
 			break;
 		case 2:
-			name = " Beta Tester\t\t Month 0, 201X";
+			name = " Ellen Barabasz\t November 21, 2015";
 			break;
 		case 3:
 			name = " Beta Tester\t\t Month 0, 201X";
