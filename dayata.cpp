@@ -38,8 +38,8 @@ int main()
 	//check_saved_game();
 	tutorial();
 	get_name("Before we begin, what is your name?", name);
-	level_one(name);
-	//level_two(name); //continue coding, yo!
+	//level_one(name);
+	level_two(name); //continue coding, yo!
 	//credits();
 	return 0;
 }
@@ -370,6 +370,7 @@ void level_two(string name)
 		
 		getchar();
 		
+		//menu for actions
 		cout << "You have " << minutes << " minutes before the party starts 'turning up'." << endl;
 
 		if(dress == false)
@@ -416,6 +417,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	bool leave = false; 
 	bool nap = false;
 	
+	//the manager part is universal to all level 2.5-ers
 	getchar();
 	cout << string(30, '\n');
 	cout << "36 MINUTES LATER" << endl;
@@ -431,6 +433,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	cout << "*you*: If I just take it slow.. maybe it'll work." << endl;
 	getchar();
 	
+	//neutral scenario; Q wants to make sure you're going to the party.
 	if(teeth == false && shower == false)
 	{
 	    cout << "\t\t*ring* *ring*";
@@ -537,6 +540,8 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 			}
 		}
 	}
+	
+	//negative scenario; shit gets real, and idk if it's a dream yet
 	else if(teeth == true && shower == false)
 	{
 		
@@ -642,6 +647,8 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 		}
 		
 	}
+	
+	//positive scenario; Q comes over with Richard, who passes out on the couch, and well, it's the best possible scenario for nap
 	else if(teeth == false && shower == true)
 	{
 	    cout << "*ring* *ring*";
