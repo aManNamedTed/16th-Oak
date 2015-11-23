@@ -56,14 +56,12 @@ string get_command()
 	{
 		;
 	}
-	return command;
 }
 
 void level_one(string name)
 {
 	string command;
 	
-	cout << endl;
 	cout << "Upon stepping foot in your apartment after a long day at work, your home" << endl; 
 	cout << "phone rings.";
 	cout << " (Who owns a home phone anymore? What the hell?)" << endl;
@@ -405,7 +403,6 @@ void level_two(string name)
 			command = get_command();
 		}	
 	}while(!leave);
-	
 }
 
 
