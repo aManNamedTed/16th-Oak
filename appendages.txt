@@ -86,7 +86,7 @@ appendage log:
 			F F T
 			F T F
 			F T T
-		[]finish Teeth(T),Shower(F)
+		[x]finish Teeth(T),Shower(F)
 		[]finish Teeth(F),Shower(T)
 			naked event, setting of apartment description?
 			best possible scenario for getting ready.

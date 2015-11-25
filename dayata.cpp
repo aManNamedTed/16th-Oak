@@ -18,15 +18,30 @@ void tutorial();
 void description();
 void get_name(string p, string& name);
 void goodbye(string);
+
+//1; ??? asks you to go to the party
 void level_one(string);
+
+//2; you get ready for the party
 void level_two(string);
-void level_two_and_a_half(string, bool, bool);
+
+//2.5;
+//F/F	Neutral: ??? is excited for your presence at the party, or you reject the call and go to goodbye(), then to level 3 from there
+//T/F	Worst: Someone causes an issue at the party, causing Richard & ??? to come to your house. You run from the cops
+//T/T	Best: ??? is arrives at your door with Richard, as ??? thought Richard was getting too drunk. You invite them in for the night
+void level_two_and_a_half(string, bool, bool); 
+
+//WORST 2.5 CASE, EXTRA CHAPTER
+void worst_case(string);
+
 void level_three_determiner(string, bool, bool, bool, bool, bool);
 void level_four(string);
 void level_five(string);
 void level_six(string);
+
+//displays the beta testers and credits afterwards
 string betas(int);
-void credits();
+void credits(string);
 
 const int NAMES = 11;
 
@@ -40,7 +55,7 @@ int main()
 	get_name("Before we begin, what is your name?", name);
 	level_one(name);
 	//level_two(name); //continue coding, yo!
-	credits();
+	credits(name);
 	return 0;
 }
 
@@ -560,12 +575,12 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	    	cout << "*You have, one, new message.*" << endl;
 	    	getchar();
 	    	cout << "???: " << name << "!" << endl;
-	    	cout << "???: Richard tried to steal a bottle from the party!" << endl;
+	    	cout << "???: Richard tried to steal the host's phone from the party!" << endl;
 	    	cout << "???: There was a bit of a scuffle between Richard and the hosts," << endl;
 	    	cout << "???: *skrr*--he pulled out a GUN--*skrr*" << endl;
 	    	cout << "???: *skrr*--said you'd be a safe place to hide out at." << endl;
 			getchar();
-			cout << "*you*: What the--" << endl;
+			cout << "*you*: What?!--" << endl;
 			getchar();
 			cout << "*gunshots in the distance*" << endl;
 			getchar();
@@ -573,7 +588,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 			getchar();
 			cout << "*you*: Wha--" << endl;
 			getchar();
-			cout << "I told you shit would hit the fan." << endl; //euphemism rotary machine
+			cout << "I TOLD YOU THINGS WOULD GET REAL." << endl;
 			getchar();
 			cout << "*bzz*" << endl;
 			getchar();
@@ -588,7 +603,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 			}
 			if(command == "answer" || command == "Answer" || command == "answer phone" || command == "Answer phone" || command == "answer call" || command == "Answer call" || command == "get phone" || command == "Get phone")
 			{
-				cout << "*click*" << endl;
+				cout << "*ch-KUH*" << endl;
 				getchar();
 				cout << "???:" << name << "?! It's Q!" << endl;
 				getchar();
@@ -612,7 +627,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 					getchar();
 					cout << "They get closer to your";
 					getchar();
-					cout << "*BAMBAMBAM*";
+					cout << "*BLAMBLAMBLAM*";
 					getchar();
 					cout << "... door." << endl;
 					getchar();
@@ -626,16 +641,31 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 					
 					if(command == "answer" || command == "Answer" || command == "answer door" || command == "Answer the door" || command == "answer the door" || command == "Answer door" || command == "get door" || command == "get the door" || command == "Get door" || command == "Get the door")
 					{
-						cout << "The pressure from beyond the door overwhelms you." << endl;
+						cout << "The pressure from beyond the door overwhelms you.";
 						getchar();
-						cout << "Richard slams into you and you both fall onto the ground." << endl;
+						cout << "Richard slams into you and you both fall onto the ground.";
 						getchar();
-						cout << "Q is bleeding from the knee down, and is holding their side tenderly." << endl;
+						cout << "Q is bleeding from the knee down, and is holding their side tenderly.";
 						getchar();
 						cout << "Q: You got a first aid kit?" << endl;
-						cout << name << ": WHAT THE HELL?!" << endl;
+						getchar();
+						cout << name << ": WHAT THE HELL?!";
+						getchar();
 						cout << "Q: Richard said it'd be okay to come here!" << endl;
-						
+						getchar();
+						cout << "Richard gets up hurriedly with his pistol in hand as" << endl;
+						cout << "you pick yourself up." << endl;
+						getchar();
+						cout << "Richard: " << name << "! I did something stupid. But hey! It's all alright!" << endl;
+						cout << "Richard: But that doesn't matter; why didn't you come to the party?" << endl;
+						getchar();
+						cout << "Your ears begin to ring as you realize you're housing a fugitive." << endl;
+						getchar();
+						cout << "Richard: " << name << "? You okay?" << endl;
+						cout << "Q: " << name << "!?" << endl;
+						getchar();
+						cout << "You pass out as shock overwhelms you." << endl;
+						worst_case(name);
 					}
 				}
 			}
@@ -650,6 +680,80 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 	    getchar();
 	    cout << "Your phone sure does ring a lot." << endl;
 	    command = get_command();	       
+	}
+}
+
+void worst_case(string name)
+{
+	string command;
+
+	getchar();
+	cout << string(30, '\n');
+	cout << "???: grrmmglrrlrhh";
+	getchar();
+	cout << "???: ggeeEEttBBAAARRGHGHH" << endl;
+	getchar();
+	cout << "Your ears ring with intensity as the evening breeze wakes you." << endl;
+	getchar();
+	cout << "*gunshots*";
+	getchar();
+	cout << "*more gunshots*";
+	getchar();
+	cout << "*A LOT OF GUNSHOTS*" << endl;
+	getchar();
+	cout << "Richard: " << name << "! Get up!" << endl;
+	cout << "Richard: You've been out for about an hour, but Q and I" << endl;
+	cout << "Richard: managed to get you to the fire escape out back." << endl;
+	getchar();
+	cout << "Q: Get up here!" << endl;
+	getchar();
+	cout << "You see Q motion for you to climb up the ladder." << endl;
+	command = get_command();
+	while(command != "Climb!" && command != "climb!" && command != "climb" && command != "Climb" && command != "climb ladder" && command != "Climb ladder" && command != "climb the ladder" && command != "Climb the ladder")
+	{
+		cout << "*gunshots whirring*" << endl;
+		cout << "CLIMB!" << endl;
+		command = get_command();
+	}
+	
+	if(command == "Climb!" || command == "climb!" || command == "climb" || command == "Climb" || command == "climb ladder" || command == "Climb ladder" || command == "climb the ladder" || command == "Climb the ladder")
+	{
+		cout << "With sluggish effort, you successfully climb the ladder." << endl;
+		getchar();
+		cout << "Q: " << name << "!" << endl;
+		cout << "Q: The police are gonna be up here any second." << endl;
+		cout << "Q: We need to get somewhere safe." << endl;
+		getchar();
+		
+		cout << endl;
+		cout << "Over the next few moments, you assess your surroundings.";
+		cout << "You have enough time to check two hiding spots." << endl;
+		getchar();
+		
+		bool vent = false;
+		bool spotlight = false; //(sunlight?) sp?
+		bool edge_of = false; //1000th line of code!
+		int turns = 2;
+		
+		cout << "You have " << turns << " left before the cops breach the roof." << endl;
+		if(vent == false)
+		{
+			cout << "The vent " << endl;
+			vent = true;	
+		}
+		if(spotlight == false)
+		{
+			cout << "
+			spotlight = true;
+		}
+		if(edge_of == false)
+		{
+			cout << "
+			edge_of = true;
+		}
+		command = get_command();
+		//make bool for the possible choices
+		
 	}
 }
 
@@ -832,14 +936,25 @@ void check_saved_game()
 	}
 }
 
-void credits()
+void credits(string name)
 {
+	cout << "Executive Producer: David Amante" << endl;
+	cout << "Story Written by: David Amante" << endl;
+	cout << "Music Written & Performed by: David Amante" << endl;
+	getchar();
 	cout << "Special thanks to all the great people who beta-tested this game!" << endl << endl;
 	cout << "\t x: Name\t\t Date-of-first-play " << endl;
 	for(int i = 1; i < NAMES; i++)
 	{
 		cout << "\t " << i << ":" << betas(i) << endl;
 	}
+	getchar();
+	cout << "Last but not least," << endl;
+	cout << "A special thanks to you, " << name << "." << endl;
+	cout << "For taking time out of your day to play this silly game." << endl;
+	getchar();
+	cout << "The End!" << endl;
+	getchar();
 }
 
 string betas(int count)
