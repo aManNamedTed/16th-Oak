@@ -731,11 +731,11 @@ void worst_case(string name)
 		getchar();
 		
 		bool vent = false;
-		bool spotlight = false; //(sunlight?) sp?
+		bool window = false; //(sunlight?) sp?
 		bool edge_of = false; //1000th line of code!
-		int turns = 2;
 		
-		cout << "You have " << turns << " left before the cops breach the roof." << endl;
+		cout << "
+		
 		if(vent == false)
 		{
 			cout << "The vent " << endl;
