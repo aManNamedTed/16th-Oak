@@ -53,8 +53,9 @@ int main()
 	//check_saved_game();
 	tutorial();
 	get_name("Before we begin, what is your name?", name);
-	level_one(name);
-	//level_two(name); //continue coding, yo!
+	//level_one(name);
+	//level_two(name); //need to continue truth table values to progress story 
+	worst_case(name); //continue coding, yo!
 	credits(name);
 	return 0;
 }
@@ -94,7 +95,7 @@ void level_one(string name)
 		cout << "???: Dude! Party on 32nd and Elm! That cutie from your sociology class is here!! You coming??" << endl;
 		command = get_command();
 		
-		while(command != "who is this?" && command != "Who is this?" && command != "Who's calling?" && command != "who's calling?" && command != "whos calling?" && command != "Whos calling?")
+		while(command != "who's calling" && command != "whos calling" && command != "who is this?" && command != "Who is this?" && command != "Who's calling?" && command != "who's calling?" && command != "whos calling?" && command != "Whos calling?")
 		{
 			if(command == "yes" || command == "Yes")
 			{
@@ -117,7 +118,7 @@ void level_one(string name)
 			command = get_command();
 		}
 		
-		if(command == "who is this?" || command == "Who is this?" || command == "Who's calling?" || command == "who's calling?" || command == "whos calling?" || command == "Whos calling?")
+		if(command == "who's calling" || command == "whos calling" || command == "who is this?" || command == "Who is this?" || command == "Who's calling?" || command == "who's calling?" || command == "whos calling?" || command == "Whos calling?")
 		{
 			cout << "???: It's Richard! C'mon man! Work couldn't've been THAT bad!";
 			getchar();
@@ -734,21 +735,19 @@ void worst_case(string name)
 		bool window = false; //(sunlight?) sp?
 		bool edge_of = false; //1000th line of code!
 		
-		cout << "
-		
 		if(vent == false)
 		{
 			cout << "The vent " << endl;
 			vent = true;	
 		}
-		if(spotlight == false)
+		if(window == false)
 		{
-			cout << "
-			spotlight = true;
+			//cout << "
+			window = true;
 		}
 		if(edge_of == false)
 		{
-			cout << "
+			//cout << "
 			edge_of = true;
 		}
 		command = get_command();
