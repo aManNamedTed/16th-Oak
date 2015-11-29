@@ -179,7 +179,7 @@ void level_two(string name)
 	getchar();
 	cout << string(30, '\n');
 	
-	cout << "Upon hearing the news of an uproarious shindig occurring in the near future," << endl;
+	cout << "pon hearing the news of an uproarious shindig occurring in the near future," << endl;
 	cout << "You find yourself tired, surprised, and other words expressing mood." << endl << endl;
 	
 	do
