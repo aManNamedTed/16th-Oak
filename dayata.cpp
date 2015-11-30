@@ -75,8 +75,8 @@ int main()
 	//check_saved_game();
 	tutorial();
 	get_name("Before we begin, what is your name?", name);
-	//level_one(name);
-	level_two(name); //need to continue truth table values to progress story 
+	level_one(name);
+	//level_two(name); //need to continue truth table values to progress story 
 	//worst_case(name); //continue coding, yo!
 	credits(name);
 	return 0;
