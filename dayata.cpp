@@ -733,7 +733,7 @@ void worst_case(string name)
 		
 		bool vent = false;
 		bool window = false; //(sunlight?) sp?
-		bool edge_of = false; //1000th line of code!
+		bool edge_of = false; //1000th line of code! 11-23-15 @ d/v/b's house
 		
 		if(vent == false)
 		{
