@@ -27,28 +27,31 @@ int main()
 		sleep(.5);
 		
 	}
-	cout << "Done installing documentation for diaper, spoon, pocket-2.2, stale-toast-testing, macro_gainz3, lipbalm after 13 seconds" << endl;
+	cout << "Done installing documentation for diaper, spoon, pocket-2.2, stale-toast-testing, macro_gainz8, lipbalm after 13 seconds" << endl;
 	
 	sleep(1);
 	
 	cout << "Updating tube_socks" << endl;
 	for(int i = 10; i < 13; i++)
 	{
-		sleep(1.3);
+		sleep(1);
 		cout << "Fetching: " << material_list(i) << "-4." << i << " ";
 		sleep(.7);
 		cout << "(100%)" << endl;
-		sleep(.3);
+		sleep(.45);
 		cout << "Parsing documentation for " << material_list(i) << "-4." << i+8 << endl;
 	}
-	sleep(2);
+	sleep(1);
 	
-	cout << "Levels updated: partypack" << endl;
+	cout << "Levels updated: level_three level_four level_five partypack fight-mechanic pillow-fight cooties3" << endl;
+	sleep(2);
+	cout << endl;
 	cout << "Enjoy the next section of the story!" << endl;
 	//put prompt here
 	return 0;
 }
 
+//to make this shorter later, just superimpose the three lists and set i or num seperately in-game
 string package_list(int num)
 {
 	string pak;
@@ -95,6 +98,7 @@ string material_list(int num)
 	}
 	return ial;
 }
+
 string program_list(int num)
 {
 	string doc;

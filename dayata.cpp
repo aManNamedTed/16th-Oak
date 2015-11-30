@@ -9,41 +9,63 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-
+#include <windows.h>
+#include <unistd.h>
 using namespace std;
 
 string get_command();
+	//gets command from user
+	
 void check_saved_game();
+	//will check the saved game, but not developed quite yet. -11.30.15
+
 void tutorial();
+	//tutorial for how to play this game
+	
 void description();
+	//description of the game and its creator
+
 void get_name(string p, string& name);
+	//gets name before game starts
+	
 void goodbye(string);
+	//you say goodbye to an important call
+	
+//these functions are for the hacker-esque update-script in level 3
+	string program_list(int);
+	string package_list(int);
+	string material_list(int);
 
-//1; ??? asks you to go to the party
 void level_one(string);
-
-//2; you get ready for the party
+	//1: ??? asks you to go to the party
+	
 void level_two(string);
+	//2: you get ready for the party
 
-//2.5;
-//F/F	Neutral: ??? is excited for your presence at the party, or you reject the call and go to goodbye(), then to level 3 from there
-//T/F	Worst: Someone causes an issue at the party, causing Richard & ??? to come to your house. You run from the cops
-//T/T	Best: ??? is arrives at your door with Richard, as ??? thought Richard was getting too drunk. You invite them in for the night
 void level_two_and_a_half(string, bool, bool); 
+	//F/F	Neutral: ??? is excited for your presence at the party, or you reject the call and go to goodbye(), then to level 3 from there
+	//T/F	Worst: Someone causes an issue at the party, causing Richard & ??? to come to your house. You run from the cops
+	//T/T	Best: ??? is arrives at your door with Richard, as ??? thought Richard was getting too drunk. You invite them in for the night
 
-//WORST 2.5 CASE, EXTRA CHAPTER
 void worst_case(string);
+	//WORST 2.5 CASE, EXTRA CHAPTER
 
 void level_three_determiner(string, bool, bool, bool, bool, bool);
+	//idk yet
+	
 void level_four(string);
+	//i also don't know yet
+
 void level_five(string);
+	//meh i'll get to it
+	
 void level_six(string);
+	//i should really plan games out better
 
-//displays the beta testers and credits afterwards
-string betas(int);
-void credits(string);
-
-const int NAMES = 11;
+//displays the beta testers and credits afterwards--i should really put this in a struct
+	string betas(int);
+	void credits(string);
+	const int NAMES = 11;
 
 int main()
 {
@@ -54,8 +76,8 @@ int main()
 	tutorial();
 	get_name("Before we begin, what is your name?", name);
 	//level_one(name);
-	//level_two(name); //need to continue truth table values to progress story 
-	worst_case(name); //continue coding, yo!
+	level_two(name); //need to continue truth table values to progress story 
+	//worst_case(name); //continue coding, yo!
 	credits(name);
 	return 0;
 }
@@ -845,9 +867,92 @@ void goodbye(string name)
 }
 void level_three_determiner(string name, bool dress, bool teeth, bool shower, bool leave, bool nap)
 {
+	string command;
 	getchar();
 	cout << string(30, '\n');
-	cout << "You are in level 3 determiner" << endl;
+	
+	cout << "..." << endl;
+	getchar();
+	cout << "STORY NOT UPDATED" << endl;
+	getchar();
+	cout << "..." << endl;
+	getchar();
+	cout << "Sign: 'Please ring the bell for assistance.'" << endl;
+	command = get_command();
+	
+	while(command != "ring bell" && command != "Ring bell" && command != "ring the bell" && command != "Ring the bell" && command != "ring" && command != "Ring")
+	{
+		cout << "Sign: 'Please ring the bell for assistance.'" << endl;	
+		command = get_command();
+	}
+	
+	if(command == "ring bell" || command == "Ring bell" || command == "ring the bell" || command == "Ring the bell" || command == "ring" || command == "Ring")
+	{
+		cout << "I'll be just a second!" << endl;
+		getchar();
+		cout << "How can I help you--" << endl;
+		getchar();
+		cout << "Hey!" << endl;
+		getchar();
+		cout << name << "!" << endl;
+		getchar();
+		cout << "I wasn't expecting you to be here so fast.." << endl;
+		getchar();
+		cout << "*nervous laughter*" << endl;
+		cout << "I *literally* JUST finished the next level!!" << endl;
+		getchar();
+		cout << "So hey! No worries, right!??" << endl;
+		cout << "This update'll take twenty seconds tops?" << endl;
+		getchar();
+		cout << "DON'T WORRY THOUGH. It'll run by itself." << endl;
+		getchar();
+		cout << "Just sit back and enjoy the file names." << endl;
+		cout << "Programmers absolutely ADORE naming file names sillily." << endl;
+		getchar();
+		
+	}
+
+	sleep(1);
+	cout << "Updating storymode" << endl;
+	
+	for(int i = 4; i < 10; i++)
+	{
+		sleep(1);
+		cout << "Fetching: " << package_list(i) << "-1.7." << i << " ";
+		sleep(1);
+		cout << "(100%)" << endl;
+		sleep(.8);
+		cout << "Successfully installed " << package_list(i) << endl;
+		sleep(.3);
+		cout << "Installing mi documentation for storymode-2.4." << (i + 3) << endl;
+		cout << "Parsing documentation for " << program_list(i) << endl;
+		sleep(.5);
+		
+	}
+	cout << "Done installing documentation for diaper, spoon, pocket-2.2, stale-toast-testing, macro_gainz8, lipbalm after 13 seconds" << endl;
+	
+	sleep(1);
+	
+	cout << "Updating tube_socks" << endl;
+	for(int i = 10; i < 13; i++)
+	{
+		sleep(1);
+		cout << "Fetching: " << material_list(i) << "-4." << i << " ";
+		sleep(.7);
+		cout << "(100%)" << endl;
+		sleep(.45);
+		cout << "Parsing documentation for " << material_list(i) << "-4." << i+8 << endl;
+	}
+	sleep(1);
+	
+	cout << "Levels updated: level_three partypack fight-mechanic pillow-fight cooties3" << endl;
+	sleep(2);
+	cout << endl;
+	cout << "Thanks for waiting!" << endl;
+	getchar();
+	cout << "Back at it!" << endl;
+	
+	//put prompt here
 }
 
 void description()
@@ -906,8 +1011,6 @@ void tutorial()
 		cout << "When you see the following:" << endl;
 		cout << "*you*: ____________" << endl << endl;
 		cout << "It represents an aside, not literal dialogue." << endl;
-		getchar();
-		cout << "The story that is about to unfold may or may not be true." << endl;
 		getchar();
 		cout << "Good luck." << endl;
 		getchar();
@@ -995,6 +1098,86 @@ string betas(int count)
 	}
 	return name;
 }
+
+//these functions are for the mock update script used in-game
+string package_list(int num)
+{
+	string pak;
+	
+	//to make this shorter later, just superimpose the three lists and set i or num seperately in-game	
+	switch(num)
+	{
+		case 4:
+			pak = "diaper";
+			break;
+		case 5:
+			pak = "spoon";
+			break;
+		case 6:
+			pak = "pocket";
+			break;
+		case 7:
+			pak = "stale-toast-testing";
+			break;
+		case 8:
+			pak = "macro_gainz3";
+			break;
+		case 9:
+			pak = "lipbalm";
+			break;
+	}
+	return pak;
+}
+
+string material_list(int num)
+{
+	string ial;
+	
+	switch(num)
+	{
+		case 10:
+			ial = "wool";
+			break;
+		case 11:
+			ial = "cotton";
+			break;
+		case 12:
+			ial = "polyester";
+			break;
+	}
+	return ial;
+}
+
+string program_list(int num)
+{
+	string doc;
+	
+	switch(num)
+	{
+		case 4:
+			doc = "d.cpp";
+			break;
+		case 5:
+			doc = "the_gem_knight.rb";
+			break;
+		case 6:
+			doc = "kith.lsp";
+			break;
+		case 7:
+			doc = "ekans.py";
+			break;
+		case 8:
+			doc = "veranda.java";
+			break;
+		case 9:
+			doc = "Q_necklace.pl";
+			break;
+	}
+	
+	return doc;
+}
+//END MOCK UPDATE SCRIPT FUNCTIONS
+
 void get_name(string p, string& name)
 {
 	cout << p << endl;
