@@ -1,0 +1,23 @@
+SPOILERS!!!
+THIS FILE IS INTENDED FOR THE DEVELOPER ONLY.
+Intended use of this document is to develop dayata a piece a time
+according to the story below.
+
+AGAIN. SPOILERS, OKAY?
+
+___________________________________________________TRUTH TABLE MAP TO OTHER LEVELS
+LEVEL 1==LEVEL 2==LEVEL 2.5 /=>LEVEL GOODBYE
+           ||       D T S   |
+           ||     -[F F F]==/  /==>WORST CASE==\
+         LEVEL 3  |[F T F]====/                 |
+          D T S   | F F T                       |
+          F F F <=/=============================/
+          F T F
+          F F T
+          F T T
+          T F T
+          T T F
+          T F F
+          T T T
+    
+___________________________________________________THE WRITTEN STORY
