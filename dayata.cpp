@@ -501,7 +501,7 @@ void level_two_and_a_half(string name, bool teeth, bool shower)
 			}
 	        if(command == "hello?" || command == "hello" || command == "hi" || command == "Hi" || command == "Hi?" || command == "hi?")
 	        {
-	            cout << "???: " << name << "! It's Q." << endl;
+	            cout << "???: " << name << "! It's Q!" << endl;
 	            getchar();
 	            cout << name << ": ...";
 	            getchar();
@@ -793,12 +793,15 @@ void goodbye(string name)
 	getchar();
 	cout << "Y'know... I am SO disappointed in you, " << name << ".";
 	getchar();
-	cout << "You could have just answered.." << endl;
-	cout << "I mean, the person obviously knew your name from SOMEWHERE." << endl;
-	cout << "It could have been important." << endl;
+	cout << "You could have just answered..." << endl;
+	getchar();
+	cout << "Like a polite human being." << endl;
+	getchar();
+	cout << "It's the *least* you could've done." << endl;
+	cout << "It could have been the most call of your life." << endl;
 	getchar();
 	
-	cout << "Eh, but none the wiser." << endl;
+	cout << "But now you'll never know." << endl;
 	getchar();
 	cout << "...";
 	getchar();
