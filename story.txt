@@ -1,122 +1,123 @@
-SPOILERS!!!
-THIS FILE IS INTENDED FOR THE DEVELOPER ONLY.
-Intended use of this document is to develop dayata a piece a time
-according to the story below.
+Disclaimer: This file is intended for the use of the developer ONLY. This file contains major spoilers to
+the game, 'Day at a Party.'
 
-AGAIN. SPOILERS, OKAY?
+Background: I realized I had messed up by trying to implement too many features before actually finishing
+the game. This is my second attempt at creating the story, from start to finish, and then actually
+programming the entire game from start to finish, within 24 hours. So the goal here in dayata 2.0 is to
+create the entire story, hopefully succeeding in 10 full minutes of play time. The story begins here:
 
-___________________________________________________TRUTH TABLE MAP TO OTHER LEVELS
-LEVEL 1==LEVEL 2==LEVEL 2.5 /=>LEVEL GOODBYE
-           ||       D T S   |
-           ||     -[F F F]==/  /==>WORST CASE==\
-         LEVEL 3  |[F T F]====/                 |
-          D T S   | F F T                       |
-          F F F <=/=============================/
-          F T F
-          F F T
-          F T T
-          T F T
-          T T F
-          T F F
-          T T T
+________________________________________________________STORY___________________________________________
+Level One:
+    Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
+    and the voice on the other line says, "Dude! Party on 32nd and Elm! That cutie from your sociology 
+    class is here!! You coming?" You are taken aback by the voice. It sounds familiar, but you're not 
+    entirely sure who it is. "Who is this?" You ask, to which the voice says, "Richard! C'mon man! Work
+    couldn't've been THAT bad! So are you coming or not??" You reply half-heartedly with a yes. Richard: 
+    GOOD! It's still early--so you probably have an hour before we 'turn up.' I guess that's what this 
+    generation's culture calls it nowadays. Nevertheless, I better see you here tonight!
     
-___________________________________________________THE WRITTEN STORY
-LEVEL 1
-Upon stepping foot in your apartment after a long day at work, your home phone
-rings. You answer it, and the voice on the other line says, "Dude! Party on
-32nd and Elm! That cutie from your sociology class is here!! You coming?" 
-           You are taken aback by the voice.
-           It sounds familiar, but you're not entirely sure who it is.
-"Who is this?" You ask, to which the voice says, "Richard! C'mon man! Work
-couldn't've been THAT bad! So are you coming or not??"
-           You reply half-heartedly with a yes.
-Richard: GOOD! It's still early--so you probably have an hour before we 'turn
-up.' I guess that's what this generation's culture calls it nowadays. 
-Nevertheless, I better see you here tonight!
+Level Two:
+    Upon hearing the new of an uproarious shindig occurring in the near future, you find yourself tired,
+    surprised, and other words expressing mood.
+      >Shower
+        /set music, during an ad you hear of a medical discovery by a Myrtle Wexington
+      >Get Dressed
+      >Brush Teeth
+      >Leave
+    [you will not be allowed to leave until you have completed all of the above]
+    
+Level Three:
+    Upon arriving at 32nd and Elm, you see a beautiful two story house. Redwood porch on the right side
+    of the house. Garage/basement combo on the left. You walk up to the house as a familiar face rushes
+    frantically out of the front door. You begin up the steps as she hurries down them. Without missing
+    a beat, she starts, "Hey /name/! You haven't seen Ron anywhere, have you??" 
+    >no
+      You shake your head, no. She nods and says, "well if you see him, be sure to let me know, okay??"
+      She hurries off around the corner to the gas station. 
+      *you*: Oh what's her NAME? I remember we had World History in high school, but ugh, I can't
+      remember her name for the life of me. And Ron? I also remember him from high school. He was 
+      exceptional at hyper-realistic art. Hmm. I'll be sure to keep an eye out for him.
+    
+    You turn around to open the door, as-- *CRASH* --a noise comes from inside the garage. You open the
+    door and the bass of the music assault your senses. 
+    
+    You are in the hallway by the front door. There are stairs to the left, a room to the right, and music
+    coming from the end of the hallway.
+        (use [go to] and an area to go to that area)
+    Areas:
+        stairs
+        room
+        music
+        
+    >go to stairs
+        (WHILE HAVEN'T FOUND RON)
+            Upon making the turn up the stairs, a large man in a suit stops you in your tracks.
+            Guard: Name?
+            you: uh.. /name/?
+            The guard searches for your name...
+            Guard: You're not on the list.
+            The guard turns you around and sends you back downstairs.
+            
+    >go to room
+        You knock on the door.
+        (WHILE HAVEN'T TRIED TO OPEN BATHROOM)
+            ???: Go away.
+            You turn around and go back to where you were.
+        (WHEN YOU HAVE TRIED TO OPEN BATHROOM)
+        . . .
+        The door cracks open and a head peeks out at you.
+        you: ... Hello?
+        ???: /name/?! Oh my! Hi!
+        The girl grabs your wrist and pulls you into the room, slamming the door behind you.
+        ???: /name/! I'm so glad to see you! This dumb party my sister threw is SOOO lame.
+        you: ...?
+        ???: Oh.. uh?
+        She notices your confusion.
+        ???: Myrtle? From organic chem?
+        You realize who the familiar face from earlier was. Heather! The T.A from World History.
+        Her and her sister come from an iconic family. Dad is the head of Oncology at the local
+        hospital, while Mom is a data analyst for Google. Heather is known for being the ONLY
+        student in county history to score a 5 on the AP World History test. While Myrtle was..
+        *flashback*: a medical breakthrough was discovered today by local student, Myrtle Wexington.
+        
+        In a fit of excitement, you almost shout,
+        you: Myrtle!!
+        you: You were on the news like, a half hour ago!
+        you: You made some sort of medical breakthrough, progressing--
+        Myrtle: Yeah yeah. I know, 'progressing mankind towards superhuman capabilities.'
+        
+        You're confused why she seems disappointed.
+        
+        Myrtle: Literally everyone at the party has been raving to me about how 'amazing' I am. It's
+        Myrtle: not really that amazing. Professor Treuse just made a stupid error in his modeling
+        Myrtle: of five-alpha dihydroprogesterone. He forgot the damn thirtieth carbon
+        Myrtle: resulting in an error with his final calculation. I fixed it, and it just so happens
+        Myrtle: when that specific carbon interacts with an arterial graft, the body
+        Myrtle: merges almost immediately with the artificial limb. Cool, whatever.
+        
+        you: *in awe*
+        
+        Myrtle: Umm.. anyway! What's up?
+        
+        >ask about getting into the garage
+            Myrtle: Oh of course! Actually, Richard told me earlier that when you get here, to let
+            Myrtle: you know he'd be in the garage. Here, take the key.
+            
+            *You've gained the garage key!*
+            
+            You head back to the hallway.
+    >go to music
+    
 
-
-
-
-LEVEL 2    
-This is where the story gets interesting. Before you are a series of tasks
-that should be completed before you depart for the party. There are 8 unique
-combinations in which each combination may turn the story into a new and
-exciting story. The main story is whatever you make of it. Each combination
-of actions leads you into a parallel universe in which anything can happen.
-(this section is already developed so no need to describe it)
-
-
-
-ONLY RELEVENT TO ALL WHO GET TO LEVEL 2.5
-@@@@@@@@@@@@@@@@@@@@@REMEMBER, MANAGER SAID TO TAKE IT 'SLOW'@@@@@@@@@@@@@@@@@@@
-LEVEL 2.5
-LEVEL 2.5.N
-NAP, dress F, teeth F, shower F
-           RING RING
-           CALLER ID
-           UNAVAILABLE
-           RING RING
-           You get the phone. Yet another unfamiliar yet familiar voice fills your ear.
-           ???: /name/?
-           Richard: /name/?! I LOVE YOU!! WOOOOO!!
-           ???: hello?
-           you: hello!
-           ???: /name/! It's Q!
-           you: ...
-           *you*: OH! FROM SOCIOLOGY!
-           *you*: Richard, you clever fig nut.
-           Q: Richard said to call you in case he got too drunk. He also said he loves you very much
-           and is happy you're friends. He's been saying that, more or less, for the last hour--ANYWAY!
-           Richard is definitely going to need a nanny tonight.
-           *You*: Nanny meaning someone to take care of them--specifically during or after a night of drinking.
-           Q: You're coming tonight, right?
-----PATH---you: No.--------------------------------------------------------------------------------------------------------
-___________GO_TO_LEVEL_GOODBYE______________________________________________________________
-LEVEL GOODBYE
-           1 MIN SINCE YOU HUNG UP
-           y'know, i'm so disappointed in you, /name/.
-           you could have just answered.. like a polite human being. I mean it's the least you could've done.
-           It could have been the most important call of your life.
-           But now you'll never know.
-           ...
-           ....
-           .....
-           
-           5 min since you hung up
-           Hey. It's me again, mr. narrator.
-           
-           y'know, i just g ot some interesting intel from a reliable source.
-           turn on your tv.
-           You turn on your tv.
-@@@@@@@@@@@@@REMEMBER@@@@@@@@@@@STONE CRAB@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-           news report about Richard being the local drug kingpin.
-           he tried to steal a bottle from the party, and pulled a gun.
-           in a fit of rage, he fires his gun three times,
-           injuring five students.
-           *fuzz*
-           *transmission end*
-____________________________________________________GO_TO_LEVEL_3____________________________________####################RESUME#######
-
-###############SO I THINK THE STORY WILL GO FOR A LOOP IN THIS PART. THIS LEVEL SHOULD BE A DREAM, ABOUT WAKING UP AND GOING TO THE PARTY, BEING CONSUMED BY WHAT HAPPENS, AS IT REALLY HAPPENS, AND THEN SKIPPING FORWARD TO LEVEL 6/7 THE AFTER PARTY, WHERE YOU JUST WAKE UP IN BED, AND THEY ARE UPSET YOU DIDN'T GO TO THE PARTY.
-           you wake up in a haze.
-
------differentpath----you: Yes!-------------------------------------------------------------------------------------------------------
-                      Q: Fantastic! (act of desiring you to be there) Freudian slip.
-                      *you*: oh SNAP.
-                      Q: Well i'm happy to hear you're coming out tonight. Richard is pretty tipsy.
-____________________________________________________GO_TO_LEVEL_3___________________________________
-LEVEL 3: NAP, DRESS(T) TEETH(F) SHOWER(F)
-           
-____________________________________________________GO_TO_LEVEL_4___________________________________
-           NAP, dress F, teeth T, shower F
-           NAP, dress F, teeth F, shower T
-
-           LEAVE      DRESS F TEETH F SHOWER F
-                      DRESS F TEETH T SHOWER F
-                      DRESS F TEETH F SHOWER T
-                      DRESS F TEETH T SHOWER T
-                      DRESS T TEETH F SHOWER T
-                      DRESS T TEETH T SHOWER F
-                      DRESS T TEETH F SHOWER F
-                      DRESS T TEETH T SHOWER T
-           
+      >Heather paces around frantically as if searching for something. Maybe you should help her?
+        >help Heather
+          ???: ...hey-- Hey! Have you seen my friend, Ron?
+          ???: 
+      >Myrtle
+        >talk to Myrtle
+      >Willow
+        >talk to Willow
+      >Ron
+        >open bathroom door
+      >Liz
+        >
