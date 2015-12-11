@@ -27,6 +27,7 @@ Level Two:
     [you will not be allowed to leave until you have completed all of the above]
     
 Level Three:
+    [ALSO, there is a flagpole bearing a bright yellow flag with a happy face on it]
     Upon arriving at 32nd and Elm, you see a beautiful two story house. Redwood porch on the right side
     of the house. Garage/basement combo on the left. You walk up to the house as a familiar face rushes
     frantically out of the front door. You begin up the steps as she hurries down them. Without missing
@@ -41,13 +42,56 @@ Level Three:
     You turn around to open the door, as-- *CRASH* --a noise comes from inside the garage. You open the
     door and the bass of the music assault your senses. 
     
-    You are in the hallway by the front door. There are stairs to the left, a room to the right, and music
-    coming from the end of the hallway.
+    You are in the hallway by the front door. There is a set of stairs, a door to the left, a room to 
+    the right, and music coming from the end of the hallway.
+    
+    You also notice a poster by the foot of the stairs.
+    
         (use [go to] and an area to go to that area)
     Areas:
+        poster
+        door
         stairs
         room
         music
+        
+    >go to poster
+        [] Go to the bathroom
+        [] Talk to Myrtle
+        [] Go to the garage
+        [] Talk to Q and Richard
+        [] Go upstairs (meet Guard)
+        [] Go back to the garage
+        [] Talk to Q and Richard
+        [] Meet Liz
+        [] Liz takes you upstairs (beats up the guard)
+        [] Look at all those trophies
+        [] Pull the one that is broken
+        [] Meet Ruby
+        [] Heather pops in while leaving Ruby
+        [] Bring Heather to the bathroom where Ron is
+        [] Heather bangs on the door, waking Ron
+        [] Ron opens the door
+        [] Drunk Ron insists on introducing you to Fen (he has a treat for Fen)
+        [] Fen brings you to the final door
+        [] Fen barks at the final door
+        [] The door opens and you meet Willow
+        [] Willow is Myrtle & Heather's mom
+        [] Willow is close to completing a complex math problem on her white board
+        [] She is holding Fen while finishing up, when you hear a collection of sirens.
+        [] Willow takes you through a secret firepole down to the garage
+        [] You land in Liz's dance room, where she is still practicing.
+        [] You warn her of the impending raid
+        [] Willow insists on everyone, Fen, You, Q, Richard, and Liz, to get in the Rolls Royce
+        [] (crazy ass cut scene)
+        [] Willow activates the cloaking device and there is a bright flash
+        [] There is a 
+        
+    >go to door
+        (WHILE HAVEN'T TALKED TO MYRTLE)
+        It's locked. You go back to where you were.
+        (AFTER YOU HAVE TALKED TO MYRTLE)
+        ###################need to write what goes next here
         
     >go to stairs
         (WHILE HAVEN'T FOUND RON)
@@ -107,17 +151,12 @@ Level Three:
             
             You head back to the hallway.
     >go to music
-    
+        Arriving in the heart of the party, you see a beer pong table, a rage cage table,
+        a kitchen area, a large group of people gathered around a T.V, and a room toward your right.
+        
 
       >Heather paces around frantically as if searching for something. Maybe you should help her?
         >help Heather
           ???: ...hey-- Hey! Have you seen my friend, Ron?
-          ???: 
-      >Myrtle
-        >talk to Myrtle
-      >Willow
-        >talk to Willow
-      >Ron
-        >open bathroom door
-      >Liz
-        >
+          ???:
+          
