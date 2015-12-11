@@ -84,9 +84,14 @@ Level Three:
         [] You warn her of the impending raid
         [] Willow insists on everyone, Fen, You, Q, Richard, and Liz, to get in the Rolls Royce
         [] (crazy ass cut scene)
-        [] Willow activates the cloaking device and there is a bright flash
-        [] There is a 
-        
+        [] You appear in the back seat with Q and Richard, Liz in the front seat, and Fen and Willow driving
+        [] Closure about every other character
+        [] Willow drops you off at your apartment
+        [] Richard and Q tag along
+        [] You enter your apartment and Richard passes out on the couch. 
+        [] You and Q nanny Richard for the last time
+        [] You invite Q into your room to sleep
+        [] LEVEL FOUR (FINAL LEVEL) maybe.
     >go to door
         (WHILE HAVEN'T TALKED TO MYRTLE)
         It's locked. You go back to where you were.
