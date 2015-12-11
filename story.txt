@@ -56,7 +56,7 @@ Level Three:
         music
         
     >go to poster
-        [] Go to the bathroom
+        [x] Go to the bathroom
         [] Talk to Myrtle
         [] Go to the garage
         [] Talk to Q and Richard
@@ -96,7 +96,7 @@ Level Three:
         (WHILE HAVEN'T TALKED TO MYRTLE)
         It's locked. You go back to where you were.
         (AFTER YOU HAVE TALKED TO MYRTLE)
-        ###################need to write what goes next here
+        You have 
         
     >go to stairs
         (WHILE HAVEN'T FOUND RON)
@@ -109,10 +109,10 @@ Level Three:
             
     >go to room
         You knock on the door.
-        (WHILE HAVEN'T TRIED TO OPEN BATHROOM)
+        (WHILE HAVEN'T VISITED THE BATHROOM)
             ???: Go away.
             You turn around and go back to where you were.
-        (WHEN YOU HAVE TRIED TO OPEN BATHROOM)
+        (WHEN YOU HAVE VISITED THE BATHROOM)
         . . .
         The door cracks open and a head peeks out at you.
         you: ... Hello?
@@ -155,13 +155,47 @@ Level Three:
             *You've gained the garage key!*
             
             You head back to the hallway.
+            
     >go to music
-        Arriving in the heart of the party, you see a beer pong table, a rage cage table,
-        a kitchen area, a large group of people gathered around a T.V, and a room toward your right.
-        
-
-      >Heather paces around frantically as if searching for something. Maybe you should help her?
-        >help Heather
-          ???: ...hey-- Hey! Have you seen my friend, Ron?
-          ???:
-          
+        Arriving in the heart of the party, you see a beer pong table, a kitchen area, a large group of 
+        people gathered around a T.V, and a room toward your right.
+        Areas:
+            beer pong table
+            kitchen
+            T.V
+            room
+            
+            >go to beer pong table
+                As you approach the table, a ball flies across the table, sinking into a cup. A collective
+                cheer erupts from the spectators as the losing team downs a beer in unison.
+                Boy: Hey! No randoms.
+                You retreat back to the music.
+            
+            >go to kitchen
+                Upon sneaking past the beer pong crowd, you arrive at an almost industrial size kitchen.
+                Marble countertops, sapphire trim, and TWO refrigerators. TWO. To your right is an
+                inconspicuous table of three. Each person has a fist outreached and a water glass to
+                their left. 
+                Girl: Hey! Welcome to the designated driver table. We like to keep things fun without drinking.
+                Girl: Unfortunately, we're up to capacity for the rest of the night. Three players only. Sorry!
+                You retreat back to the kitchen area.
+            
+            >go to T.V
+                Sports Anchor: The thirty, the twenty, the ten, touchdown!!
+                Sports Anchor: A 97 yard kick return for a touchdown!
+                College Kids: (collective cheering)
+                It seems they are busy.
+                You retreat to the music.
+                
+            >go to the room
+                Upon reaching the room, you hear noises coming from inside.
+                ???: *heaving*
+                ???: *whimpering*
+                ???: *more heaving*
+                you: You alright in there?
+                ???: [gibberish]
+                you: Hello?
+                ???: Ghejkftkejkltjtkjlahejkjlkjaljiljtssjhheerrr--
+                ???: *heaving*
+                You slowly back away from the door back to the music.
+                CHECK_BATHROOM = TRUE; (move on to Myrtle)
