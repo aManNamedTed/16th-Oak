@@ -15,6 +15,17 @@ Also add details about these things:
 [] i think? include something about the delay setting, in which no input is required
 --------------------------------------------------------------------------------------------------------
 ________________________________________________________STORY___________________________________________
+Get_Name:
+    It's Friday December 25th, 2015. 
+    
+    *ding ding*
+    
+    The train bell wakes you up as you realize you've reached your stop.
+    You exit the train and begin to head back to your apartment.
+    
+    It's a brisk evening as you 
+    ###########################
+    ------------------------------------------------------
 Level One:
     Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
     and the voice on the other line says, "Dude! Party on 32nd and Elm! That cutie from your sociology 
@@ -46,7 +57,7 @@ Level Three:
       *you*: Oh what's her NAME? I remember we had World History in high school, but ugh, I can't
       remember her name for the life of me. And Ron? I also remember him from high school. He was 
       exceptional at hyper-realistic art. Hmm. I'll be sure to keep an eye out for him.
-    
+    ---------------------------------------------------------------------------------------------------
     You turn around to open the door, as-- *CRASH* --a raucous noise comes from inside the garage. 
     You open the door and the bass of the music assault your senses. 
     
@@ -55,7 +66,6 @@ Level Three:
     
     You also notice a poster by the foot of the stairs.
     
-        //put this in the tutorial (use [go to] and an area to go to that area)
     Areas:
         poster
         door
@@ -111,13 +121,13 @@ Level Three:
         [] You and Q nanny Richard for the last time
         [] You invite Q into your room to sleep
         [] LEVEL FOUR (FINAL LEVEL) maybe.
-        
+    ---------------------------------------------------------------------------------------------------------
     >go to door
         (WHILE HAVEN'T TALKED TO MYRTLE)
         It's locked. You go back to where you were.
         (AFTER YOU HAVE TALKED TO MYRTLE)
         Using the garage key, the door clicks open. You step into a dimly lit stairwell.
-    //maybe if you beat the game, a bool will flip where a secret door is there, hiding '(idkyet)'
+        //maybe if you beat the game, a bool will flip where a secret door is there, hiding '(idkyet)'
         
         Areas:
         garage
@@ -128,17 +138,17 @@ Level Three:
             
     >go to stairs
         (WHILE HAVEN'T TALKED TO LIZ) 
-    //maybe i'll throw shoutouts if you enter certain names, BUT EYES ON THE PRIZE FOR NOW.
             Upon making the turn up the stairs, a large man in a suit stops you in your tracks.
             Guard: Name?
+        //maybe i'll throw shoutouts if you entered certain names, BUT EYES ON THE PRIZE FOR NOW.
             you: uh.. /name/?
             The guard searches for your name...
             Guard: You're not on the list.
             The guard turns you around and sends you back downstairs.
-        ---------------------------------------------------------------------------------------
+        
         (WHEN YOU HAVE TALKED TO LIZ)
         ##########################
-        
+    --------------------------------------------------------------------------------------------    
     >go to room
         You knock on the door.
         (WHILE HAVEN'T VISITED THE BATHROOM)
@@ -183,14 +193,29 @@ Level Three:
         you: *in awe*
         
         Myrtle: Umm.. yeah. Oh! Richard told me that when you showed up, to let you know he'd be in the
-        Myrtle: garage. It's through the door in the hallway. Heather likes to lock it during parties 
+        Myrtle: garage. 
+        
+        *You've gained the garage key!*
+            
+        Myrtle: It's through the door in the hallway. Heather likes to lock it during parties 
         Myrtle: so no one bothers Liz. 
         
-        *beep beep*
-            *You've gained the garage key!*
-            
-            You head back to the hallway.
-            
+            ['expletive' in morse code]
+        
+        Myrtle: Like my new ringtone?! It's a word that holds 'deer' to my heart. Haha, get it? Deer. 
+        Myrtle: Because 'deer' reminds me of 'moose,' and 'moose' and 'morse' are just one letter away
+        Myrtle: from each other. And you know what letter they're differing? R! And THAT is the gas
+        Myrtle: constant made famous by French chemist, Henri Victor Regnault! Haha! Clever, right?
+        Myrtle: Anyway! I'm gonna take this. Make sure Richard is alright for me, okay?
+        Myrtle: He seemed pretty tipsy last I saw him.
+    
+        You reassure her that you will take good care of Richard, and head back to the hallway.
+        
+        (AFTER VISITING MYRTLE AND VIEWING THE CUT SCENE)
+        You knock on the door.
+        
+        Myrtle: I'm busy!
+    ---------------------------------------------------------------------------------------------------    
     >go to music
         Arriving in the heart of the party, you see a beer pong table, a kitchen area, a large group of 
         people gathered around a T.V, and a room toward your right.
@@ -205,23 +230,24 @@ Level Three:
                 cheer erupts from the spectators as the losing team downs a beer in unison.
                 Boy: Hey! No randoms.
                 You retreat back to the music.
-            
+            --------------------------------------------------------------------------------------------------
             >go to kitchen
                 Upon sneaking past the beer pong crowd, you arrive at an almost industrial size kitchen.
                 Marble countertops, sapphire trim, and TWO refrigerators. TWO. To your right is an
-                inconspicuous table of three. Each person has a fist outreached and a water glass to
-                their left. 
+                inconspicuous table of three. Each person has their left fist outreached, and a glass of 
+                something in their right.
+            
                 Girl: Hey! Welcome to the designated driver table. We like to keep things fun without drinking.
                 Girl: Unfortunately, we're up to capacity for the rest of the night. Three players only. Sorry!
                 You retreat back to the kitchen area.
-            
+            ---------------------------------------------------------------------------------------------------
             >go to T.V
                 Sports Anchor: The thirty, the twenty, the ten, touchdown!!
                 Sports Anchor: A 97 yard kick return for a touchdown!
                 College Kids: (collective cheering)
                 It seems they are busy.
                 You retreat to the music.
-                
+            ---------------------------------------------------------------------------------------------------
             >go to the room
                 Upon reaching the room, you hear noises coming from inside.
                 ???: *heaving*
@@ -234,3 +260,4 @@ Level Three:
                 ???: *heaving*
                 You slowly back away from the door back to the music.
                 CHECK_BATHROOM = TRUE; (move on to Myrtle)
+            ---------------------------------------------------------------------------------------------------
