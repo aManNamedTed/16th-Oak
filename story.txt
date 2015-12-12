@@ -57,7 +57,7 @@ Level Three:
         
     >go to poster
         [x] Go to the bathroom
-        [] Talk to Myrtle
+        [x] Talk to Myrtle
         [] Go to the garage
         [] Talk to Q and Richard
         [] Go upstairs (meet Guard)
