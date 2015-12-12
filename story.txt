@@ -20,11 +20,57 @@ Get_Name:
     
     *ding ding*
     
-    The train bell wakes you up as you realize you've reached your stop.
-    You exit the train and begin to head back to your apartment.
+    The train bell wakes you as you realize you've reached your stop.
     
-    It's a brisk evening as you 
-    ###########################
+    You leave the train and begin your four minute walk back to your apartment complex.
+    
+    (insert some Jolly Oxen here using beeps and frequencies)
+    
+    Wasn't that nice?
+    
+    Anyway.
+    
+    You see a strange man standing outside of your apartment complex.
+    
+    As you approach, the man notices you and stands in front of the door.
+    
+    Strange Man: "Name?"
+        >name[]
+            The man hesitates for a second, looking you up and down.
+            
+            ...
+            
+            if(name == "david amante")
+            {
+                Strange Man: "Apologies, sir. It's you, from the past. It's 3:09AM PST on"
+                Strange Man: "December 12, 2015. You got this crazy dumb idea to try to"
+                Strange Man: "release this game in thirteen days. I mean, it's on GitHub,"
+                Strange Man: "the edits are there. The archiving. Dude you're nuts for"
+                Strange Man: "deciding to finish this game in 13 days. I mean, disregarding the fact"
+                Strange Man: "that you have that hash table project due in 8 days, and a calculus I final"
+                Strange Man: "in 2 days, oh and the CIS in-class final is on the 17th, that final you"
+                Strange Man: "should be studying for.. Well I mean. Priorities, right? Go you. Or well,"
+                Strange Man: "go me? It's late and you/i/we're tired. Good luck finishing this." 
+                Strange Man: "Thanks me. Or you. Us. This is weird. Go on in. Have fun."
+            }
+            else
+            {
+                #you are not him (if you put david amante as the name of your char, special stuff happens)
+                Holding a finger to his earpiece, he says,
+                
+                Strange Man: "01111001 01101111 01110101"
+                delay(1 second)
+                Strange Man: "01100001 01110010 01100101"
+                delay(1 second)
+                Strange Man: "01101110 01101111 01110100"
+                delay(.7)
+                Strange Man: "01101000 01101001 01101101"
+                
+                Strange Man: "My apologies. You must be one of the other 9 people that live here."
+                Strange Man: "Please. After you."
+                
+                The man holds the door open as you enter.
+            }
     ------------------------------------------------------
 Level One:
     Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
@@ -39,7 +85,7 @@ Level Two:
     Upon hearing the new of an uproarious shindig occurring in the near future, you find yourself tired,
     surprised, and other words expressing mood.
       >Shower
-        /set music, during an ad you hear of a medical discovery by a Myrtle Wexington
+        //set music, during an ad you hear of a medical discovery by a Myrtle Wexington
       >Get Dressed
       >Brush Teeth
       >Leave
@@ -89,9 +135,6 @@ Level Three:
         [x] Talk to Myrtle
         [x] Go to the garage
         [] Talk to Q and Richard
-        [] Go upstairs (meet Guard)
-        [] Go back to the garage
-        [] Talk to Q and Richard
         [] Meet Liz
         [] Liz takes you upstairs (beats up the guard)
         [] Look at all those trophies
@@ -133,8 +176,40 @@ Level Three:
         garage
         
         >go to garage
-        
-        
+            You descend the staircase and open the door to the garage. You see two cars to the right of you,
+            a door to the left, and a large shelving structure behind you. In front of you, there
+            are two people sitting in lawn chairs looking into a room separated by glass.
+            
+            Areas:
+                cars
+                door
+                shelves
+                people
+            
+            >go to cars
+                There are two cars, side by side. A midnight blue Maserati Granturismo MC Stradale. Absolutely
+                stunning. You circle the car twice. No license plates. Keeping it company is an onyx black Rolls 
+                Royce Wraith with gray trim. It's so shiny. Almost.. abnormally shiny? Too shiny. It's weird.
+                Hmm.. Again, no plates. Odd.
+                You return to where you were.
+            ----------------------------------------------------------------------------------------------------
+            >go to door
+                (WHILE HAVEN'T TALKED TO PEOPLE)
+                There is a red light on right above the doorway. Underneath it reads,
+                "Do not disturb" 
+                Maybe it's a sign to not go in there.
+                
+                (AFTER YOU HAVE TALKED TO PEOPLE)
+                ##################################
+            
+            >go to shelves
+                Before you are two book shelves. One side filled with house and art paint, and painting books,
+                while the other side is filled with hand and power tools. Looks like your everyday workbench.
+                You turn back around.
+            
+            >go to people
+                #################################
+            
             
     >go to stairs
         (WHILE HAVEN'T TALKED TO LIZ) 
