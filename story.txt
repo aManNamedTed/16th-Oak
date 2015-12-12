@@ -5,8 +5,73 @@ Background: I realized I had messed up by trying to implement too many features 
 the game. This is my second attempt at creating the story, from start to finish, and then actually
 programming the entire game from start to finish, within 24 hours. So the goal here in dayata 2.0 is to
 create the entire story, hopefully succeeding in 10 full minutes of play time. The story begins here:
-
+________________________________________TUTORIAL________________________________________________________
+Classic tutorial, no skipping, primarily the tutorial from the last attempt at this game. Can be found
+in /mainlib. 
+Also add details about these things:
+[] include something about using the new 'go to + area' mechanic.
+[] include about how there are moments where there will be noise, so use headphones, and be considerate
+    if you're in a setting where others can readily hear what your computer will put out
+[] i think? include something about the delay setting, in which no input is required
+--------------------------------------------------------------------------------------------------------
 ________________________________________________________STORY___________________________________________
+Get_Name:
+    It's Friday December 25th, 2015. 
+    
+    *ding ding*
+    
+    The train bell wakes you as you realize you've reached your stop.
+    
+    You leave the train and begin your four minute walk back to your apartment complex.
+    
+    (insert some Jolly Oxen here using beeps and frequencies)
+    
+    Wasn't that nice?
+    
+    Anyway.
+    
+    You see a strange man standing outside of your apartment complex.
+    
+    As you approach, the man notices you and stands in front of the door.
+    
+    Strange Man: "Name?"
+        >name[]
+            The man hesitates for a second, looking you up and down.
+            
+            ...
+            
+            if(name == "david amante")
+            {
+                Strange Man: "Apologies, sir. It's you, from the past. It's 3:09AM PST on"
+                Strange Man: "December 12, 2015. You got this crazy dumb idea to try to"
+                Strange Man: "release this game in thirteen days. I mean, it's on GitHub,"
+                Strange Man: "the edits are there. The archiving. Dude you're nuts for"
+                Strange Man: "deciding to finish this game in 13 days. I mean, disregarding the fact"
+                Strange Man: "that you have that hash table project due in 8 days, and a calculus I final"
+                Strange Man: "in 2 days, oh and the CIS in-class final is on the 17th, that final you"
+                Strange Man: "should be studying for.. Well I mean. Priorities, right? Go you. Or well,"
+                Strange Man: "go me? It's late and you/i/we're tired. Good luck finishing this." 
+                Strange Man: "Thanks me. Or you. Us. This is weird. Go on in. Have fun."
+            }
+            else
+            {
+                #you are not him (if you put david amante as the name of your char, special stuff happens)
+                Holding a finger to his earpiece, he says,
+                
+                Strange Man: "01111001 01101111 01110101"
+                delay(1 second)
+                Strange Man: "01100001 01110010 01100101"
+                delay(1 second)
+                Strange Man: "01101110 01101111 01110100"
+                delay(.7)
+                Strange Man: "01101000 01101001 01101101"
+                
+                Strange Man: "My apologies. You must be one of the other 9 people that live here."
+                Strange Man: "Please. After you."
+                
+                The man holds the door open as you enter.
+            }
+    ------------------------------------------------------
 Level One:
     Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
     and the voice on the other line says, "Dude! Party on 32nd and Elm! That cutie from your sociology 
@@ -15,18 +80,19 @@ Level One:
     couldn't've been THAT bad! So are you coming or not??" You reply half-heartedly with a yes. Richard: 
     GOOD! It's still early--so you probably have an hour before we 'turn up.' I guess that's what this 
     generation's culture calls it nowadays. Nevertheless, I better see you here tonight!
-    
+    ---------------------------------------------------------------------------------------------------
 Level Two:
     Upon hearing the new of an uproarious shindig occurring in the near future, you find yourself tired,
     surprised, and other words expressing mood.
       >Shower
-        /set music, during an ad you hear of a medical discovery by a Myrtle Wexington
+        //set music, during an ad you hear of a medical discovery by a Myrtle Wexington
       >Get Dressed
       >Brush Teeth
       >Leave
     [you will not be allowed to leave until you have completed all of the above]
-    
+    ---------------------------------------------------------------------------------------------------
 Level Three:
+    [ALSO, there is a flagpole bearing a bright yellow flag with a happy face on it]
     Upon arriving at 32nd and Elm, you see a beautiful two story house. Redwood porch on the right side
     of the house. Garage/basement combo on the left. You walk up to the house as a familiar face rushes
     frantically out of the front door. You begin up the steps as she hurries down them. Without missing
@@ -37,33 +103,135 @@ Level Three:
       *you*: Oh what's her NAME? I remember we had World History in high school, but ugh, I can't
       remember her name for the life of me. And Ron? I also remember him from high school. He was 
       exceptional at hyper-realistic art. Hmm. I'll be sure to keep an eye out for him.
+    ---------------------------------------------------------------------------------------------------
+    You turn around to open the door, as-- *CRASH* --a raucous noise comes from inside the garage. 
+    You open the door and the bass of the music assault your senses. 
     
-    You turn around to open the door, as-- *CRASH* --a noise comes from inside the garage. You open the
-    door and the bass of the music assault your senses. 
+    You are in the hallway by the front door. There is a set of stairs, a door to the left, a room to 
+    the right, and music coming from the end of the hallway.
     
-    You are in the hallway by the front door. There are stairs to the left, a room to the right, and music
-    coming from the end of the hallway.
-        (use [go to] and an area to go to that area)
+    You also notice a poster by the foot of the stairs.
+    
     Areas:
+        poster
+        door
         stairs
         room
         music
         
+    >go to poster 
+    {THE WAY THIS WILL WORK IS IT SHOWS 3 AT A TIME, AFTER YOU FINISH THE TOP-MOST TASK, A BOOL WILL 
+     SWAP VALUES, MAKING THE TOP TASK DISAPPEAR, AND THE NEW (3RD) BOTTOM TASK TO APPEAR. THE USER
+     SHOULD BE ABLE TO ACCESS THIS POSTER FROM ANYWHERE.
+     either:
+    1.  CONSIDERING IT NOW, I THINK I WILL MAKE IT BE SOME HANDOUT FROM SOMEONE AT THE PARTY, IN WHICH
+        YOU TAKE THE POSTER AND FOLD IT AND PUT IT INTO YOUR POCKET,
+    2.  OR IT WILL JUST BE A POSTER THAT IS CONSPICUOUSLY ON EVERY FLOOR
+    3.  OR IT WILL BE ONLY ON THE FIRST FLOOR, (NOT IN BASEMENT/NOT IN SECOND FLOOR
+    4.  OR MAYBE IT WILL JUST BE A COMMAND THAT IS SOMETHING LIKE, "what do i do", WHERE IT WILL CALL
+        THE NARRATOR IN WHICH THEY WILL TELL YOU WHAT TO DO
+    }
+        [x] Go to the bathroom
+        [x] Talk to Myrtle
+        [x] Go to the garage
+        [] Talk to Q and Richard
+        [] Meet Liz
+        [] Liz takes you upstairs (beats up the guard)
+        [] Look at all those trophies
+        [] Pull the one that is broken
+        [] Meet Ruby
+        [] Heather pops in while leaving Ruby
+        [] Bring Heather to the bathroom where Ron is
+        [] Heather bangs on the door, waking Ron
+        [] Ron opens the door
+        [] Drunk Ron insists on introducing you to Fen (he has a treat for Fen)
+        [] Fen brings you to the final door
+        [] Fen barks at the final door
+        [] The door opens and you meet Willow
+        [] Willow is Myrtle & Heather's mom
+        [] Willow is close to completing a complex math problem on her white board
+        [] She is holding Fen while finishing up, when you hear a collection of sirens.
+        [] Willow takes you through a secret firepole down to the garage
+        [] You land in Liz's dance room, where she is still practicing.
+        [] You warn her of the impending raid
+        [] Willow insists on everyone, Fen, You, Q, Richard, and Liz, to get in the Rolls Royce
+        [] (crazy ass cut scene)
+        [] You appear in the back seat with Q and Richard, Liz in the front seat, and Fen and Willow driving
+        [] Closure about every other character
+        [] Willow drops you off at your apartment
+        [] Richard and Q tag along
+        [] You enter your apartment and Richard passes out on the couch. 
+        [] You and Q nanny Richard for the last time
+        [] You invite Q into your room to sleep
+        [] LEVEL FOUR (FINAL LEVEL) maybe.
+    ---------------------------------------------------------------------------------------------------------
+    >go to door
+        (WHILE HAVEN'T TALKED TO MYRTLE)
+        It's locked. You go back to where you were.
+        (AFTER YOU HAVE TALKED TO MYRTLE)
+        Using the garage key, the door clicks open. You step into a dimly lit stairwell.
+        //maybe if you beat the game, a bool will flip where a secret door is there, hiding '(idkyet)'
+        
+        Areas:
+        garage
+        
+        >go to garage
+            You descend the staircase and open the door to the garage. You see two cars to the right of you,
+            a door to the left, and a large shelving structure behind you. In front of you, there
+            are two people sitting in lawn chairs looking into a room separated by glass.
+            
+            Areas:
+                cars
+                door
+                shelves
+                people
+            
+            >go to cars
+                There are two cars, side by side. A midnight blue Maserati Granturismo MC Stradale. Absolutely
+                stunning. You circle the car twice. No license plates. Keeping it company is an onyx black Rolls 
+                Royce Wraith with gray trim. It's so shiny. Almost.. abnormally shiny? Too shiny. It's weird.
+                Hmm.. Again, no plates. Odd.
+                You return to where you were.
+            ----------------------------------------------------------------------------------------------------
+            >go to door
+                (WHILE HAVEN'T TALKED TO PEOPLE)
+                There is a red light on right above the doorway. Underneath it reads,
+                "Do not disturb" 
+                Maybe it's a sign to not go in there.
+                
+                (AFTER YOU HAVE TALKED TO PEOPLE)
+                ##################################
+            
+            >go to shelves
+                Before you are two book shelves. One side filled with house and art paint, and painting books,
+                while the other side is filled with hand and power tools. Looks like your everyday workbench.
+                You turn back around.
+            
+            >go to people
+                #################################
+            
+            
     >go to stairs
-        (WHILE HAVEN'T FOUND RON)
+        (WHILE HAVEN'T TALKED TO LIZ) 
             Upon making the turn up the stairs, a large man in a suit stops you in your tracks.
             Guard: Name?
+        //maybe i'll throw shoutouts if you entered certain names, BUT EYES ON THE PRIZE FOR NOW.
             you: uh.. /name/?
             The guard searches for your name...
             Guard: You're not on the list.
             The guard turns you around and sends you back downstairs.
-            
+        
+        (WHEN YOU HAVE TALKED TO LIZ)
+        ##########################
+    --------------------------------------------------------------------------------------------    
     >go to room
         You knock on the door.
-        (WHILE HAVEN'T TRIED TO OPEN BATHROOM)
+        (WHILE HAVEN'T VISITED THE BATHROOM)
             ???: Go away.
             You turn around and go back to where you were.
-        (WHEN YOU HAVE TRIED TO OPEN BATHROOM)
+        
+        (WHEN YOU HAVE VISITED THE BATHROOM)
+        You knock on the door.
         . . .
         The door cracks open and a head peeks out at you.
         you: ... Hello?
@@ -72,8 +240,10 @@ Level Three:
         ???: /name/! I'm so glad to see you! This dumb party my sister threw is SOOO lame.
         you: ...?
         ???: Oh.. uh?
+        
         She notices your confusion.
-        ???: Myrtle? From organic chem?
+        
+        ???: I'm uh.. We had organic chem together.
         You realize who the familiar face from earlier was. Heather! The T.A from World History.
         Her and her sister come from an iconic family. Dad is the head of Oncology at the local
         hospital, while Mom is a data analyst for Google. Heather is known for being the ONLY
@@ -97,27 +267,72 @@ Level Three:
         
         you: *in awe*
         
-        Myrtle: Umm.. anyway! What's up?
+        Myrtle: Umm.. yeah. Oh! Richard told me that when you showed up, to let you know he'd be in the
+        Myrtle: garage. 
         
-        >ask about getting into the garage
-            Myrtle: Oh of course! Actually, Richard told me earlier that when you get here, to let
-            Myrtle: you know he'd be in the garage. Here, take the key.
+        *You've gained the garage key!*
             
-            *You've gained the garage key!*
-            
-            You head back to the hallway.
-    >go to music
+        Myrtle: It's through the door in the hallway. Heather likes to lock it during parties 
+        Myrtle: so no one bothers Liz. 
+        
+            ['expletive' in morse code]
+        
+        Myrtle: Like my new ringtone?! It's a word that holds 'deer' to my heart. Haha, get it? Deer. 
+        Myrtle: Because 'deer' reminds me of 'moose,' and 'moose' and 'morse' are just one letter away
+        Myrtle: from each other. And you know what letter they're differing? R! And THAT is the gas
+        Myrtle: constant made famous by French chemist, Henri Victor Regnault! Haha! Clever, right?
+        Myrtle: Anyway! I'm gonna take this. Make sure Richard is alright for me, okay?
+        Myrtle: He seemed pretty tipsy last I saw him.
     
-
-      >Heather paces around frantically as if searching for something. Maybe you should help her?
-        >help Heather
-          ???: ...hey-- Hey! Have you seen my friend, Ron?
-          ???: 
-      >Myrtle
-        >talk to Myrtle
-      >Willow
-        >talk to Willow
-      >Ron
-        >open bathroom door
-      >Liz
-        >
+        You reassure her that you will take good care of Richard, and head back to the hallway.
+        
+        (AFTER VISITING MYRTLE AND VIEWING THE CUT SCENE)
+        You knock on the door.
+        
+        Myrtle: I'm busy!
+    ---------------------------------------------------------------------------------------------------    
+    >go to music
+        Arriving in the heart of the party, you see a beer pong table, a kitchen area, a large group of 
+        people gathered around a T.V, and a room toward your right.
+        Areas:
+            beer pong table
+            kitchen
+            T.V
+            room
+            
+            >go to beer pong table
+                As you approach the table, a ball flies across the table, sinking into a cup. A collective
+                cheer erupts from the spectators as the losing team downs a beer in unison.
+                Boy: Hey! No randoms.
+                You retreat back to the music.
+            --------------------------------------------------------------------------------------------------
+            >go to kitchen
+                Upon sneaking past the beer pong crowd, you arrive at an almost industrial size kitchen.
+                Marble countertops, sapphire trim, and TWO refrigerators. TWO. To your right is an
+                inconspicuous table of three. Each person has their left fist outreached, and a glass of 
+                something in their right.
+            
+                Girl: Hey! Welcome to the designated driver table. We like to keep things fun without drinking.
+                Girl: Unfortunately, we're up to capacity for the rest of the night. Three players only. Sorry!
+                You retreat back to the kitchen area.
+            ---------------------------------------------------------------------------------------------------
+            >go to T.V
+                Sports Anchor: The thirty, the twenty, the ten, touchdown!!
+                Sports Anchor: A 97 yard kick return for a touchdown!
+                College Kids: (collective cheering)
+                It seems they are busy.
+                You retreat to the music.
+            ---------------------------------------------------------------------------------------------------
+            >go to the room
+                Upon reaching the room, you hear noises coming from inside.
+                ???: *heaving*
+                ???: *whimpering*
+                ???: *more heaving*
+                you: You alright in there?
+                ???: [gibberish]
+                you: Hello?
+                ???: Ghejkftkejkltjtkjlahejkjlkjaljiljtssjhheerrr--
+                ???: *heaving*
+                You slowly back away from the door back to the music.
+                CHECK_BATHROOM = TRUE; (move on to Myrtle)
+            ---------------------------------------------------------------------------------------------------
