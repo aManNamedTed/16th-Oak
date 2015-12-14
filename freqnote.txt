@@ -1,8 +1,13 @@
-
-
-
-
-
+Half note               =  120 / BPM = 1.333
+Quarter note            =   60 / BPM = 0.667
+Eighth note             =   30 / BPM = 0.333
+Sixteenth note          =   15 / BPM = 0.167
+Dotted-quarter note     =   90 / BPM = 1.000
+Dotted-eighth note      =   45 / BPM = 0.500
+Dotted-sixteenth note   = 22.5 / BPM = 0.250
+Triplet-quarter note    =   40 / BPM = 0.444
+Triplet-eighth note     =   20 / BPM = 0.222
+Triplet-sixteenth note  =   10 / BPM = 0.111
 
 
 @======================================================================@

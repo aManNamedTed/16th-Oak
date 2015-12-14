@@ -31,6 +31,29 @@ void b0(double); void b1(double); void b2(double); void b3(double); void b4(doub
 
 int main()
 {
+	e5(700);
+	d5(300);
+	e5(300);
+	d5(200);
+	c5(500);
+	b4(300);
+	
+	e5(700);
+	cs5(300);
+	e5(200);
+	d5(300);
+	f5(700);
+	
+	f5(700);
+	g5(700);
+	a5(700);
+	g5(500);
+	
+	f5(500);
+	fs5(500);
+	a5(500);
+	g5(500);
+	b5(300);
 	
 	return 0;
 }
