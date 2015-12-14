@@ -208,7 +208,7 @@ Level Three:
                 You turn back around.
             
             >go to people
-                You approach#############
+                You approach the two people sitting in
             
             
     >go to stairs
