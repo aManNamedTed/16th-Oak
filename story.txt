@@ -14,6 +14,11 @@ Also add details about these things:
     if you're in a setting where others can readily hear what your computer will put out
 [] i think? include something about the delay setting, in which no input is required
 --------------------------------------------------------------------------------------------------------
+==========================MAIN MENU=====================================================================
+-Story Mode
+-Locked! (if talk to ruby, unlock ruby story)
+-Locked! (if talk to seb, unlock seb story)
+
 ________________________________________________________STORY___________________________________________
 Get_Name:
     It's Friday December 25th, 2015. 
