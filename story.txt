@@ -79,12 +79,16 @@ Get_Name:
     ------------------------------------------------------
 Level One:
     Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
-    and the voice on the other line says, "Dude! Party on 32nd and Elm! That cutie from your sociology 
+    and the voice on the other line says, "Dude! Party on 21st and Main! That cutie from your sociology 
     class is here!! You coming?" You are taken aback by the voice. It sounds familiar, but you're not 
     entirely sure who it is. "Who is this?" You ask, to which the voice says, "Richard! C'mon man! Work
     couldn't've been THAT bad! So are you coming or not??" You reply half-heartedly with a yes. Richard: 
     GOOD! It's still early--so you probably have an hour before we 'turn up.' I guess that's what this 
-    generation's culture calls it nowadays. Nevertheless, I better see you here tonight!
+    generation's culture calls it nowadays. Nevertheless, I better see you here tonight! I've got a
+    plan to get you to meet this cutie tonight!
+    you: but--
+    *click*
+    you: Shit.
     ---------------------------------------------------------------------------------------------------
 Level Two:
     Upon hearing the new of an uproarious shindig occurring in the near future, you find yourself tired,
@@ -203,6 +207,7 @@ Level Three:
                 There is a red light on right above the doorway. Underneath it reads,
                 "Do not disturb" 
                 Maybe it's a sign to not go in there.
+                You return to where you were.
                 
                 (AFTER YOU HAVE TALKED TO PEOPLE)
                 ##################################
@@ -213,8 +218,49 @@ Level Three:
                 You turn back around.
             
             >go to people
-                You approach the two people sitting in
-            
+                You approach the two. The boy's messy black hair rests on the shoulder of his friend. Thick
+                curly hair runs down the back of the lawn chair. Seems familiar. You're not quite sure where
+                you've seen this scene before, but you gather the courage to say hello.
+                >hello?
+                    The girl turns towards you carefully, not to wake the snoring boy. 
+                    ??? (whispering): "/name/? Shh! He's sleeping."
+                    you (whispering): Whoa. Is that.. Richard?
+                    ???: Of course. He asked me to nanny for him in case he got too drunk. 
+                    ???: He also said you'd be coming to the party around this time, too.
+                    ???: You remember me, right? Q? from sociology?
+                    ???: Richard was telling me about you.. y'know, until he blacked out.
+                    you: Um, well.. it's nice to meet you!
+                    Q: Ditto. Here, sit. Watch Liz practice with us.
+                    >sit
+                        Q: You know Liz, right?
+                        >no?
+                            Q: Oh! Well she's absolutely obsessed with boxing. Heather and Myrtle's
+                            Q: parents took her in when her parents passed. Tragic accident. Actually, 
+                            Q: it's what--/date/--today? Their deathday is tomorrow. Liz got their 
+                            Q: deathday tattooed on the inside of her wrist. She says it calms her when 
+                            Q: she gets upset. She relishes the fact that they are always watching over her. 
+                            Q: It's around this time that she gets super motivated to practice harder than ever.
+                            Q: Look at her. She's amazing.
+                            
+                            Soft orchestral music emanated from behind the glass. Liz flowed gracefully 
+                            around the ring, like water, dancing in a stream.  
+                            
+                            Q: Do you know how her parents passed?
+                            >no
+                                Q: Well, her father had picked her up from second grade because her
+                                Q: mother was enduring chemotherapy. On the way to the hospital,
+                                Q: a strange man in a suit approached her father. Her father was the
+                                Q: professor of dance the local community college so she figured it wasn't
+                                Q: a big deal. She says she had seen this man before, but wasn't
+                                Q: quite sure. 'Something was off,' she would say. Her father told her
+                                Q: to give him and the strange man some time to talk. 
+                                you: ...
+                                Q: Next thing she knew her father was on the floor gasping for air
+                                Q: as the man fled. She doesn't remember much after that..
+                                Q: Just being in the hospital with her parents laying next to each other..
+                                you: ...
+                                Q: They passed within minutes of each other.
+                                Q: Ever 
             
     >go to stairs
         (WHILE HAVEN'T TALKED TO LIZ) 
@@ -248,7 +294,7 @@ Level Three:
         
         She notices your confusion.
         
-        ???: I'm uh.. We had organic chem together.
+        ???: I'm uh.. We had... organic chem together.
         You realize who the familiar face from earlier was. Heather! The T.A from World History.
         Her and her sister come from an iconic family. Dad is the head of Oncology at the local
         hospital, while Mom is a data analyst for Google. Heather is known for being the ONLY
