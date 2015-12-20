@@ -143,12 +143,13 @@ Level Three:
         [x] Go to the bathroom
         [x] Talk to Myrtle
         [x] Go to the garage
-        [] Talk to Q and Richard
+        [x] Talk to Q and Richard
         [] Meet Liz
         [] Liz takes you upstairs (beats up the guard)
+        [] Meet Seb (unlock Seb's story in the main menu)
         [] Look at all those trophies
         [] Pull the one that is broken
-        [] Meet Ruby
+        [] Meet Ruby (unlock Ruby's story in the main menu)
         [] Heather pops in while leaving Ruby
         [] Bring Heather to the bathroom where Ron is
         [] Heather bangs on the door, waking Ron
