@@ -150,7 +150,7 @@ Level Three:
         [] Meet Seb (unlock Seb's story in the main menu)
         [x] Look at all those trophies
         [x] Pull the one that is broken
-        [] Meet Ruby (unlock Ruby's story in the main menu)
+        [x] Meet Ruby (unlock Ruby's story in the main menu)
         [] Heather pops in while leaving Ruby
         [] Bring Heather to the bathroom where Ron is
         [] Heather bangs on the door, waking Ron
@@ -379,14 +379,16 @@ Level Three:
         You notice four [puppies] in a small fenced-off area. To the right are shelves upon shelves of [trophies]. 
         Behind you is a closed [door].
         [boy]
-        [puppy]
+        [puppies]
         [trophies]
         [door]
         >go to boy
             As you approach the boy, he gets up and violently
-        >go to puppy
+        >go to puppies
             There's three pitch-black-haired puppies and one West Highland White Terrier. The three border collies 
             bear collars with the names, 'Myoh,' 'Robin,' and 'Kermit.' The westie's collar bears the name, 'Ruoy.'
+            Kermit the dog. How clever.
+            
             Pet the puppies? [yes]
             >yes
                 The puppies playfully bite on your hand and welcome the attention. 
@@ -478,7 +480,7 @@ Level Three:
                 
                 The one on the left is of Myrtle, smile full of braces and holding up a blue ribbon. 
                 A woman stands beside her holding up a paper with a chemical structure on it. 
-                In the background is a banner, "Frosh Science Fair /date-6years/".
+                In the background is a banner, "Frosh Science Fair /date-8years/".
                 
                 In the middle is a picture of a man in a white lab coat, smiling happily next to a man with a cane.
             
