@@ -13,6 +13,7 @@ Also add details about these things:
 [] include about how there are moments where there will be noise, so use headphones, and be considerate
     if you're in a setting where others can readily hear what your computer will put out
 [] i think? include something about the delay setting, in which no input is required
+[] include something about the [command] response feature
 --------------------------------------------------------------------------------------------------------
 ==========================MAIN MENU=====================================================================
 -Story Mode
@@ -79,19 +80,19 @@ Get_Name:
     ------------------------------------------------------
 Level One:
     Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
-    and the voice on the other line says, "Dude! Party on 21st and Main! That cutie from your sociology 
+    and the voice on the other line says, "Dude! Party on 16th and Oak! That cutie from your sociology 
     class is here!! You coming?" You are taken aback by the voice. It sounds familiar, but you're not 
     entirely sure who it is. "Who is this?" You ask, to which the voice says, "Richard! C'mon man! Work
     couldn't've been THAT bad! So are you coming or not??" You reply half-heartedly with a yes. Richard: 
     GOOD! It's still early--so you probably have an hour before we 'turn up.' I guess that's what this 
     generation's culture calls it nowadays. Nevertheless, I better see you here tonight! I've got a
-    plan to get you to meet this cutie tonight!
+    plan to introduce you two!
     you: but--
     *click*
     you: Shit.
     ---------------------------------------------------------------------------------------------------
 Level Two:
-    Upon hearing the new of an uproarious shindig occurring in the near future, you find yourself tired,
+    Upon hearing the news of an uproarious shindig occurring in the near future, you find yourself tired,
     surprised, and other words expressing mood.
       >Shower
         //set music, during an ad you hear of a medical discovery by a Myrtle Wexington
@@ -101,7 +102,7 @@ Level Two:
     [you will not be allowed to leave until you have completed all of the above]
     ---------------------------------------------------------------------------------------------------
 Level Three:
-    Upon arriving at 32nd and Elm, you see a beautiful two story house. Redwood porch on the right side
+    Upon arriving at 16th and Oak, you see a beautiful two story house. Redwood porch on the right side
     of the house. Garage/basement combo on the left. A flagpole stands tall to the left of the garage.
     A flag bearing bright yellow smiles at you from above. You walk up to the house as a familiar face rushes
     frantically out of the front door. You begin up the steps as she hurries down them. Without missing
@@ -250,7 +251,12 @@ Level Three:
                                 [no]
                             >no
                                 Q: Well, her father had picked her up from second grade because her
-                                Q: mother was enduring chemotherapy. On the way to the hospital,
+                                Q: mother was enduring chemotherapy. She loved her father so much.
+                                Q: He always supported her and always emphasized the importance of
+                                Q: elegance of and beauty. I remember him too. He was indeed a nice man.
+                                you: So then what happened?
+                                Q: Oh, right. Sad story. Anyway.
+                                Q: On the way to the hospital,
                                 Q: a strange man in a suit approached her father. Her father was the
                                 Q: professor of dance at the local community college so she figured it wasn't
                                 Q: a big deal. She says she had seen this man before, but wasn't
@@ -261,7 +267,7 @@ Level Three:
                                 Q: as the man fled. She doesn't remember much after that..
                                 Q: Just being in the hospital with her parents laying next to each other..
                                 you: ...
-                                Q: "Be graceful, love." Her father told her in his final hour.
+                                Q: "Be graceful, love." Her father told her with his final breaths.
                                 Q: Both parents passed within minutes of each other.
                                 
                                 You think quietly to yourself.. 
@@ -298,6 +304,7 @@ Level Three:
                                 Liz (laughing): /name/ hun, if there's anything you need, just let me know.
                                 
                                 Actually, this would be a great time to [ask about the guard] upstairs.
+                                
                                 >ask about the guard
                                     You describe the large man in a suit taking names at the top of the stairs.
                                     
@@ -307,16 +314,20 @@ Level Three:
                                     >yes
                                         Liz: ...
                                         
-                                        Liz's mood changes tremendously. She's quiet. Grinning? Almost.. happy?
+                                        Liz's mood changes tremendously. She's quiet. Grinning? 
+                                        
+                                        Almost.. happy?
+                                        
                                         You notice her eyes start to glisten as she turns her back to you.
                                         She begins unravelling her hand-wraps.
                                         
                                         Liz: /name/. Wait here. I'll be right back.
                                         
-                                        As Liz begins to walk away, the final wrap slides off of her wrist
+                                        As Liz begins to walk away, the final wrap slides off of her thumb
                                         and falls to the floor.
                                         
                                         (delay printing between each letter)
+                                       
                                         B
                                         E
                                         
@@ -328,17 +339,18 @@ Level Three:
                                         F
                                         U
                                         L
+                                        ♥
                                         
                                         Cascades down from her elbow to her wrist in Amatic letters.
                                         
                                         A few seconds later you hear shouts from the first floor. A door
                                         opens, and you hear a sound like a sack of potatoes being dragged across the floor.
                                         
-                                        Moments later, footsteps enter the house. The door closes, and the garage door
+                                        Moments later, footsteps enter the house. The front door closes, and the garage door
                                         opens and shuts.
                                         
                                         Without saying a word, Liz picks up her hand-wraps and enters the ring.
-                                        The door closes and the red "Do not disturb" sign illuminates.
+                                        The door firmly shuts and the red "Do not disturb" sign illuminates.
                                         
                                         Q: Umm.. It's probably safe to say that upstairs is open now.
                                         you: Yeah..
@@ -346,13 +358,15 @@ Level Three:
                                         Q: Seb is okay, I'd appreciate it. [okay]
                                         >okay
                                             Q: Sounds good. We'll be here.
+                                            (MOVE ON TO GO UPSTAIRS)
                         (AFTER YOU HAVE TALKED)
                         Richard sits up and promptly throws up on the lawn chair you were sitting in.
                         Maybe it's best not to bother them.
                         You go back to where you were.
+                        ----------------------------------------------------------------------------------------------
     >go to stairs
         (WHILE HAVEN'T TALKED TO LIZ) 
-            Upon making the turn up the stairs, a large man in a suit stops you in your tracks.
+            Upon turning the corner of the stairs, a large man in a suit stops you in your tracks.
             Guard: Name?
         //maybe i'll throw shoutouts if you entered certain names, BUT EYES ON THE PRIZE FOR NOW.
             you: uh.. /name/?
@@ -361,7 +375,79 @@ Level Three:
             The guard turns you around and sends you back downstairs.
         
         (WHEN YOU HAVE TALKED TO LIZ)
-        #################
+        Arriving at the second floor, you see a [boy] sitting on a couch staring at a screen, controller in hand.
+        You notice a [puppy] in a small fenced-off area. To the right are shelves upon shelves of [trophies]. 
+        Behind you is a closed [door].
+        [boy]
+        [puppy]
+        [trophies]
+        [door]
+        >go to boy
+            ######
+        >go to puppy
+            ######
+        >go to trophies
+            In front of you are two shelves lined with gold figurines of people with various sports uniforms on.
+            There's a [trophy] on its side towards the end of the shelf.
+            >go to trophy
+                How odd. A single trophy on its side. Fix it? [yes]
+                >yes
+                    You place the trophy back on its base as a flutter catches your eye. You look to your left and
+                    see a stream of smoke drift off into the atmosphere outside of a [window].
+                    >go to window
+                        A single window just about big enough to get through. Open the window? [yes]
+                        >yes
+                            The window is open. Climb through? [yes]
+                            >yes
+                                You climb through the window as cigarette smoke fills the air.
+                                The balcony holds a [woman] with fiery hair and her easel. 
+                                You notice she's painting the night's sky.
+                                A cigarette burns quietly in an bunny-shaped ash tray next to her.
+                                Behind her is a single framed artwork. You can make out a silhouette of
+                                a middle finger against a red background. Her headphones are keeping
+                                her focused on her work. She hasn't noticed you.
+                                >go to woman
+                                    You tap the woman's shoulder. She continues painting as she says,
+                                    
+                                    ???: Heather, I told you, I don't know where Ron is.
+                                    
+        >go to door
+            You enter a small room with a single light. To the [left], there is another closed door. In front
+            of you is a small cabinet with [pictures] on it. To the [right] is another closed door.
+            left
+            pictures
+            right
+            leave
+            
+            >go to left
+                You open the door to the door on the left and find yourself in a laundry room.
+                Standard washer/dryer combo. There's a [backpack] on the wall.
+                >go to backpack
+                    The backpack is made of a thick gray material. There's an orange symbol on it.
+                    
+                    (symbol)
+                    
+                    You leave the laundry room.
+            --------------------------------------------------------------------------------------------------
+            >go to pictures
+                Three picture frames stand on the cabinet. 
+                
+                The one on the left is of Myrtle, smile full of braces and holding up a blue ribbon. 
+                A woman stands beside her holding up a paper with a chemical structure on it. 
+                In the background is a banner, "Frosh Science Fair /date-6years/".
+                
+                In the middle is a picture of a man in a white lab coat, smiling happily next to a man with a cane.
+            
+                On the right is a picture of Liz, Heather, and Myrtle grinning from ear to ear. The date shows,
+                'December 25th, 2015.' The caption on the frame reads, "Happy Holidays from the Wexington family!"
+                
+                You return to the middle of the room.
+            --------------------------------------------------------------------------------------------------
+            >go to right
+                Laughter comes from behind the door. It sounds like there's multiple people in there.
+                Maybe... Yeah, maybe it's best not to go in there.
+                
+                You return to the middle of the room.
     --------------------------------------------------------------------------------------------    
     >go to room
         You knock on the door.
@@ -457,7 +543,7 @@ Level Three:
             ---------------------------------------------------------------------------------------------------
             >go to T.V
                 Sports Anchor: The thirty, the twenty, the ten, touchdown!!
-                Sports Anchor: A 97 yard kick return for a touchdown!
+                Sports Anchor: A 97 yard kick return for the Anteaters!
                 College Kids: (collective cheering)
                 It seems they are busy.
                 You retreat to the music.
@@ -470,7 +556,7 @@ Level Three:
                 you: You alright in there?
                 ???: [gibberish]
                 you: Hello?
-                ???: Ghejkftkejkltjtkjlahejkjlkjaljiljtssjhheerrr--
+                ???: GjejkktjkjkjjjjkjkjHejkjkkjajjjkjtjjkhkejjjr--
                 ???: *heaving*
                 You slowly back away from the door back to the music.
                 CHECK_BATHROOM = TRUE; (move on to Myrtle)
