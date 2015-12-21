@@ -148,8 +148,8 @@ Level Three:
         [x] Meet Liz
         [x] Liz takes you upstairs (beats up the guard)
         [] Meet Seb (unlock Seb's story in the main menu)
-        [] Look at all those trophies
-        [] Pull the one that is broken
+        [x] Look at all those trophies
+        [x] Pull the one that is broken
         [] Meet Ruby (unlock Ruby's story in the main menu)
         [] Heather pops in while leaving Ruby
         [] Bring Heather to the bathroom where Ron is
@@ -376,21 +376,32 @@ Level Three:
         
         (WHEN YOU HAVE TALKED TO LIZ)
         Arriving at the second floor, you see a [boy] sitting on a couch staring at a screen, controller in hand.
-        You notice a [puppy] in a small fenced-off area. To the right are shelves upon shelves of [trophies]. 
+        You notice four [puppies] in a small fenced-off area. To the right are shelves upon shelves of [trophies]. 
         Behind you is a closed [door].
         [boy]
         [puppy]
         [trophies]
         [door]
         >go to boy
-            ######
+            As you approach the boy, he gets up and violently
         >go to puppy
-            ######
+            There's three pitch-black-haired puppies and one West Highland White Terrier. The three border collies 
+            bear collars with the names, 'Myoh,' 'Robin,' and 'Kermit.' The westie's collar bears the name, 'Ruoy.'
+            Pet the puppies? [yes]
+            >yes
+                The puppies playfully bite on your hand and welcome the attention. 
+            
+                You return to where you were.
+        -----------------------------------------------------------------------------------------------------------
         >go to trophies
             In front of you are two shelves lined with gold figurines of people with various sports uniforms on.
-            There's a [trophy] on its side towards the end of the shelf.
+            (WHILE YOU HAVEN'T TALKED TO SEB)
+            You go back to where you were.
+            
+            (AFTER YOU HAVE TALKED TO SEB)
+            There's a [trophy] on its side due to Seb's tantrum.
             >go to trophy
-                How odd. A single trophy on its side. Fix it? [yes]
+                The trophy doesn't look broken, just fallen over. Fix it? [yes]
                 >yes
                     You place the trophy back on its base as a flutter catches your eye. You look to your left and
                     see a stream of smoke drift off into the atmosphere outside of a [window].
@@ -407,10 +418,43 @@ Level Three:
                                 a middle finger against a red background. Her headphones are keeping
                                 her focused on her work. She hasn't noticed you.
                                 >go to woman
-                                    You tap the woman's shoulder. She continues painting as she says,
+                                    You tap the woman's shoulder. She shakes her head and continues painting,
                                     
-                                    ???: Heather, I told you, I don't know where Ron is.
+                                    ???: Seb, I'm not gonna tell Heather you threw your controller again.
                                     
+                                    Get her attention? [yes]
+                                    >yes
+                                        you: Hey!
+                                        
+                                        Surprised, she jumps and turns towards you. She takes off her headphones.
+                                        
+                                        ???: Hey yourself! What are you doing on my balcony?! How did you even know?!
+                                        
+                                        You explain how you saw the puff of smoke rise from the other side of the window.
+                                        
+                                        ???: Damn. I knew I shouldn't have smoked tonight. Oh well.
+                                        ???: What's your name?
+                                        you: /name/? And yours?
+                                        ???: Ruby.
+                                        Ruby: I'm Seb's sister. He likes to come over to Heather's and play on their
+                                        Ruby: big screen. I don't understand why he plays video games. He's so smart.
+                                        Ruby: Dude, he made a flying BIKE for the science fair last year. He's fifteen.
+                                        Ruby: Shit, at my age, I was trying to maintain my sanity during high school.
+                                        
+                                        Ruby's phone rings. She stands up to get her phone out her pocket.
+                                        A metallic clang erupts from the backyard. You rush to look over the railing.
+                                        
+                                        Before being able to look, Ruby grabs your arm, shaking her head. 
+                                        
+                                        Ruby: I'm gonna take this. Don't tell anyone about this place, alright?
+                                        >okay
+                                            Ruby sits back down in front of her easel, that metal clang sounds again.
+                                            You climb back through the window into the house.
+                                            Ruby locks the window behind you.
+                                            
+                                        (AFTER TALKING TO RUBY)
+                                            Ruby locked the window. There's no way I'm getting back out there.
+        ------------------------------------------------------------------------------------------------------
         >go to door
             You enter a small room with a single light. To the [left], there is another closed door. In front
             of you is a small cabinet with [pictures] on it. To the [right] is another closed door.
