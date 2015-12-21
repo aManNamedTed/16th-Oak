@@ -186,6 +186,9 @@ Level Three:
         garage
         
         >go to garage
+            (WHILE HAVEN'T TRIED TO GO UPSTAIRS)
+            
+            (WHILE YOU HAVE TRIED TO GO UPSTAIRS)
             You descend the staircase and open the door to the garage. You see two cars to the right of you,
             a door to the left, and a large shelving structure behind you. In front of you, there
             are two people sitting in lawn chairs looking into a room separated by glass.
@@ -261,7 +264,7 @@ Level Three:
                                 Q: Just being in the hospital with her parents laying next to each other..
                                 you: ...
                                 Q: They passed within minutes of each other.
-                                Q: Ever 
+                                Q: 
             
     >go to stairs
         (WHILE HAVEN'T TALKED TO LIZ) 
