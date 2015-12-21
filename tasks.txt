@@ -1,0 +1,28 @@
+Monday, December 21st, 2015: 12 Hours
+    *Today I will be writing the story only. I hope to finish story by the end of the day.
+  (6hrs) 1:00AM - 7:00AM: Finish writing level 3
+  (1hr)  7:00AM - 8:00AM: Begin writing level 4
+  (3hrs) 10:00AM - 1:00PM: Develop 1/2 of level 4
+  (2hrs) 2:00PM - 4:00PM: Complete level 4
+    [level 4 should be the end of the game]
+    
+Tuesday, December 22nd, 2015: 6 Hours
+    *Today I will begin programming of dayata
+  (2hrs) 11:00AM - 1:00PM: Begin writing level 1
+  (2hrs) 2:00PM - 4:00PM: Finish level 1, begin level 2
+  (2hrs) 5:00PM - 7:00PM: Finish level 2, begin level 3
+  
+Wednesday, December 23rd, 2015: 6 Hours
+    *Today I should be about halfway done with programming dayata
+  (2hrs) 11:00AM - 1:00PM: Halfway through level 3
+  (2hrs) 2:00PM - 4:00PM: Finish level 3, begin level 4
+  (2hrs) 5:00PM - 7:00PM: Halfway through level 4
+  
+Thursday, December 24th, 2015:
+    *Today I should be just about finished with level 4. 
+    *Begin testing and debugging
+  (2hrs) 1:00PM - 3:00PM: Finish the whole game. (means finish level 4)
+  (2hrs) 3:00PM - 5:00PM: Program accessories; tutorial, credits.
+  (2hrs) 5:00PM - 7:00PM: Play game all the way through, with no bugs.
+  (1hr)  8:00PM - 9:00PM: Release
+  
