@@ -101,9 +101,9 @@ Level Two:
     [you will not be allowed to leave until you have completed all of the above]
     ---------------------------------------------------------------------------------------------------
 Level Three:
-    [ALSO, there is a flagpole bearing a bright yellow flag with a happy face on it]
     Upon arriving at 32nd and Elm, you see a beautiful two story house. Redwood porch on the right side
-    of the house. Garage/basement combo on the left. You walk up to the house as a familiar face rushes
+    of the house. Garage/basement combo on the left. A flagpole stands tall to the left of the garage.
+    A flag bearing bright yellow smiles at you from above. You walk up to the house as a familiar face rushes
     frantically out of the front door. You begin up the steps as she hurries down them. Without missing
     a beat, she starts, "Hey /name/! You haven't seen Ron anywhere, have you??" 
     >no
@@ -144,8 +144,8 @@ Level Three:
         [x] Talk to Myrtle
         [x] Go to the garage
         [x] Talk to Q and Richard
-        [] Meet Liz
-        [] Liz takes you upstairs (beats up the guard)
+        [x] Meet Liz
+        [x] Liz takes you upstairs (beats up the guard)
         [] Meet Seb (unlock Seb's story in the main menu)
         [] Look at all those trophies
         [] Pull the one that is broken
@@ -186,9 +186,6 @@ Level Three:
         garage
         
         >go to garage
-            (WHILE HAVEN'T TRIED TO GO UPSTAIRS)
-            
-            (WHILE YOU HAVE TRIED TO GO UPSTAIRS)
             You descend the staircase and open the door to the garage. You see two cars to the right of you,
             a door to the left, and a large shelving structure behind you. In front of you, there
             are two people sitting in lawn chairs looking into a room separated by glass.
@@ -212,9 +209,6 @@ Level Three:
                 "Do not disturb" 
                 Maybe it's a sign to not go in there.
                 You return to where you were.
-                
-                (AFTER YOU HAVE TALKED TO PEOPLE)
-                ##################################
             
             >go to shelves
                 Before you are two book shelves. One side filled with house and art paint, and painting books,
@@ -236,6 +230,9 @@ Level Three:
                     you: Um, well.. it's nice to meet you!
                     Q: Ditto. Here, sit. Watch Liz practice with us.
                     >sit
+                        You pull up the remaining green and white lawn chair and sit next to Richard.
+                        He snores quietly on Liz's shoulder.
+                        
                         Q: You know Liz, right?
                         >no?
                             Q: Oh! Well she's absolutely obsessed with boxing. Heather and Myrtle's
@@ -249,23 +246,110 @@ Level Three:
                             Soft orchestral music emanated from behind the glass. Liz flowed gracefully 
                             around the ring, like water, dancing in a stream.  
                             
-                            Q: Do you know how her parents passed?
+                            Q: Do you know how her parents passed? 
+                                [no]
                             >no
                                 Q: Well, her father had picked her up from second grade because her
                                 Q: mother was enduring chemotherapy. On the way to the hospital,
                                 Q: a strange man in a suit approached her father. Her father was the
-                                Q: professor of dance the local community college so she figured it wasn't
+                                Q: professor of dance at the local community college so she figured it wasn't
                                 Q: a big deal. She says she had seen this man before, but wasn't
                                 Q: quite sure. 'Something was off,' she would say. Her father told her
                                 Q: to give him and the strange man some time to talk. 
                                 you: ...
-                                Q: Next thing she knew her father was on the floor gasping for air
+                                Q: Next thing she knew, her father was on the floor gasping for air
                                 Q: as the man fled. She doesn't remember much after that..
                                 Q: Just being in the hospital with her parents laying next to each other..
                                 you: ...
-                                Q: They passed within minutes of each other.
-                                Q: 
-            
+                                Q: "Be graceful, love." Her father told her in his final hour.
+                                Q: Both parents passed within minutes of each other.
+                                
+                                You think quietly to yourself.. 
+                                
+                                *you*: Wow. That happened to her in second grade? She must've been what, seven? 
+                                *you*: Eight? That's.. messed up. I hope she doesn't let it get to her too much.
+                                
+                                Lost in thought, completely oblivious to the world, you realize someone quietly 
+                                stands next to you.
+                                
+                                Liz: BOO!
+                                
+                                Startled, you fall from your lawn chair onto the concrete floor.
+                                
+                                Liz: Hi stranger! Q, who's this attractive, yet jumpy human being?
+                                Q (whispering): Liz! Keep your voice down! Can't you see Richard is sleeping?
+                                Liz: Ooh. My bad. 
+                                Liz (whispering): Q, who's this attractive, yet jumpy human being?
+                                Q: This is /name/. We have sociology together. /name/ and Richard are best buds. 
+                                
+                                Liz: Really? But Richie is on YOUR shoulder, I see?
+                                Q: !!? 
+                                Q: What! Nooo, it's not like that!
+                                
+                                Q swiftly sits up, waking Richard.
+                                
+                                # make sure you customize the name to the drunken text feel
+                                Richard (groggily): /name/? iS thAt /name/? yOU mAde iT! meEt Q--
+                                
+                                Richard vomits onto the floor beside your feet.
+                                
+                                Richard: hnngggh.
+                                
+                                Liz (laughing): /name/ hun, if there's anything you need, just let me know.
+                                
+                                Actually, this would be a great time to [ask about the guard] upstairs.
+                                >ask about the guard
+                                    You describe the large man in a suit taking names at the top of the stairs.
+                                    
+                                    Liz: Wait. What?
+                                    Liz: What did you say he was wearing?
+                                    Liz: A suit? [yes]
+                                    >yes
+                                        Liz: ...
+                                        
+                                        Liz's mood changes tremendously. She's quiet. Grinning? Almost.. happy?
+                                        You notice her eyes start to glisten as she turns her back to you.
+                                        She begins unravelling her hand-wraps.
+                                        
+                                        Liz: /name/. Wait here. I'll be right back.
+                                        
+                                        As Liz begins to walk away, the final wrap slides off of her wrist
+                                        and falls to the floor.
+                                        
+                                        (delay printing between each letter)
+                                        B
+                                        E
+                                        
+                                        G
+                                        R
+                                        A
+                                        C
+                                        E
+                                        F
+                                        U
+                                        L
+                                        
+                                        Cascades down from her elbow to her wrist in Amatic letters.
+                                        
+                                        A few seconds later you hear shouts from the first floor. A door
+                                        opens, and you hear a sound like a sack of potatoes being dragged across the floor.
+                                        
+                                        Moments later, footsteps enter the house. The door closes, and the garage door
+                                        opens and shuts.
+                                        
+                                        Without saying a word, Liz picks up her hand-wraps and enters the ring.
+                                        The door closes and the red "Do not disturb" sign illuminates.
+                                        
+                                        Q: Umm.. It's probably safe to say that upstairs is open now.
+                                        you: Yeah..
+                                        Q: I'll be here with Richard. While you're up there, if you could make sure
+                                        Q: Seb is okay, I'd appreciate it. [okay]
+                                        >okay
+                                            Q: Sounds good. We'll be here.
+                        (AFTER YOU HAVE TALKED)
+                        Richard sits up and promptly throws up on the lawn chair you were sitting in.
+                        Maybe it's best not to bother them.
+                        You go back to where you were.
     >go to stairs
         (WHILE HAVEN'T TALKED TO LIZ) 
             Upon making the turn up the stairs, a large man in a suit stops you in your tracks.
@@ -277,7 +361,7 @@ Level Three:
             The guard turns you around and sends you back downstairs.
         
         (WHEN YOU HAVE TALKED TO LIZ)
-        ##########################
+        #################
     --------------------------------------------------------------------------------------------    
     >go to room
         You knock on the door.
