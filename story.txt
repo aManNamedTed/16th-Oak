@@ -356,7 +356,8 @@ Level Three:
         
         (WHEN YOU HAVE TALKED TO LIZ)
         Arriving at the second floor, you see a [boy] sitting on a couch staring at a screen, controller in hand.
-        You notice four [puppies] in a small fenced-off area. To the right are shelves upon shelves of [trophies]. 
+        There is a large mahogany bookshelf next to the couch. You notice four [puppies] in a small fenced-off area. 
+        To the right are shelves upon shelves of [trophies]. 
         Behind you is a closed [door].
         [boy]
         [puppies]
@@ -690,8 +691,159 @@ Level Four:
                     "(message from earlier)"
                     "(capitalize get heather from within the message)"
                     
-                    Heather: Yup, that's GOTTA be him. C'mon let's go get'm.
-                    
+                    Heather: Yup, that's GOTTA be him.
+                    Heather hurries off to the bathroom.
+        getchar();
+        You follow her, passing the college kids as they scream at the T.V.
+        
+        Heather bangs furiously on the door.
+        Heather: RON! You in there?!
+        
+        Heather continues banging on the door.
+        
+        Heather: RON! Open up!
+        
+        The door clicks and Heather bursts in.
+        
+        Heather: RON! Ron. Are you okay?!
+        Ron (drunken text): yeah, i just.. i thought i could handle.
+        Heather: Oh dear, I'm just glad you're concious.
+        Heather: Remember last time at that frat party? It could've been a lot worse.
+        Ron: that's true.
+        Heather: C'mon /name/. Help me get him upstairs. My mom can probably help us.
+        
+        You grab Ron's arm and help him to his [feet].
+        >feet
+            You notice that strange symbol from the backpack on Ron's shoes.
+        
+        Ron: Heh, you like'm? Seb made'm for me. They're--
+        Heather: Red! Yeah. See? Ron, your shoes are red. 
+        
+        You're curious. What does that symbol mean?
+        
+        You arrive at the top of the stairs with Ron and Heather. 
+        Heather hurries into the hallway where the pictures are.
+        A slight shifting noise is made from inside the hallway.
+        
+        The large mahogany bookshelf moves slightly.
+        Heather: C'mon /name/, follow me.
+        
+        You pick up Ron and assist him towards the bookshelf.
+        Heather: My parents like privacy.
+        Heather: A lot of it.
+        
+        *you*: Gross.
+        
+        The bookshelf shifts to the left, revealing a room.
+        
+        Heather: Hey Ma! Need some help over here.
+        
+        ???: I'll b-b-be right ou-out!
+        
+        *you*: What the hell? Why is Heather's mom home during a house party? Isn't that kind
+        of weird? What parents let their kids throw a massive house party in their house,
+        WHILE they're home?
+        
+        Heather: Put Ron on the bed over there.
+        
+        You help Ron over to the queen-sized bed on the far side of the room. The bed frame
+        is composed of bookshelves. There are tons of thick textbooks lining the bed frame.
+        Organic chemistry, world history, data analytics, the list goes on.
+        
+        A stout woman with horn-rimmed glasses and a violet pajamas appears.
+        
+        ???: Hi h-h-honey! What's u-up?
+        Heather: Ron drank a bit too--
+        ???: Heather! How rude of you not to introduce me to your friend!
+        Heather (mockingly): Mom, /name/. /name/, Mom. My Mom prefers Willow though. As that is her name.
+        Willow: Thank y-you, dear.
+        
+        you: Nice to meet--
+        Heather: Mom! Ron? Dangerously drunk? Hello?
+        Willow: It's n-n-nice to meet y-you too, /name/.
+
+        Willow shoots a glance at Heather as she walks out of the room.
+        
+        Heather: Sorry, /name/. I'm just worried about Ron.
+        
+        Willow enters the room with a large syringe and a disinfectant wipe.
+        
+        Heather: Don't worry, I've tried it, it works.
+        
+        Heather pulls up her shirt a bit, revealing a barely noticeable scar on the upper right side of her stomach.
+        
+        Willow: See, you inj-j-ject the sobering agent d-directly in-into the liver; w-w-works withthin s-seconds.
+        
+        Willow lifts up Ron's shirt and wipes a swatch underneath his rib cage.
+        
+        Willow: I'm working on a p-p-patent f-for it currently, but--
+        
+        Willow jabs the syringe into Ron's abdomen. Ron grunts in pain.
+        
+        Willow: those f-fair people at Medi C-C-Co. say it's 't-too dangerous' and whatnot.
+        Willow: Sure, I'm not e-e-exactly in pharmaceutic-c-cals, but I know enough ab-b-bout chemistry to know
+        Willow: what's 'dangerous.'
+        
+        Willow leaves the room with the syringe and disinfectant wipe as Heather grabs a textbook.
+        
+        Heather (whispering): My mom has a stutter. You know. She knows. Don't mention it.
+        You nod.
+        
+        Ron awakens violently, as if from a bad dream.
+        
+        Ron: Hey! Wha-- I CAN'T SEE!! EVERYTHINGS DARK!!
+        
+        Willow (from the other room): It wears off in a minute, Ron!
+        
+        Ron: Mrs. Wexington??
+        
+        Heather throws the textbook at Ron.
+        
+        Ron: OW! WHAT THE HELL?!
+        
+        Heather: You poop! You passed out in the bathroom WITH the door locked. AGAIN.
+        Ron: Heather? Look, I'm sorry! I didn't want you to see me like that because... um..
+        
+        Ron slowly feels his way to the edge of the bed and sits up.
+        
+        Heather: Because you messed up?!
+        Ron: Because I messed up.
+        
+        getchar();
+        
+        Heather: Yeah well... I'm happy you're okay.
+        Ron: Babe.
+        Heather: Yes?
+        Ron: I still can't see.
+        
+        Heather walks up to him and caresses his face and looks deep into his eyes.
+        
+        Ron: Oh uh.. I still can't--
+        Heather: Shhh.
+        Ron: I uh--
+        
+        Heather kisses Ron.
+        
+        Ron opens his eyes and looks around.
+        Ron: I can see! Thanks baby.
+        Heather: You're welcome.
+        
+        Willow enters the room.
+        Willow: Ooohh H-Heather. You just have g-g-great t-timing is all.
+        Heather: Mom! Shuhhla la lalala!
+        you: Nice reference.
+        
+        Heather winks at you.
+        
+        Ron: Babe!
+        
+        Heather: SOMEONE has good taste in comedy, 'Babe.'
+        
+        
+        
+        
+        
+        
         -------------------------------------------------------------------------------------------------
         >go to left
             You find yourself in the laundry room. Standard washer/dryer combo. The backpack is missing.
@@ -721,18 +873,14 @@ Level Four:
             
             You return to where you were.
         ---------------------------------------------------------------------------------------------------
-        [] Heather pops in while leaving Ruby
-        [] Bring Heather to the bathroom where Ron is
-        [] Heather bangs on the door, waking Ron
-        [] Ron opens the door
-        [] Drunk Ron insists on introducing you to Fen (he has a treat for Fen)
-        [] Fen brings you to the final door
-        [] Fen barks at the final door
-        [] The door opens and you meet Willow
-        [] Willow is Myrtle & Heather's mom
-        [] Willow is close to completing a complex math problem on her white board
-        [] She is holding Fen while finishing up, when you hear a collection of sirens.
-        [] Willow takes you through a secret firepole down to the garage
+        [x] Run into Heather on the first floor
+        [x] Bring Heather to the bathroom where Ron is
+        [x] Heather bangs on the door, waking Ron
+        [x] Ron opens the door
+        [x] Heather wants help getting Ron upstairs to her Mom
+        [x] The door opens and you meet Willow
+        [x] Willow is Myrtle & Heather's mom
+        [x] Willow cures Ron's drunkeness
         [] You land in Liz's dance room, where she is still practicing.
         [] You warn her of the impending raid
         [] Willow insists on everyone, Fen, You, Q, Richard, and Liz, to get in the Rolls Royce
