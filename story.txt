@@ -78,6 +78,7 @@ Get_Name:
                 The man holds the door open as you enter.
             }
     ------------------------------------------------------
+========================================================================================================
 Level One:
     Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
     and the voice on the other line says, "Dude! Party on 16th and Oak! That cutie from your sociology 
@@ -91,6 +92,7 @@ Level One:
     *click*
     you: Shit.
     ---------------------------------------------------------------------------------------------------
+=======================================================================================================
 Level Two:
     Upon hearing the news of an uproarious shindig occurring in the near future, you find yourself tired,
     surprised, and other words expressing mood.
@@ -101,6 +103,7 @@ Level Two:
       >Leave
     [you will not be allowed to leave until you have completed all of the above]
     ---------------------------------------------------------------------------------------------------
+=======================================================================================================
 Level Three:
     Upon arriving at 16th and Oak, you see a beautiful two story house. Redwood porch on the right side
     of the house. Garage/basement combo on the left. A flagpole stands tall to the left of the garage.
@@ -130,16 +133,17 @@ Level Three:
         music
         
     >go to poster 
-    {THE WAY THIS WILL WORK IS IT SHOWS 3 AT A TIME, AFTER YOU FINISH THE TOP-MOST TASK, A BOOL WILL 
-     SWAP VALUES, MAKING THE TOP TASK DISAPPEAR, AND THE NEW (3RD) BOTTOM TASK TO APPEAR. THE USER
-     SHOULD BE ABLE TO ACCESS THIS POSTER FROM ANYWHERE.
-     either:
-    1.  CONSIDERING IT NOW, I THINK I WILL MAKE IT BE SOME HANDOUT FROM SOMEONE AT THE PARTY, IN WHICH
-        YOU TAKE THE POSTER AND FOLD IT AND PUT IT INTO YOUR POCKET,
-    2.  OR IT WILL JUST BE A POSTER THAT IS CONSPICUOUSLY ON EVERY FLOOR
-    3.  OR IT WILL BE ONLY ON THE FIRST FLOOR, (NOT IN BASEMENT/NOT IN SECOND FLOOR
-    4.  OR MAYBE IT WILL JUST BE A COMMAND THAT IS SOMETHING LIKE, "what do i do", WHERE IT WILL CALL
-        THE NARRATOR IN WHICH THEY WILL TELL YOU WHAT TO DO
+    {   
+        THE WAY THIS WILL WORK IS IT SHOWS 3 AT A TIME, AFTER YOU FINISH THE TOP-MOST TASK, A BOOL WILL 
+         SWAP VALUES, MAKING THE TOP TASK DISAPPEAR, AND THE NEW (3RD) BOTTOM TASK TO APPEAR. THE USER
+        SHOULD BE ABLE TO ACCESS THIS POSTER FROM ANYWHERE.
+        either:
+        1.  CONSIDERING IT NOW, I THINK I WILL MAKE IT BE SOME HANDOUT FROM SOMEONE AT THE PARTY, IN WHICH
+            YOU TAKE THE POSTER AND FOLD IT AND PUT IT INTO YOUR POCKET,
+        2.  OR IT WILL JUST BE A POSTER THAT IS CONSPICUOUSLY ON EVERY FLOOR
+        3.  OR IT WILL BE ONLY ON THE FIRST FLOOR, (NOT IN BASEMENT/NOT IN SECOND FLOOR
+        4.  OR MAYBE IT WILL JUST BE A COMMAND THAT IS SOMETHING LIKE, "what do i do", WHERE IT WILL CALL
+            THE NARRATOR IN WHICH THEY WILL TELL YOU WHAT TO DO
     }
         [x] Go to the bathroom
         [x] Talk to Myrtle
@@ -147,34 +151,10 @@ Level Three:
         [x] Talk to Q and Richard
         [x] Meet Liz
         [x] Liz takes you upstairs (beats up the guard)
-        [] Meet Seb (unlock Seb's story in the main menu)
+        [x] Meet Seb (unlock Seb's story in the main menu)
         [x] Look at all those trophies
         [x] Pull the one that is broken
         [x] Meet Ruby (unlock Ruby's story in the main menu)
-        [] Heather pops in while leaving Ruby
-        [] Bring Heather to the bathroom where Ron is
-        [] Heather bangs on the door, waking Ron
-        [] Ron opens the door
-        [] Drunk Ron insists on introducing you to Fen (he has a treat for Fen)
-        [] Fen brings you to the final door
-        [] Fen barks at the final door
-        [] The door opens and you meet Willow
-        [] Willow is Myrtle & Heather's mom
-        [] Willow is close to completing a complex math problem on her white board
-        [] She is holding Fen while finishing up, when you hear a collection of sirens.
-        [] Willow takes you through a secret firepole down to the garage
-        [] You land in Liz's dance room, where she is still practicing.
-        [] You warn her of the impending raid
-        [] Willow insists on everyone, Fen, You, Q, Richard, and Liz, to get in the Rolls Royce
-        [] (crazy ass cut scene)
-        [] You appear in the back seat with Q and Richard, Liz in the front seat, and Fen and Willow driving
-        [] Closure about every other character
-        [] Willow drops you off at your apartment
-        [] Richard and Q tag along
-        [] You enter your apartment and Richard passes out on the couch. 
-        [] You and Q nanny Richard for the last time
-        [] You invite Q into your room to sleep
-        [] LEVEL FOUR (FINAL LEVEL) maybe.
     ---------------------------------------------------------------------------------------------------------
     >go to door
         (WHILE HAVEN'T TALKED TO MYRTLE)
@@ -383,7 +363,42 @@ Level Three:
         [trophies]
         [door]
         >go to boy
-            As you approach the boy, he gets up and violently
+            As you approach the boy, he gets up in a fit of anger and throws his controller across the room.
+            The controller smashes into the trophy shelf, toppling a large golden football trophy to the floor.
+            ???: GEORGE!! WHY DID YOU FLANK, GEORGE?! WHY. WHY GEORGE, WHY?! I TOLD YOU I NEEDED COVER FIRE!1!!11
+            
+            The boy shouts into his headset furiously, not noticing you're there.
+            
+            You clear your throat, loudly.
+            
+            ???: I gotta go, George. We'll try again in a few.
+            
+            The boy takes off his headset and tosses it on the couch. He goes to retrieve his
+            controller from across the room.
+            
+            ???: Can I help you?
+            [Seb?]
+            >Seb?
+                you: Are you Seb?
+                Seb: What's it to you?
+                [Q]
+                >Q
+                    you: Q wanted me to make sure you were okay.
+                    Seb: Oh yeah? Well tell Q I'M perfectly fine. GEORGE is the one sucks at this game.
+                    Seb: Go pick up that trophy for me, yeah? I'm gonna try this stupid mission again.
+                    
+                    *you*: Okay?
+                    
+                    Seb replaces the headset back on his head.
+                    You return to where you were.
+                    
+                    (AFTER ALREADY TALKING TO SEB)
+                    You approach Seb.
+                    Seb: GO LEFT, GEORGE. LEFT. YOUR OTHER LEFT.
+                    
+                    Seb waves a hand for you to go away.
+                    You return to the middle of the room.
+        ---------------------------------------------------------------------------------------------------------
         >go to puppies
             There's three pitch-black-haired puppies and one West Highland White Terrier. The three border collies 
             bear collars with the names, 'Myoh,' 'Robin,' and 'Kermit.' The westie's collar bears the name, 'Ruoy.'
@@ -401,6 +416,7 @@ Level Three:
             You go back to where you were.
             
             (AFTER YOU HAVE TALKED TO SEB)
+            In front of you are two shelves lined with gold figurines of people with various sports uniforms on.
             There's a [trophy] on its side due to Seb's tantrum.
             >go to trophy
                 The trophy doesn't look broken, just fallen over. Fix it? [yes]
@@ -422,7 +438,7 @@ Level Three:
                                 >go to woman
                                     You tap the woman's shoulder. She shakes her head and continues painting,
                                     
-                                    ???: Seb, I'm not gonna tell Heather you threw your controller again.
+                                    ???: Seb, I'm not gonna vouch for you because you threw her controller again.
                                     
                                     Get her attention? [yes]
                                     >yes
@@ -448,12 +464,31 @@ Level Three:
                                         
                                         Before being able to look, Ruby grabs your arm, shaking her head. 
                                         
-                                        Ruby: I'm gonna take this. Don't tell anyone about this place, alright?
-                                        >okay
-                                            Ruby sits back down in front of her easel, that metal clang sounds again.
-                                            You climb back through the window into the house.
-                                            Ruby locks the window behind you.
-                                            
+                                        you: Didn't you hear th--
+                                        Ruby: I'm gonna take this. Go back downstairs and don't tell anyone about this place, got it?
+                                        
+                                        You nod hesitantly.
+                                        
+                                        Ruby pushes you toward the window, stopping you just short of it.
+                                        Taking the phone from her ear, she hushes you and gestures for you to
+                                        climb back through the window.
+                                        As you reach the other side, Ruby locks the window behind you.
+                                        
+                                        getchar();
+                                        
+                                        You turn around to feel a gust of wind as you notice the laundry door slam.
+                                        You hear a whirring noise for a second, then, 
+                                        
+                                        *BANG*
+                                        
+                                        Seb is no longer where he was.
+                                        
+                                        getchar();
+                                        
+                                        You hear Ruby shouting for a second.
+                                        Ruby (from the balcony): WHAT?!--
+                                        That metal clang breaches your ears again. Then, silence.
+                                @@@GO TO LEVEL 4
                                         (AFTER TALKING TO RUBY)
                                             Ruby locked the window. There's no way I'm getting back out there.
         ------------------------------------------------------------------------------------------------------
@@ -469,10 +504,11 @@ Level Three:
                 You open the door to the door on the left and find yourself in a laundry room.
                 Standard washer/dryer combo. There's a [backpack] on the wall.
                 >go to backpack
-                    The backpack is made of a thick gray material. There's an orange symbol on it.
+                    The backpack is made of a thick gray material. There's a vermillion colored symbol on it.
                     
                     (symbol)
                     
+                    getchar();
                     You leave the laundry room.
             --------------------------------------------------------------------------------------------------
             >go to pictures
@@ -607,3 +643,105 @@ Level Three:
                 You slowly back away from the door back to the music.
                 CHECK_BATHROOM = TRUE; (move on to Myrtle)
             ---------------------------------------------------------------------------------------------------
+
+=======================================================================================================
+Level Four:
+    Back in the middle of the second story, Seb is gone. The [puppies] and [trophies] are still here.
+    Behind you, the same [door] is still there. Something feels... off.
+    [puppies]
+    >go to puppies
+        All four puppies are still here. Pet the puppies? [yes]
+        >yes
+            The puppies cower in the back of the pen. One barks quietly at you.
+            
+            *you*: That's odd. They were friendly a minute ago.
+            
+            You return to where you were.
+        -------------------------------------------------------------------------------------------------
+    [trophies]
+    >go to trophies
+        The same trophies are still here. The one you picked up--its base is glowing faintly.
+        
+        You return to where you were.
+        --------------------------------------------------------------------------------------------------
+    [door]
+    >go to door
+        The door opens. To the [left] is the laundry room door. To the [right] is the locked door from before.
+        In front of you are three [pictures].
+        [leave]
+        >leave
+            Upon exiting the hallway, a noise rings out from the [first floor].
+            [first floor]
+            >go to first floor
+                You arrive at the base of the stairs to feel the bass of the music rattle your bones.
+                It seems the party is still going on perfectly fine. 
+                
+                The front door opens and Heather bursts in.
+                
+                Heather: Look! I'll call you back!
+                
+                She puts away her phone and looks up.
+                
+                Heather: /name/! Hey! You haven't seen [Ron] have you??
+                >Ron
+                    You begin telling Heather of the voice from inside the bathroom.
+                    The terrible heaves you heard from behind the door, and the slurred message,
+                    
+                    "(message from earlier)"
+                    "(capitalize get heather from within the message)"
+                    
+                    Heather: Yup, that's GOTTA be him. C'mon let's go get'm.
+                    
+        -------------------------------------------------------------------------------------------------
+        >go to left
+            You find yourself in the laundry room. Standard washer/dryer combo. The backpack is missing.
+            
+            *you* Hmm. Seb is missing, and the backpack.. This is kinda creepy, not gonna lie.
+            
+            You leave the laundry room and return to the hallway.
+        --------------------------------------------------------------------------------------------------
+        >go to right
+            The door creaks open. Your hand flicks on the light switch.
+            getchar();
+            There is a bed in the corner of the room, and a glowing [computer] screen to the right of you.
+            [computer]
+                The computer screen is black with white text. It shows;
+                (mock update script)
+                
+                *you*: It looks like something is being installed.
+                
+                You leave the room.
+        --------------------------------------------------------------------------------------------------
+        >go to pictures
+            Same three pictures:
+            Myrtle, winning an award at a science fair.
+            A man in a white lab coat smiling next to a man with a cane,
+            and the holiday picture with Liz, Myrtle, and Heather.
+            Nothing seems different.
+            
+            You return to where you were.
+        ---------------------------------------------------------------------------------------------------
+        [] Heather pops in while leaving Ruby
+        [] Bring Heather to the bathroom where Ron is
+        [] Heather bangs on the door, waking Ron
+        [] Ron opens the door
+        [] Drunk Ron insists on introducing you to Fen (he has a treat for Fen)
+        [] Fen brings you to the final door
+        [] Fen barks at the final door
+        [] The door opens and you meet Willow
+        [] Willow is Myrtle & Heather's mom
+        [] Willow is close to completing a complex math problem on her white board
+        [] She is holding Fen while finishing up, when you hear a collection of sirens.
+        [] Willow takes you through a secret firepole down to the garage
+        [] You land in Liz's dance room, where she is still practicing.
+        [] You warn her of the impending raid
+        [] Willow insists on everyone, Fen, You, Q, Richard, and Liz, to get in the Rolls Royce
+        [] (crazy ass cut scene)
+        [] You appear in the back seat with Q and Richard, Liz in the front seat, and Fen and Willow driving
+        [] Closure about every other character
+        [] Willow drops you off at your apartment
+        [] Richard and Q tag along
+        [] You enter your apartment and Richard passes out on the couch. 
+        [] You and Q nanny Richard for the last time
+        [] You invite Q into your room to sleep
+        [] LEVEL FOUR (FINAL LEVEL) maybe.
