@@ -29,35 +29,52 @@ void b0(double); void b1(double); void b2(double); void b3(double); void b4(doub
 
 //game functions
 void description(); //prints description of game/creator before start of game
-void tutorial(string &); //prints tutorial screen, gets name of player
-void credits();
+void tutorial(string &, bool &); //prints tutorial screen, gets name of player
+void mainmenu(string); //main menu returns a string that points to which story to play
+void credits(bool &); //prints credits
 
 //text manipulation functions
 void wipe(); //clears text from standard sized terminal
 void getcom(string &); //gets command from user
 void yesorno(string &); //checks for yes/no commands
-void checkcom(string &command, string location); //checks for correct location commands
+void checkS(string, bool&); //checks if name ends in an 's'
+void checkcom(string &, string); //checks for correct location commands
+void checkcom(string &, string, string); //checks for correct location commands
+void checkcom(string &, string, string, string); //checks for correct location commands
+
+//global variables
+bool s, met_ruby, met_seb;
+
+/////////////////////////////////////////////////////////////////////////game functions
 int main()
 {
 	string name;
+	string story;
+	bool done = false;
 	
 	//GAME START
-	//description();
-	tutorial(name);
-	//credits();
+	do
+	{
+		//description();
+		//tutorial(name, s);
+		mainmenu(name);
+		//credits(done);
+	}while(!done);
+	
+	return 0;
 }
 
 void description()
 {
-	cout << " \t===========================================================" << endl;
-	cout << " \t  #   ####  TTT H H     &&&         OOOO    AAA   KK   KK " << endl;
- 	cout << " \t###  ######  T  HHH    && &&       OOOOOO  AAAAA  KK  KK  " << endl;
-	cout << " \t ##  ##      T  H H    && &&  &&   OO  OO AA   AA KK KK   " << endl;
-	cout << " \t ##  #####              &&&   &&   OO  OO AA   AA KKKKK   " << endl;
-	cout << " \t ##  ##  ##           &&   &&&&    OO  OO AAAAAAA KK  KK  " << endl;
-	cout << " \t ##  ######           &&    &&     OOOOOO AA   AA KK   KK " << endl;
-	cout << " \t####  ####             &&&&&  &&    OOOO  AA   AA KK    KK" << endl;
-	cout << " \t===========================================================" << endl;
+	cout << " \t============================================================" << endl;
+	cout << " \t   #   ####  TTT H H     &&&         OOOO    AAA   KK   KK " << endl;
+ 	cout << " \t ###  ######  T  HHH    && &&       OOOOOO  AAAAA  KK  KK  " << endl;
+	cout << " \t  ##  ##      T  H H    && &&  &&   OO  OO AA   AA KK KK   " << endl;
+	cout << " \t  ##  #####              &&&   &&   OO  OO AA   AA KKKKK   " << endl;
+	cout << " \t  ##  ##  ##           &&   &&&&    OO  OO AAAAAAA KK  KK  " << endl;
+	cout << " \t  ##  ######           &&    &&     OOOOOO AA   AA KK   KK " << endl;
+	cout << " \t ####  ####             &&&&&  &&    OOOO  AA   AA KK    KK" << endl;
+	cout << " \t============================================================" << endl;
 	cout << endl;
 	cout << "  Upon receiving a call from a mysterious being," << endl; 
 	cout << "  \tyou are invited to a nondescript party. As the" << endl;
@@ -68,17 +85,7 @@ void description()
 	getchar();
 }
 
-void credits()
-{
-	cout << "Game: 16th & Oak" << endl;
-	cout << "Created: November 3, 2015" << endl;
-	cout << "Finished: TBA" << endl;
-	cout << "Language: C++" << endl;
-	cout << "Author: David Amante" << endl;
-	cout << "Email: davidamante17@yahoo.com" << endl << endl;
-}
-
-void tutorial(string &name)
+void tutorial(string &name, bool &s)
 {
 	wipe();
 	string response;
@@ -112,6 +119,7 @@ void tutorial(string &name)
 	cout << "(3/6)---------------------------------------------------------------------" << endl;
 	cout << "At times, there will be locations you must travel to. To do this, type" << endl;
 	cout << "'go to' and the location. Locations are always found within brackets[]." << endl;
+	cout << "You must be careful; locations are case sensitive!" << endl;
 	cout << "For this example, type 'go to next level'." << endl << endl;
 	cout << "Try going to the [next level]!" << endl;
 	getcom(response);
@@ -126,6 +134,8 @@ void tutorial(string &name)
 	cout << "... what's your name?" << endl << endl;
 	cout << "Name: ";
 	getline(cin, name);
+	checkS(name, s);
+	
 	cout << endl << name << "? Cute." << endl;
 	getchar();
 	
@@ -172,10 +182,87 @@ void tutorial(string &name)
 	cout << "Boop!" << endl;
 	c4(600); //boop
 	
-	cout << "Have fun!!" << endl;
+	cout << endl << "Have fun!!" << endl;
 	getchar();
 }
 
+void mainmenu(string name)
+{
+	wipe();
+	bool done;
+	string command;
+	string my_story;
+	//stub for dev
+	name = "David";
+	
+	//checking for s as the last letter of name for correct possessive noun
+	checkS(name, s);
+	do
+	{
+		cout << "\t\t\t   Main Menu" << endl;
+		cout << "\t\t\t---------------" << endl;
+		if(s == true)
+		{
+			cout << "\t\t\t[" << name << "' Story]" << endl;
+			my_story = "go to " + name + "' Story";
+		}
+		else
+		{
+			cout << "\t\t\t[" << name << "'s Story]" << endl;
+			my_story = "go to " + name + "'s Story";
+		}
+		
+		if(met_ruby == false)
+		{
+			cout << "\t\t\t   [Locked!]" << endl;
+		}
+		else
+		{
+			cout << "\t\t\t[Ruby's Story]" << endl;
+		}
+		
+		if(met_seb == false)
+		{
+			cout << "\t\t\t   [Locked!]" << endl;
+		}
+		else
+		{
+			cout << "\t\t\t[Seb's Story]" << endl;
+		}
+		
+		getcom(command);
+		checkcom(command, my_story, "go to Ruby's Story", "go to Seb's Story");
+		if(command == my_story)
+		{
+			done = true;//######################################################################################DELEGATE THE THREE STORIES
+		}
+		if(command == "go to Ruby's Story")
+		{
+			done = true;
+		}
+		if(command == "go to Seb's Story")
+		{
+			done = true;
+		}
+	}while(!done);
+}
+
+void credits(bool &done)
+{
+	cout << "\t  Game: 16th & Oak" << endl;
+	cout << "\tLanguage: C++" << endl;
+	cout << "\tCreated: November 3rd, 2015" << endl;
+	cout << "\tFinished: December 25th, 2015" << endl;
+	cout << "\tAuthor: David Amante" << endl;
+	cout << "\tEmail: davidamante17@yahoo.com" << endl << endl;
+	getchar();
+	
+	cout << "\t\t The End!" << endl;
+	getchar();
+	done = true;
+}
+
+/////////////////////////////////////////////////////////////////////text manipulation functions
 void wipe()
 {
 	cout << string(30, '\n');
@@ -205,8 +292,39 @@ void checkcom(string &command, string location)
 		getcom(command);
 	}
 }
+void checkcom(string &command, string location1, string location2)
+{
+	while(command != location1 && command != location2)
+	{
+		cout << "Invalid location." << endl;
+		getcom(command);
+	}
+}
+void checkcom(string &command, string location1, string location2, string location3)
+{
+	while(command != location1 && command != location2 && command != location3)
+	{
+		cout << "Invalid location." << endl;
+		getcom(command);
+	}
+}
 
-//musical note functions
+void checkS(string name, bool &s)
+{
+	for(int i = 0; i < name.size(); i++)
+	{
+		if((name[i] == 's' || name[i] == 'S') && i == (name.size()-1))
+		{
+			s = true;
+		}
+		else
+		{
+			s = false;
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////musical note functions
 //C
 void c0(double length)  
 {
