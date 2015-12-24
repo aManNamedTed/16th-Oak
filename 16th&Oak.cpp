@@ -1,41 +1,212 @@
 #include <iostream>
+#include <string>
 #include <windows.h>
+#include <unistd.h>
 
 using namespace std;
 
+//musical note functions
 //C, C#/Db
 void c0(double); void c1(double); void c2(double); void c3(double); void c4(double); void c5(double); void c6(double); void c7(double); void c8(double); 
 void cs0(double); void cs1(double); void cs2(double); void cs3(double); void cs4(double); void cs5(double); void cs6(double); void cs7(double); void cs8(double); 
-
 //D, D#/Eb
 void d0(double); void d1(double); void d2(double); void d3(double); void d4(double); void d5(double); void d6(double); void d7(double); void ds8(double); 
 void ds0(double); void ds1(double); void ds2(double); void ds3(double); void ds4(double); void ds5(double); void ds6(double); void ds7(double); void ds8(double); 
-
 //E
 void e0(double); void e1(double); void e2(double); void e3(double); void e4(double); void e5(double); void e6(double); void e7(double); void e8(double); 
-
 //F, F#/Gb
 void f0(double); void f1(double); void f2(double); void f3(double); void f4(double); void f5(double); void f6(double); void f7(double); void f8(double); 
 void fs0(double); void fs1(double); void fs2(double); void fs3(double); void fs4(double); void fs5(double); void fs6(double); void fs7(double); void fs8(double); 
-
 //G, G#/Ab
 void g0(double); void g1(double); void g2(double); void g3(double); void g4(double); void g5(double); void g6(double); void g7(double); void g8(double); 
 void gs0(double); void gs1(double); void gs2(double); void gs3(double); void gs4(double); void gs5(double); void gs6(double); void gs7(double); void gs8(double); 
-
 //A, A#/Bb
 void a0(double); void a1(double); void a2(double); void a3(double); void a4(double); void a5(double); void a6(double); void a7(double); void a8(double); 
 void as0(double); void as1(double); void as2(double); void as3(double); void as4(double); void as5(double); void as6(double); void as7(double); void as8(double); 
-
 //B
 void b0(double); void b1(double); void b2(double); void b3(double); void b4(double); void b5(double); void b6(double); void b7(double); void b8(double);
 
+
+//game functions
+void description(); //prints description of game/creator before start of game
+void tutorial(string &); //prints tutorial screen, gets name of player
+void credits();
+
+//text manipulation functions
+void wipe(); //clears text from standard sized terminal
+void getcom(string &); //gets command from user
+void yesorno(string &); //checks for yes/no commands
+void checkcom(string &command, string location); //checks for correct location commands
 int main()
 {
-	c6(500);
-	c4(500);
-	return 0;
+	string name;
+	
+	//GAME START
+	//description();
+	tutorial(name);
+	//credits();
 }
 
+void description()
+{
+	cout << " \t===========================================================" << endl;
+	cout << " \t  #   ####  TTT H H     &&&         OOOO    AAA   KK   KK " << endl;
+ 	cout << " \t###  ######  T  HHH    && &&       OOOOOO  AAAAA  KK  KK  " << endl;
+	cout << " \t ##  ##      T  H H    && &&  &&   OO  OO AA   AA KK KK   " << endl;
+	cout << " \t ##  #####              &&&   &&   OO  OO AA   AA KKKKK   " << endl;
+	cout << " \t ##  ##  ##           &&   &&&&    OO  OO AAAAAAA KK  KK  " << endl;
+	cout << " \t ##  ######           &&    &&     OOOOOO AA   AA KK   KK " << endl;
+	cout << " \t####  ####             &&&&&  &&    OOOO  AA   AA KK    KK" << endl;
+	cout << " \t===========================================================" << endl;
+	cout << endl;
+	cout << "  Upon receiving a call from a mysterious being," << endl; 
+	cout << "  \tyou are invited to a nondescript party. As the" << endl;
+	cout << "  \t\tnight progresses, your world is flipped upside" << endl;
+	cout << "  \t\t\tdown after meeting the mastermind behind it all." << endl << endl;
+	cout << "  \t\t    Can you handle this epic adventure?" << endl;
+	cout << "   \n\t\t\t       [Press Enter]" << endl;
+	getchar();
+}
+
+void credits()
+{
+	cout << "Game: 16th & Oak" << endl;
+	cout << "Created: November 3, 2015" << endl;
+	cout << "Finished: TBA" << endl;
+	cout << "Language: C++" << endl;
+	cout << "Author: David Amante" << endl;
+	cout << "Email: davidamante17@yahoo.com" << endl << endl;
+}
+
+void tutorial(string &name)
+{
+	wipe();
+	string response;
+	
+	//cout << "123456789012345678901234567890123456789012345678901234567890123456789012345" << endl;
+	cout << "\t\t\t Welcome to the tutorial!" << endl;
+	cout << "\t    This is to help get you situated before you begin." << endl << endl;
+	cout << "(1/6)---------------------------------------------------------------------" << endl;
+	cout << "When you see a blinking cursor at the bottom left, press the enter key." << endl;
+	getchar();
+	cout << "Perfect!" << endl;
+	getchar();
+	
+	cout << "(2/6)---------------------------------------------------------------------" << endl;
+	cout << "When you see '>', and a blinking cursor, you will have to enter a command," << endl;
+	cout << "then press the enter key. Commands are displayed inside the symbols, <>." << endl << endl;
+	cout << "Do you understand?" << endl;
+	cout << "<yes> / <no>" << endl;
+	getcom(response);
+	yesorno(response);
+	if(response == "yes" || response == "Yes")
+	{
+		cout << "Sick!" << endl;
+	}
+	else if(response == "no" || response == "No")
+	{
+		cout << "Lies! You're doing fine!" << endl;
+	}
+	getchar();
+	
+	cout << "(3/6)---------------------------------------------------------------------" << endl;
+	cout << "At times, there will be locations you must travel to. To do this, type" << endl;
+	cout << "'go to' and the location. Locations are always found within brackets[]." << endl;
+	cout << "For this example, type 'go to next level'." << endl << endl;
+	cout << "Try going to the [next level]!" << endl;
+	getcom(response);
+	checkcom(response, "go to next level");
+	if(response == "go to next level")
+	{
+		cout << "Nice job, uh.." << endl;
+	}
+	getchar();
+	
+	cout << "(4/6)---------------------------------------------------------------------" << endl;
+	cout << "... what's your name?" << endl << endl;
+	cout << "Name: ";
+	getline(cin, name);
+	cout << endl << name << "? Cute." << endl;
+	getchar();
+	
+	cout << "(5/6)---------------------------------------------------------------------" << endl;
+	cout << name << ", do you want the best game-playing experience possible?" << endl;
+	cout << "<yes> / <no>" << endl;
+	getcom(response);
+	yesorno(response);
+	
+	if(response == "yes" || response == "Yes")
+	{
+		cout << "For the best experience:" << endl << endl;
+		
+		cout << "\t1. Right click the top of this window." << endl;
+		cout << "\t     [It looks like this]--> (C:\\Users\\[...]\\16th&Oak.exe)" << endl << endl;
+		cout << "\t2. Click on properties." << endl;
+		cout << "\t3. Click on the 'Font' tab." << endl;
+		cout << "\t4. Set the font to Consolas." << endl;
+		cout << "\t5. Set the font size to 14." << endl;
+		cout << "\t6. Click on the 'Layout' tab and set these values:" << endl << endl;
+		cout << "\t7. Screen Buffer Size: " << endl;
+		cout << "\t\t Width:  75" << endl;
+		cout << "\t\t Height: 300" << endl << endl;
+		cout << "\t8. Window Size" << endl;
+		cout << "\t\t Width:  75" << endl;
+		cout << "\t\t Height: 32" << endl << endl;	
+		cout << "\t9. Click 'OK'" << endl;
+	}
+	else if(response == "no" || response == "No")
+	{
+		cout << "No worries!" << endl;
+	}
+	getchar();
+	
+	cout << "(6/6)---------------------------------------------------------------------" << endl;
+	cout << "Finally, " << name << ", this game plays the occasional 'beep' and 'boop'," << endl;
+	cout << "so adjust your speaker settings accordingly." << endl << endl;
+	cout << "Please be courteous of others!" << endl;
+	
+	getchar();
+	
+	cout << "Beep! ";
+	c6(600); //beep
+	cout << "Boop!" << endl;
+	c4(600); //boop
+	
+	cout << "Have fun!!" << endl;
+	getchar();
+}
+
+void wipe()
+{
+	cout << string(30, '\n');
+}
+
+void getcom(string &command)
+{
+	cout << "> ";
+	getline(cin, command);
+	cout << endl;
+}
+
+void yesorno(string &response)
+{
+	while(response != "yes" && response != "no" && response != "Yes" && response != "No")
+	{
+		cout << "Invalid response." << endl;
+		getcom(response);
+	}
+}
+
+void checkcom(string &command, string location)
+{
+	while(command != location)
+	{
+		cout << "Invalid location." << endl;
+		getcom(command);
+	}
+}
+
+//musical note functions
 //C
 void c0(double length)  
 {
