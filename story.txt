@@ -5,13 +5,15 @@ Background: I realized I had messed up by trying to implement too many features 
 the game. This is my second attempt at creating the story, from start to finish, and then actually
 programming the entire game from start to finish, within 24 hours. So the goal here in dayata 2.0 is to
 create the entire story, hopefully succeeding in 10 full minutes of play time. The story begins here:
+
+Note: ### means this is where i've developed up to
 ________________________________________TUTORIAL________________________________________________________
 Classic tutorial, no skipping, primarily the tutorial from the last attempt at this game. Can be found
 in /mainlib. 
 Also add details about these things:
 [x] include something about using the new 'go to + area' mechanic. [finished 1AM 12/24/15]
-[] include about how there are moments where there will be noise, so use headphones, and be considerate
-    if you're in a setting where others can readily hear what your computer will put out
+[x] include about how there are moments where there will be noise, so use headphones, and be considerate
+    if you're in a setting where others can readily hear what your computer will put out [finished 2:03AM 12/24/15]
 [-] i think? include something about the delay setting, in which no input is required [no more delay setting]
 [x] include something about the [command] response feature [finished 12:32AM 12/24/15]
 --------------------------------------------------------------------------------------------------------
@@ -19,7 +21,8 @@ Also add details about these things:
 -Story Mode
 -Locked! (if talk to ruby, unlock ruby story)
 -Locked! (if talk to seb, unlock seb story)
-
+[finished 2:53AM] 
+###################
 ________________________________________________________STORY___________________________________________
 Get_Name:
     It's Friday December 25th, 2015. 
