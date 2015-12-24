@@ -675,7 +675,7 @@ Level Four:
             [first floor]
             >go to first floor
                 You arrive at the base of the stairs to feel the bass of the music rattle your bones.
-                It seems the party is still going on perfectly fine. 
+                It's as if nobody heard that.
                 
                 The front door opens and Heather bursts in.
                 
@@ -714,12 +714,15 @@ Level Four:
         
         You grab Ron's arm and help him to his [feet].
         >feet
-            You notice that strange symbol from the backpack on Ron's shoes.
+            You notice a symbol on Ron's shoes. 
+            (symbol)
+            *you*: What is that from?
+            *you*: THE BACKPACK.
         
         Ron: Heh, you like'm? Seb made'm for me. They're--
         Heather: Red! Yeah. See? Ron, your shoes are red. 
         
-        You're curious. What does that symbol mean?
+        *you*: What the hell are they hiding?
         
         You arrive at the top of the stairs with Ron and Heather. 
         Heather hurries into the hallway where the pictures are.
@@ -732,7 +735,7 @@ Level Four:
         Heather: My parents like privacy.
         Heather: A lot of it.
         
-        *you*: Gross.
+        *you*: Gross?
         
         The bookshelf shifts to the left, revealing a room.
         
@@ -755,7 +758,7 @@ Level Four:
         ???: Hi h-h-honey! What's u-up?
         Heather: Ron drank a bit too--
         ???: Heather! How rude of you not to introduce me to your friend!
-        Heather (mockingly): Mom, /name/. /name/, Mom. My Mom prefers Willow though. As that is her name.
+        Heather (mockingly): Mom, /name/. /name/, Mom. 'Mom' prefers Willow though. As that is her name.
         Willow: Thank y-you, dear.
         
         you: Nice to meet--
@@ -766,11 +769,11 @@ Level Four:
         
         Heather: Sorry, /name/. I'm just worried about Ron.
         
-        Willow enters the room with a large syringe and a disinfectant wipe.
+        Willow returns to the room with a large syringe and a disinfectant wipe.
         
         Heather: Don't worry, I've tried it, it works.
         
-        Heather pulls up her shirt a bit, revealing a barely noticeable scar on the upper right side of her stomach.
+        Heather pulls up her shirt a bit, revealing a tiny tidbit of a scar on the upper right side of her stomach.
         
         Willow: See, you inj-j-ject the sobering agent d-directly in-into the liver; w-w-works withthin s-seconds.
         
@@ -786,12 +789,12 @@ Level Four:
         
         Willow leaves the room with the syringe and disinfectant wipe as Heather grabs a textbook.
         
-        Heather (whispering): My mom has a stutter. You know. She knows. Don't mention it.
+        Heather (whispering): My mom has a stutter. You know it. She knows it. Don't mention it.
         You nod.
         
         Ron awakens violently, as if from a bad dream.
         
-        Ron: Hey! Wha-- I CAN'T SEE!! EVERYTHINGS DARK!!
+        Ron: Hey! Wha-- WHAT?! I CAN'T SEE!! EVERYTHINGS DARK!!
         
         Willow (from the other room): It wears off in a minute, Ron!
         
@@ -801,7 +804,7 @@ Level Four:
         
         Ron: OW! WHAT THE HELL?!
         
-        Heather: You poop! You passed out in the bathroom WITH the door locked. AGAIN.
+        Heather: You poop! You passed out in the bathroom with the door LOCKED. AGAIN.
         Ron: Heather? Look, I'm sorry! I didn't want you to see me like that because... um..
         
         Ron slowly feels his way to the edge of the bed and sits up.
@@ -824,36 +827,23 @@ Level Four:
         
         Heather kisses Ron.
         
-        Ron opens his eyes and looks around.
-        Ron: I can see! Thanks baby.
-        Heather: You're welcome.
+        Ron opens his eyes as wide as he can, straining to see.
         
         Willow enters the room.
-        Willow: Ooohh H-Heather. You just have g-g-great t-timing is all.
-        Heather: Mom! Shuhhla la lalala!
-        you: Nice reference.
         
-        Heather winks at you.
+        Ron: Oh hey Ms. W!
+        Willow: G-good e-evening, Ron.
+        Willow: Heather, h-have you heard from Ru-b-by late-l-ly? Seb alrea-d-dy t-took off.
         
-        Ron: Babe!
-        
-        Heather: SOMEONE has good taste in comedy, 'Babe.'
+        Ron: HEATHER!
         
         Disembodied Voice: WARNING. WARNING.
         Disembodied Voice: Three foreign vectors in air space: Four. Nine. Three. Zero.
         Disembodied Voice: Location: J-76.
         
-        Willow: Heather! Do y-you have anyth-thing to do w-with this?!
-        Heather: About that.. 
-        Heather: While I was looking for Ron down the street, I saw that ###########################
+        Heather: Uhhh..
         
-        
-        
-        
-        
-        
-        
-        
+        Willow: HEA-TH-THER S-SADIE WEXINGTON!!
         
         -------------------------------------------------------------------------------------------------
         >go to left
@@ -892,6 +882,9 @@ Level Four:
         [x] The door opens and you meet Willow
         [x] Willow is Myrtle & Heather's mom
         [x] Willow cures Ron's drunkeness
+        =====================================================================================================
+        (I AM RESERVING THESE EVENTS FOR A FURTHER RELEASE OF THIS GAME.)
+        (FOR NOW I WILL OUTLINE RUBY/SEB'S STORY, AS WELL AS BEGIN PROGRAMMING THE GAME..)
         [] You land in Liz's dance room, where she is still practicing.
         [] You warn her of the impending raid
         [] Willow insists on everyone, Fen, You, Q, Richard, and Liz, to get in the Rolls Royce
@@ -904,3 +897,4 @@ Level Four:
         [] You and Q nanny Richard for the last time
         [] You invite Q into your room to sleep
         [] LEVEL FOUR (FINAL LEVEL) maybe.
+~~~~~~~~LET THE GAMES BEGIN~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
