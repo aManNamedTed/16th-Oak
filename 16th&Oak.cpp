@@ -31,6 +31,13 @@ void b0(double); void b1(double); void b2(double); void b3(double); void b4(doub
 void description(); //prints description of game/creator before start of game
 void tutorial(string &, bool &); //prints tutorial screen, gets name of player
 void mainmenu(string); //main menu returns a string that points to which story to play
+void my_story(string); //the main story, using the player's name
+void my_level_zero(string); //level zero of main story
+void my_level_one(string); //level one of main story
+void my_level_two(string); //level two of main story
+void my_level_three(string); //level three of main story
+void ruby_story(string);  //Ruby's story, also uses player's name
+void seb_story(string); //Seb's story, also uses player's name
 void credits(bool &); //prints credits
 
 //text manipulation functions
@@ -55,9 +62,14 @@ int main()
 	//GAME START
 	do
 	{
+		
 		//description();
 		//tutorial(name, s);
-		mainmenu(name);
+		//mainmenu(name);
+		
+		name = "Poop";
+		my_story(name); //in main menu, this works
+		
 		//credits(done);
 	}while(!done);
 	
@@ -154,7 +166,7 @@ void tutorial(string &name, bool &s)
 		cout << "\t2. Click on properties." << endl;
 		cout << "\t3. Click on the 'Font' tab." << endl;
 		cout << "\t4. Set the font to Consolas." << endl;
-		cout << "\t5. Set the font size to 14." << endl;
+		cout << "\t5. Set the font size of your choosing." << endl;
 		cout << "\t6. Click on the 'Layout' tab and set these values:" << endl << endl;
 		cout << "\t7. Screen Buffer Size: " << endl;
 		cout << "\t\t Width:  75" << endl;
@@ -191,9 +203,7 @@ void mainmenu(string name)
 	wipe();
 	bool done;
 	string command;
-	string my_story;
-	//stub for dev
-	name = "David";
+	string their_story;
 	
 	//checking for s as the last letter of name for correct possessive noun
 	checkS(name, s);
@@ -204,12 +214,12 @@ void mainmenu(string name)
 		if(s == true)
 		{
 			cout << "\t\t\t[" << name << "' Story]" << endl;
-			my_story = "go to " + name + "' Story";
+			their_story = "go to " + name + "' Story";
 		}
 		else
 		{
 			cout << "\t\t\t[" << name << "'s Story]" << endl;
-			my_story = "go to " + name + "'s Story";
+			their_story = "go to " + name + "'s Story";
 		}
 		
 		if(met_ruby == false)
@@ -231,20 +241,136 @@ void mainmenu(string name)
 		}
 		
 		getcom(command);
-		checkcom(command, my_story, "go to Ruby's Story", "go to Seb's Story");
-		if(command == my_story)
+		checkcom(command, their_story, "go to Ruby's Story", "go to Seb's Story");
+		if(command == their_story)
 		{
-			done = true;//######################################################################################DELEGATE THE THREE STORIES
+			my_story(name); //'their_story' clashed with function name, 'my_story'; had to differentiate
 		}
 		if(command == "go to Ruby's Story")
 		{
-			done = true;
+			ruby_story(name);
 		}
 		if(command == "go to Seb's Story")
 		{
-			done = true;
+			seb_story(name);
 		}
 	}while(!done);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////MY STORY FUNCTIONS
+void my_story(string name)
+{
+	my_level_zero(name);
+	my_level_one(name);
+	my_level_two(name);
+	my_level_three(name);
+}
+
+void my_level_zero(string name)
+{
+	cout << "It's Friday December 25th, 2015." << endl;//################################CURRENTDATE FUNCTION NEEDED
+    
+	cout << endl << "The train bell wakes you as you realize you've reached your stop." << endl;
+	cout << "You leave the train and begin to walk back to your apartment complex." << endl;
+    getchar();
+    
+    //(insert some Jolly Oxen here using beeps and frequencies)###############################################
+	cout << "\t\tcasual" << endl;
+	c3(350);
+	e3(350);
+	g3(350);
+	
+	cout << "\t\t    walking" << endl;
+	c4(350);
+	e4(350);
+	g4(350);
+	
+	cout << "\t\t\t transition" << endl;
+	c5(350);
+	e5(350);
+	g5(350);
+	
+	cout << "\t\t\t\t music" << endl;
+	c6(450);
+    sleep(.5);
+    
+	cout << endl << "Approaching your apartment complex, you notice a strange man outside." << endl;
+    cout << "As you get closer, the man notices you and stands in front of the door." << endl;
+	cout << "He's so strange. Torn shirt. Ragged jeans. No shoes. Homeless, maybe?" << endl;
+	getchar();
+	cout << "He rushes in front of you." << endl;
+	cout << "Strange Man: Stand still.";
+	getchar();
+	cout << "Strange Man: Scanning..." << endl;
+	getchar();
+	
+	//mock hacking script variant
+	
+	if(name == "David Amante")
+	{
+		cout << "Strange Man: Apologies, sir. It's you, from the past. It's 3:09AM PST on" << endl;
+		cout << "Strange Man: December 12th, 2015. You got this crazy dumb idea to try to" << endl;
+		cout << "Strange Man: release this game in thirteen days. I mean, it's on GitHub," << endl;
+		cout << "Strange Man: the edits are there. The archiving. Dude, you're nuts for" << endl;
+		cout << "Strange Man: deciding to finish this game in 13 days. I mean, disregarding" << endl;
+		cout << "Strange Man: the face that you have that hash table project due in 8 days" << endl;
+		cout << "Strange Man: and a Calculus I in 2 days, oh and the CIS in-class final is" << endl;
+		cout << "Strange Man: on the 17th, that final you should be studying for.. Well I" << endl;
+		cout << "Strange Man: mean, priorities, right? Go you. Or well, go me? It's late" << endl;
+		cout << "Strange Man: and you/I/we're tired. Good luck finishing this." << endl;
+		cout << "Strange Man: Thanks me. Or you. Us. This is weird. Go on in." << endl;
+		cout << "Strange Man: Have fun. Be safe." << endl;
+		cout << "Strange Man: \t-David Amante" << endl;
+		cout << "\t\t December 24th, 2015, 8:20PM on the night train w/ Max & Dad." << endl;
+	}
+	else
+	{
+		cout << "Holding a finger to his earpiece, he says," << endl;
+		cout << "Strange Man: 01111001 01101111 01110101" << endl;
+		sleep(1.5);
+		cout << "Strange Man: 01100001 01110010 01100101" << endl;
+		sleep(1.7);
+		cout << "Strange Man: 01101110 01101111 01110100" << endl;
+		cout << "Strange Man: 01101000 01101001 01101101" << endl;
+		getchar();
+		
+		cout << "My apologies." << endl;
+		sleep(.3);
+		cout << "Wrong person." << endl;
+		getchar();
+		
+		cout << "Please, after you." << endl << endl;
+		sleep(.4);
+		cout << "The man gestures for you to enter." << endl;
+	}
+	getchar();
+}
+
+void my_level_one(string name)
+{
+	;
+}
+
+void my_level_two(string name)
+{
+	;
+}
+
+void my_level_three(string name)
+{
+	;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////RUBY STORY FUNCTIONS
+void ruby_story(string name)
+{
+	;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////SEB STORY FUNCTIONS
+void seb_story(string name)
+{
+	;
 }
 
 void credits(bool &done)

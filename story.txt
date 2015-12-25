@@ -21,8 +21,7 @@ Also add details about these things:
 -Story Mode
 -Locked! (if talk to ruby, unlock ruby story)
 -Locked! (if talk to seb, unlock seb story)
-[finished 2:53AM] 
-###################
+[finished 2:53AM, December 24th, 2015]
 ________________________________________________________STORY___________________________________________
 Get_Name:
     It's Friday December 25th, 2015. 
