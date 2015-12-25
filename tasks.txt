@@ -54,12 +54,17 @@ Thursday, December 24th, 2015:
   (2hrs) 5:00PM - 7:00PM: Play game all the way through, with no bugs.
   (1hr)  8:00PM - 9:00PM: Release
   ---------------------------------------------------------------
-Reality:
+REALITY: 5 Hours
 Thursday, December 24th, 2015:
    *Today I will complete the whole of the program.
   (4hrs) 12:00AM - 4:00AM: Finished description, tutorial, main menu, credits,
                            and figured out how to stay in int main() during play
   (1hr)  8:00PM – 9:00PM: Programmed level 0
-  
-
 ======================================================================
+PROJECTION: 
+Friday, December 25th, 2015:
+    *Today I will finish programming level 1
+   (2hrs) 3:00AM - 5:00AM: Complete programming level 1
+REALITY:
+Friday, December 25th, 2015:
+   (2hrs) 3:00AM - 5:00AM: Complete programming level 1
