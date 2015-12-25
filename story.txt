@@ -80,6 +80,7 @@ Get_Name:
                 The man holds the door open as you enter.
             }
     ------------------------------------------------------
+    [finished level zero 9:00PM 12-24-2015]############################
 ========================================================================================================
 Level One:
     Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
@@ -137,7 +138,7 @@ Level Three:
     >go to poster 
     {   
         THE WAY THIS WILL WORK IS IT SHOWS 3 AT A TIME, AFTER YOU FINISH THE TOP-MOST TASK, A BOOL WILL 
-         SWAP VALUES, MAKING THE TOP TASK DISAPPEAR, AND THE NEW (3RD) BOTTOM TASK TO APPEAR. THE USER
+        SWAP VALUES, MAKING THE TOP TASK DISAPPEAR, AND THE NEW (3RD) BOTTOM TASK TO APPEAR. THE USER
         SHOULD BE ABLE TO ACCESS THIS POSTER FROM ANYWHERE.
         either:
         1.  CONSIDERING IT NOW, I THINK I WILL MAKE IT BE SOME HANDOUT FROM SOMEONE AT THE PARTY, IN WHICH
