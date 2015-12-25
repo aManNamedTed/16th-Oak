@@ -1,8 +1,8 @@
-#include <iostream>
-#include <string>
 #include <windows.h>
 #include <unistd.h>
-
+#include <iostream>
+#include <string>
+#include <ctime>
 using namespace std;
 
 //musical note functions
@@ -42,12 +42,16 @@ void credits(bool &); //prints credits
 
 //text manipulation functions
 void wipe(); //clears text from standard sized terminal
+void current_date();
+void checkS(string, bool&); //checks if name ends in an 's'
 void getcom(string &); //gets command from user
 void yesorno(string &); //checks for yes/no commands
-void checkS(string, bool&); //checks if name ends in an 's'
-void checkcom(string &, string); //checks for correct location commands
-void checkcom(string &, string, string); //checks for correct location commands
-void checkcom(string &, string, string, string); //checks for correct location commands
+void checkcom(string &, string); //checks for correct command input
+void checkcom(string &, string, string); //checks for correct command input
+void checkcom(string &, string, string, string); //checks for correct command input
+void checkloc(string &, string); //checks for correct location commands
+void checkloc(string &, string, string); //checks for correct location commands
+void checkloc(string &, string, string, string); //checks for correct location commands
 
 //global variables
 bool s, met_ruby, met_seb;
@@ -61,8 +65,7 @@ int main()
 	
 	//GAME START
 	do
-	{
-		
+	{	
 		//description();
 		//tutorial(name, s);
 		//mainmenu(name);
@@ -135,7 +138,7 @@ void tutorial(string &name, bool &s)
 	cout << "For this example, type 'go to next level'." << endl << endl;
 	cout << "Try going to the [next level]!" << endl;
 	getcom(response);
-	checkcom(response, "go to next level");
+	checkloc(response, "go to next level");
 	if(response == "go to next level")
 	{
 		cout << "Nice job, uh.." << endl;
@@ -152,7 +155,7 @@ void tutorial(string &name, bool &s)
 	getchar();
 	
 	cout << "(5/6)---------------------------------------------------------------------" << endl;
-	cout << name << ", do you want the best game-playing experience possible?" << endl;
+	cout << name << ", do you want the best possible gaming experience?" << endl;////////////////////#################rephrase this
 	cout << "<yes> / <no>" << endl;
 	getcom(response);
 	yesorno(response);
@@ -241,7 +244,7 @@ void mainmenu(string name)
 		}
 		
 		getcom(command);
-		checkcom(command, their_story, "go to Ruby's Story", "go to Seb's Story");
+		checkloc(command, their_story, "go to Ruby's Story", "go to Seb's Story");
 		if(command == their_story)
 		{
 			my_story(name); //'their_story' clashed with function name, 'my_story'; had to differentiate
@@ -268,14 +271,15 @@ void my_story(string name)
 
 void my_level_zero(string name)
 {
-	cout << "It's Friday December 25th, 2015." << endl;//################################CURRENTDATE FUNCTION NEEDED
-    
+	wipe();
+	
+	current_date();
+	
 	cout << endl << "The train bell wakes you as you realize you've reached your stop." << endl;
 	cout << "You leave the train and begin to walk back to your apartment complex." << endl;
     getchar();
     
-    //(insert some Jolly Oxen here using beeps and frequencies)###############################################
-	cout << "\t\tcasual" << endl;
+    cout << "\t\tcasual" << endl;
 	c3(350);
 	e3(350);
 	g3(350);
@@ -327,20 +331,20 @@ void my_level_zero(string name)
 	{
 		cout << "Holding a finger to his earpiece, he says," << endl;
 		cout << "Strange Man: 01111001 01101111 01110101" << endl;
-		sleep(1.5);
+		getchar();
 		cout << "Strange Man: 01100001 01110010 01100101" << endl;
-		sleep(1.7);
+		getchar();
 		cout << "Strange Man: 01101110 01101111 01110100" << endl;
+		getchar();
 		cout << "Strange Man: 01101000 01101001 01101101" << endl;
 		getchar();
 		
-		cout << "My apologies." << endl;
-		sleep(.3);
-		cout << "Wrong person." << endl;
+		cout << "Strange Man: My apologies." << endl;
+		sleep(1.2);
+		cout << "Strange Man: Wrong person." << endl;
 		getchar();
-		
-		cout << "Please, after you." << endl << endl;
-		sleep(.4);
+		cout << "Strange Man: Please, after you." << endl << endl;
+		sleep(1.2);
 		cout << "The man gestures for you to enter." << endl;
 	}
 	getchar();
@@ -348,7 +352,55 @@ void my_level_zero(string name)
 
 void my_level_one(string name)
 {
-	;
+	string command;
+	
+	cout << "Upon stepping foot in your apartment after a long day at work," << endl;
+	cout << "your home phone rings." << endl << endl;
+	
+	cout << "Answer the phone?" << endl;
+	cout << "<yes>" << endl;
+	getcom(command);
+	checkcom(command, "yes", "Yes");
+	
+	if(command == "yes" || command == "Yes")
+	{
+		cout << "???: Dude! Party on 16th and Oak! That cutie from your Sociology class" << endl;
+		cout << "???: is here! You coming??" << endl << endl;
+		cout << "<who is this?>" << endl;
+		getcom(command);
+		checkcom(command, "who is this?", "Who is this?");
+		
+		if(command == "Who is this?" || command == "who is this?")
+		{
+			cout << "???: It's Richard! Your best bud! DUDE. Work couldn't've been THAT bad." << endl;
+			getchar();
+			cout << "Richard: So are you coming or not?" << endl;
+			cout << "<yes>" << endl;
+			getcom(command);
+			checkcom(command, "yes", "Yes");
+			if(command == "yes" || command == "Yes")
+			{
+				cout << "Richard: GOOD! It's still early--you probably have an hour before things" << endl;
+				cout << "Richard: really get out of hand! Nevertheless, I better see you here!" << endl;
+				cout << "Richard: I have a plan to introduce you two!" << endl;
+				getchar();
+				
+				cout << "you: but--" << endl;
+				sleep(1);
+				cout << "*click*" << endl;
+				
+				cout << "you: . ";
+				sleep(1);
+				cout << ". ";
+				sleep(1);
+				cout << ".";
+				sleep(1);
+				
+				cout << "you: Shit." << endl;
+				getchar();		
+			}
+		}
+	}
 }
 
 void my_level_two(string name)
@@ -401,16 +453,43 @@ void getcom(string &command)
 	cout << endl;
 }
 
-void yesorno(string &response)
+void yesorno(string &command)
 {
-	while(response != "yes" && response != "no" && response != "Yes" && response != "No")
+	while(command != "yes" && command != "no" && command != "Yes" && command != "No")
 	{
-		cout << "Invalid response." << endl;
-		getcom(response);
+		cout << "Invalid command." << endl;
+		getcom(command);
 	}
 }
 
-void checkcom(string &command, string location)
+void checkcom(string &command, string option1)
+{
+	while(command != option1)
+	{
+		cout << "Invalid command." << endl;
+		getcom(command);
+	}
+}
+
+void checkcom(string &command, string option1, string option2)
+{
+	while(command != option1 && command != option2)
+	{
+		cout << "Invalid command." << endl;
+		getcom(command);
+	}
+}
+
+void checkcom(string &command, string option1, string option2, string option3)
+{
+	while(command != option1 && command != option2 && command != option3)
+	{
+		cout << "Invalid command." << endl;
+		getcom(command);
+	}
+}
+
+void checkloc(string &command, string location)
 {
 	while(command != location)
 	{
@@ -418,7 +497,7 @@ void checkcom(string &command, string location)
 		getcom(command);
 	}
 }
-void checkcom(string &command, string location1, string location2)
+void checkloc(string &command, string location1, string location2)
 {
 	while(command != location1 && command != location2)
 	{
@@ -426,7 +505,7 @@ void checkcom(string &command, string location1, string location2)
 		getcom(command);
 	}
 }
-void checkcom(string &command, string location1, string location2, string location3)
+void checkloc(string &command, string location1, string location2, string location3)
 {
 	while(command != location1 && command != location2 && command != location3)
 	{
@@ -448,6 +527,187 @@ void checkS(string name, bool &s)
 			s = false;
 		}
 	}
+}
+
+//////////////////////////////////////////////////////////////////////////current date function
+void current_date()
+{
+	time_t t = time(0);
+	struct tm * now = localtime(&t);
+	
+	cout << "\t\t\tIt's ";
+	switch(now->tm_mon+1)
+	{
+		case 1:
+			cout << "January ";
+			break;
+		case 2:
+			cout << "February ";
+			break;
+		case 3:
+			cout << "March ";
+			break;
+		case 4:
+			cout << "April ";
+			break;
+		case 5:
+			cout << "May ";
+			break;
+		case 6:
+			cout << "June ";
+			break;
+		case 7:
+			cout << "July ";
+			break;
+		case 8:
+			cout << "August ";
+			break;
+		case 9:
+			cout << "September ";
+			break;
+		case 10:
+			cout << "October ";
+			break;
+		case 11:
+			cout << "November ";
+			break;
+		case 12:
+			cout << "December ";
+			break;
+	}
+	
+	switch(now->tm_mday)
+	{
+		case 1:
+			cout << "1st, ";
+			break;
+		case 2:
+			cout << "2nd, ";
+			break;
+		case 3:
+			cout << "3rd, ";
+			break;
+		case 4:
+			cout << "4th, ";
+			break;
+		case 5:
+			cout << "5th, ";
+			break;
+		case 6:
+			cout << "6th, ";
+			break;
+		case 7:
+			cout << "7th, ";
+			break;
+		case 8:
+			cout << "8th, ";
+			break;
+		case 9:
+			cout << "9th, ";
+			break;
+		case 10:
+			cout << "10th, ";
+			break;
+		case 11:
+			cout << "11th, ";
+			break;
+		case 12:
+			cout << "12th, ";
+			break;
+		case 13:
+			cout << "13th, ";
+			break;
+		case 14:
+			cout << "14th, ";
+			break;
+		case 15:
+			cout << "15th, ";
+			break;
+		case 16:
+			cout << "16th, ";
+			break;
+		case 17:
+			cout << "17th, ";
+			break;
+		case 18:
+			cout << "18th, ";
+			break;
+		case 19:
+			cout << "19th, ";
+			break;
+		case 20:
+			cout << "20th, ";
+			break;
+		case 21:
+			cout << "21st, ";
+			break;
+		case 22:
+			cout << "22nd, ";
+			break;
+		case 23:
+			cout << "23rd, ";
+			break;
+		case 24:
+			cout << "24th, ";
+			break;
+		case 25:
+			cout << "25th, ";
+			break;
+		case 26:
+			cout << "26th, ";
+			break;
+		case 27:
+			cout << "27th, ";
+			break;
+		case 28:
+			cout << "28th, ";
+			break;
+		case 29:
+			cout << "29th, ";
+			break;
+		case 30:
+			cout << "30th, ";
+			break;
+		case 31:
+			cout << "31st, ";
+			break;
+	}
+	
+	switch(now->tm_year + 1900)
+	{
+		case 2015:
+			cout << "2015";
+			break;
+		case 2016:
+			cout << "2016";
+			break;
+		case 2017:
+			cout << "2017";
+			break;
+		case 2018:
+			cout << "2018";
+			break;
+		case 2019:
+			cout << "2019";
+			break;
+		case 2020:
+			cout << "2020";
+			break;
+		case 2021:
+			cout << "2021";
+			break;
+		case 2022:
+			cout << "2022";
+			break;
+		case 2023:
+			cout << "2023";
+			break;
+		case 2024:
+			cout << "2024";
+			break;
+	}
+	
+	cout << "." << endl;
 }
 
 //////////////////////////////////////////////////////////////////////////musical note functions
