@@ -68,3 +68,4 @@ Friday, December 25th, 2015:
 REALITY:
 Friday, December 25th, 2015:
    (2hrs) 3:00AM - 5:00AM: Complete programming level 1
+   (2hrs) 1:00PM - 3:00PM: Completed current date function, and most of level 1
