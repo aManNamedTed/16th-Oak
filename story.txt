@@ -80,11 +80,12 @@ Get_Name:
                 The man holds the door open as you enter.
             }
     ------------------------------------------------------
+    [finished level zero 9:00PM 12-24-2015]
 ========================================================================================================
 Level One:
     Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
     and the voice on the other line says, "Dude! Party on 16th and Oak! That cutie from your sociology 
-    class is here!! You coming?" You are taken aback by the voice. It sounds familiar, but you're not 
+    class is here!! You coming?" You are taken aback by the voice. It sounds familiar, but you're not #############
     entirely sure who it is. "Who is this?" You ask, to which the voice says, "Richard! C'mon man! Work
     couldn't've been THAT bad! So are you coming or not??" You reply half-heartedly with a yes. Richard: 
     GOOD! It's still early--so you probably have an hour before we 'turn up.' I guess that's what this 
@@ -137,7 +138,7 @@ Level Three:
     >go to poster 
     {   
         THE WAY THIS WILL WORK IS IT SHOWS 3 AT A TIME, AFTER YOU FINISH THE TOP-MOST TASK, A BOOL WILL 
-         SWAP VALUES, MAKING THE TOP TASK DISAPPEAR, AND THE NEW (3RD) BOTTOM TASK TO APPEAR. THE USER
+        SWAP VALUES, MAKING THE TOP TASK DISAPPEAR, AND THE NEW (3RD) BOTTOM TASK TO APPEAR. THE USER
         SHOULD BE ABLE TO ACCESS THIS POSTER FROM ANYWHERE.
         either:
         1.  CONSIDERING IT NOW, I THINK I WILL MAKE IT BE SOME HANDOUT FROM SOMEONE AT THE PARTY, IN WHICH
