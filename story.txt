@@ -85,7 +85,7 @@ Get_Name:
 Level One:
     Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
     and the voice on the other line says, "Dude! Party on 16th and Oak! That cutie from your sociology 
-    class is here!! You coming?" You are taken aback by the voice. It sounds familiar, but you're not #############
+    class is here!! You coming?" You are taken aback by the voice. It sounds familiar, but you're not
     entirely sure who it is. "Who is this?" You ask, to which the voice says, "Richard! C'mon man! Work
     couldn't've been THAT bad! So are you coming or not??" You reply half-heartedly with a yes. Richard: 
     GOOD! It's still early--so you probably have an hour before we 'turn up.' I guess that's what this 
@@ -93,7 +93,7 @@ Level One:
     plan to introduce you two!
     you: but--
     *click*
-    you: Shit.
+    you: Shit.[finished level one 3:00PM 12-25-2015]
     ---------------------------------------------------------------------------------------------------
 =======================================================================================================
 Level Two:
@@ -105,17 +105,18 @@ Level Two:
       >Brush Teeth
       >Leave
     [you will not be allowed to leave until you have completed all of the above]
+    [finished level two 11:00PM 12-25-2015]
     ---------------------------------------------------------------------------------------------------
 =======================================================================================================
 Level Three:
     Upon arriving at 16th and Oak, you see a beautiful two story house. Redwood porch on the right side
     of the house. Garage/basement combo on the left. A flagpole stands tall to the left of the garage.
     A flag bearing bright yellow smiles at you from above. You walk up to the house as a familiar face rushes
-    frantically out of the front door. You begin up the steps as she hurries down them. Without missing
+    frantically out of the front door. You begin up the steps as she hurries down them. Without missing 
     a beat, she starts, "Hey /name/! You haven't seen Ron anywhere, have you??" 
     >no
       You shake your head, no. She nods and says, "well if you see him, be sure to let me know, okay??"
-      She hurries off around the corner to the gas station. 
+      She hurries off around the corner to the gas station.
       *you*: Oh what's her NAME? I remember we had World History in high school, but ugh, I can't
       remember her name for the life of me. And Ron? I also remember him from high school. He was 
       exceptional at hyper-realistic art. Hmm. I'll be sure to keep an eye out for him.
@@ -577,7 +578,7 @@ Level Three:
         Myrtle: merges almost immediately with the artificial limb. Cool, whatever.
         
         you: *in awe*
-        
+        ############################################################################################################33
         Myrtle: Umm.. yeah. Oh! Richard told me that when you showed up, to let you know he'd be in the
         Myrtle: garage. 
         
@@ -647,7 +648,7 @@ Level Three:
                 You slowly back away from the door back to the music.
                 CHECK_BATHROOM = TRUE; (move on to Myrtle)
             ---------------------------------------------------------------------------------------------------
-
+                [finished 1:45AM December 26th, 2015 (just the 'go to music' section)]
 =======================================================================================================
 Level Four:
     Back in the middle of the second story, Seb is gone. The [puppies] and [trophies] are still here.
