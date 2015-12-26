@@ -174,7 +174,7 @@ Level Three:
             You descend the staircase and open the door to the garage. You see two cars to the right of you,
             a door to the left, and a large shelving structure behind you. In front of you, there
             are two people sitting in lawn chairs looking into a room separated by glass.
-            
+            ###########################################################################################################3
             Areas:
                 cars
                 door
@@ -602,6 +602,7 @@ Level Three:
         You knock on the door.
         
         Myrtle: I'm busy!
+        [finished 11:56AM December 26th, 2015]
     ---------------------------------------------------------------------------------------------------    
     >go to music
         Arriving in the heart of the party, you see a beer pong table, a kitchen area, a large group of 
