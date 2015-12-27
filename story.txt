@@ -267,7 +267,7 @@ Level Three:
                                 Startled, you fall from your lawn chair onto the concrete floor.
                                 
                                 Liz: Hi stranger! Q, who's this attractive, yet jumpy human being?
-                                #############################################
+                                
                                 Q (whispering): Liz! Keep your voice down! Can't you see Richard is sleeping?
                                 Liz: Ooh. My bad. 
                                 Liz (whispering): Q, who's this attractive, yet jumpy human being?
@@ -348,6 +348,7 @@ Level Three:
                         Richard sits up and promptly throws up on the lawn chair you were sitting in.
                         Maybe it's best not to bother them.
                         You go back to where you were.
+                        [finished 1:49PM Dec. 27th, 2015]
                         ----------------------------------------------------------------------------------------------
     >go to stairs
         (WHILE HAVEN'T TALKED TO LIZ) 
@@ -359,6 +360,7 @@ Level Three:
             Guard: You're not on the list.
             The guard turns you around and sends you back downstairs.
         
+        #################################################################
         (WHEN YOU HAVE TALKED TO LIZ)
         Arriving at the second floor, you see a [boy] sitting on a couch staring at a screen, controller in hand.
         There is a large mahogany bookshelf next to the couch. You notice four [puppies] in a small fenced-off area. 
@@ -579,7 +581,7 @@ Level Three:
         Myrtle: merges almost immediately with the artificial limb. Cool, whatever.
         
         you: *in awe*
-        ############################################################################################################33
+        
         Myrtle: Umm.. yeah. Oh! Richard told me that when you showed up, to let you know he'd be in the
         Myrtle: garage. 
         
