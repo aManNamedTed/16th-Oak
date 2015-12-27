@@ -174,7 +174,7 @@ Level Three:
             You descend the staircase and open the door to the garage. You see two cars to the right of you,
             a door to the left, and a large shelving structure behind you. In front of you, there
             are two people sitting in lawn chairs looking into a room separated by glass.
-            ###########################################################################################################3
+            
             Areas:
                 cars
                 door
@@ -227,7 +227,7 @@ Level Three:
                             Q: she gets upset. She relishes the fact that they are always watching over her. 
                             Q: It's around this time that she gets super motivated to practice harder than ever.
                             Q: Look at her. She's amazing.
-                            ########################################################
+                            
                             Soft orchestral music emanated from behind the glass. Liz flowed gracefully 
                             around the ring, like water, dancing in a stream.  
                             
@@ -267,6 +267,7 @@ Level Three:
                                 Startled, you fall from your lawn chair onto the concrete floor.
                                 
                                 Liz: Hi stranger! Q, who's this attractive, yet jumpy human being?
+                                #############################################
                                 Q (whispering): Liz! Keep your voice down! Can't you see Richard is sleeping?
                                 Liz: Ooh. My bad. 
                                 Liz (whispering): Q, who's this attractive, yet jumpy human being?
