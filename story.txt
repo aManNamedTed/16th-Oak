@@ -342,7 +342,7 @@ Level Three:
                                         Q: I'll be here with Richard. While you're up there, if you could make sure
                                         Q: Seb is okay, I'd appreciate it. [okay]
                                         >okay
-                                            Q: Sounds good. We'll be here.
+                                             Q: Sounds good. We'll be here.
                                             (MOVE ON TO GO UPSTAIRS)
                         (AFTER YOU HAVE TALKED)
                         Richard sits up and promptly throws up on the lawn chair you were sitting in.
@@ -359,13 +359,12 @@ Level Three:
             The guard searches for your name...
             Guard: You're not on the list.
             The guard turns you around and sends you back downstairs.
-        
-        #################################################################
+    
         (WHEN YOU HAVE TALKED TO LIZ)
         Arriving at the second floor, you see a [boy] sitting on a couch staring at a screen, controller in hand.
         There is a large mahogany bookshelf next to the couch. You notice four [puppies] in a small fenced-off area. 
         To the right are shelves upon shelves of [trophies]. 
-        Behind you is a closed [door].
+        Behind you is a closed [door].  
         [boy]
         [puppies]
         [trophies]
@@ -457,7 +456,7 @@ Level Three:
                                         ???: Hey yourself! What are you doing on my balcony?! How did you even know?!
                                         
                                         You explain how you saw the puff of smoke rise from the other side of the window.
-                                        
+                                        ###################################################################################
                                         ???: Damn. I knew I shouldn't have smoked tonight. Oh well.
                                         ???: What's your name?
                                         you: /name/? And yours?
