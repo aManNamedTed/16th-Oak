@@ -456,7 +456,7 @@ Level Three:
                                         ???: Hey yourself! What are you doing on my balcony?! How did you even know?!
                                         
                                         You explain how you saw the puff of smoke rise from the other side of the window.
-                                        ###################################################################################
+                                        
                                         ???: Damn. I knew I shouldn't have smoked tonight. Oh well.
                                         ???: What's your name?
                                         you: /name/? And yours?
@@ -498,6 +498,7 @@ Level Three:
                                 @@@GO TO LEVEL 4
                                         (AFTER TALKING TO RUBY)
                                             Ruby locked the window. There's no way I'm getting back out there.
+                                        [finished 12:00AM december 28th, 2015]
         ------------------------------------------------------------------------------------------------------
         >go to door
             You enter a small room with a single light. To the [left], there is another closed door. In front
@@ -537,6 +538,7 @@ Level Three:
                 Maybe... Yeah, maybe it's best not to go in there.
                 
                 You return to the middle of the room.
+                [finished 1:00AM december 28th, 2015]
     --------------------------------------------------------------------------------------------    
     >go to room
         You knock on the door.
@@ -879,7 +881,7 @@ Level Four:
             and the holiday picture with Liz, Myrtle, and Heather.
             Nothing seems different.
             
-            You return to where you were.
+            You return to where you were.##################################################################################
         ---------------------------------------------------------------------------------------------------
         [x] Run into Heather on the first floor
         [x] Bring Heather to the bathroom where Ron is
