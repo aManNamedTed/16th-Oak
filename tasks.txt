@@ -89,3 +89,6 @@ Work Time: x Hours
 Monday, December 28th, 2015:
    (2.5hrs) 12:00AM - 2:30AM: Finished a most of level four" << endl;
                               ^^^wow i'm tired as hell. good night
+   (xhrs) X:00PM : I should finish level 4 dialogue between me/heather/ron/willow
+                   Should complete my_story entirely
+                   should plan a release
