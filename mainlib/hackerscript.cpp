@@ -7,8 +7,15 @@ using namespace std;
 string program_list(int num);
 string package_list(int num);
 string material_list(int num);
+void hacker_script();
 
 int main()
+{
+	hacker_script();
+	return 0;
+}
+
+void hacker_script()
 {
 	sleep(1);
 	cout << "Updating storymode" << endl;
@@ -47,8 +54,6 @@ int main()
 	sleep(2);
 	cout << endl;
 	cout << "Enjoy the next section of the story!" << endl;
-	//put prompt here
-	return 0;
 }
 
 //to make this shorter later, just superimpose the three lists and set i or num seperately in-game

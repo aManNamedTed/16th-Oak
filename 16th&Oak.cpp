@@ -36,9 +36,15 @@ void my_level_zero(string); //level zero of main story
 void my_level_one(string); //level one of main story
 void my_level_two(string); //level two of main story
 void my_level_three(string); //level three of main story
+void my_level_four(string); //level four of main story
 void ruby_story(string);  //Ruby's story, also uses player's name
 void seb_story(string); //Seb's story, also uses player's name
-void credits(bool &); //prints credits
+void credits(bool &, string); //prints credits
+void hacker_script(); //runs the hacker script
+string program_list(int num); //program list for hacker script
+string package_list(int num); //package list for hacker script
+string material_list(int num); //material list for hacker scripts
+string betas(int); //holds the names of the beta testers
 
 //text manipulation functions
 void wipe(); //clears text from standard sized terminal
@@ -57,8 +63,10 @@ void checkloc(string &, string, string, string); //3 locations
 void checkloc(string &, string, string, string, string); //4 locations
 void checkloc(string &, string, string, string, string, string); //5 locations
 void checkloc(string &, string, string, string, string, string, string); //6 locations
+
 //global variables
 bool s, met_ruby, met_seb;
+const int NAMES = 5;
 
 /////////////////////////////////////////////////////////////////////////game functions
 int main()
@@ -68,17 +76,14 @@ int main()
 	bool done = false;
 	
 	//GAME START
-	do
-	{	
-		//description();
-		//tutorial(name, s);
-		//mainmenu(name);
-		
-		name = "Poop";
-		//my_level_two(name); //you need to edit level two to include exposition of future events.
-		my_level_three(name); //need to implement upstairs scene
-		//credits(done);
-	}while(!done);
+	while(!done)
+	{
+		description();
+		tutorial(name, s);
+		mainmenu(name);
+		my_story(name);
+		credits(done, name);
+	}
 	
 	return 0;
 }
@@ -86,13 +91,13 @@ int main()
 void description()
 {
 	cout << " \t============================================================" << endl;
-	cout << " \t   #   ####  TTT H H     &&&         OOOO    AAA   KK   KK " << endl;
- 	cout << " \t ###  ######  T  HHH    && &&       OOOOOO  AAAAA  KK  KK  " << endl;
-	cout << " \t  ##  ##      T  H H    && &&  &&   OO  OO AA   AA KK KK   " << endl;
-	cout << " \t  ##  #####              &&&   &&   OO  OO AA   AA KKKKK   " << endl;
-	cout << " \t  ##  ##  ##           &&   &&&&    OO  OO AAAAAAA KK  KK  " << endl;
-	cout << " \t  ##  ######           &&    &&     OOOOOO AA   AA KK   KK " << endl;
-	cout << " \t ####  ####             &&&&&  &&    OOOO  AA   AA KK    KK" << endl;
+	cout << " \t   #   ####  TTT H H     &&&         OOOO    AAA   KK   KK  " << endl;
+ 	cout << " \t ###  ######  T  HHH    && &&       OOOOOO  AAAAA  KK  KK   " << endl;
+	cout << " \t  ##  ##      T  H H    && &&  &&   OO  OO AA   AA KK KK    " << endl;
+	cout << " \t  ##  #####              &&&   &&   OO  OO AA   AA KKKKK    " << endl;
+	cout << " \t  ##  ##  ##           &&   &&&&    OO  OO AAAAAAA KK  KK   " << endl;
+	cout << " \t  ##  ######           &&    &&     OOOOOO AA   AA KK   KK  " << endl;
+	cout << " \t ####  ####             &&&&&  &&    OOOO  AA   AA KK    KK " << endl;
 	cout << " \t============================================================" << endl;
 	cout << endl;
 	cout << "  Upon receiving a call from a mysterious being," << endl; 
@@ -159,7 +164,8 @@ void tutorial(string &name, bool &s)
 	getchar();
 	
 	cout << "(5/6)---------------------------------------------------------------------" << endl;
-	cout << name << ", do you want the best possible gaming experience?" << endl;////////////////////#################rephrase this
+	cout << name << ", do you want special screen settings for" << endl;
+	cout << "the best viewing experience?" << endl;
 	cout << "<yes> / <no>" << endl;
 	getcom(response);
 	yesorno(response);
@@ -248,18 +254,28 @@ void mainmenu(string name)
 		}
 		
 		getcom(command);
-		checkloc(command, their_story, "go to Ruby's Story", "go to Seb's Story");
+		checkloc(command, their_story, "go to Ruby's Story", "go to Seb's Story", "go to Locked!");
+		
+		//pick your story
 		if(command == their_story)
 		{
 			my_story(name); //'their_story' clashed with function name, 'my_story'; had to differentiate
 		}
-		if(command == "go to Ruby's Story")
+		else if(command == "go to Ruby's Story" && met_ruby == true)
 		{
 			ruby_story(name);
 		}
-		if(command == "go to Seb's Story")
+		else if(command == "go to Seb's Story" && met_seb == true)
 		{
 			seb_story(name);
+		}
+		else
+		{	//for those who try to be cheeky. I might let players who've already played get to access these later.
+			//maybe another menu for people who have already beaten the game. post_menu() maybe?
+			cout << "This story is locked!";
+			getchar();
+			cout << "Nice try though!";
+			getchar();
 		}
 	}while(!done);
 }
@@ -271,6 +287,7 @@ void my_story(string name)
 	my_level_one(name);
 	my_level_two(name);
 	my_level_three(name);
+	my_level_four(name);
 }
 
 void my_level_zero(string name)
@@ -309,15 +326,24 @@ void my_level_zero(string name)
 	cout << "He's so strange. Torn shirt. Ragged jeans. No shoes. Homeless, maybe?" << endl;
 	getchar();
 	cout << "He rushes in front of you." << endl;
-	cout << "Strange Man: Stand still.";
-	getchar();
+	cout << "Strange Man: Stand still." << endl;
 	cout << "Strange Man: Scanning..." << endl;
 	getchar();
 	
-	//mock hacking script variant
+	//scanning script
+	cout << "Searching for characteristics..."<< endl;
+	for(int i = 0; i < 2; i++)
+	{
+		cout << "checking.." << endl;
+		sleep(1);
+		cout << "verifying..." << endl;
+		sleep(1.4);
+	}
 	
 	if(name == "David Amante")
 	{
+		cout << "Match confirmed." << endl;
+		getchar();
 		cout << "Strange Man: Apologies, sir. It's you, from the past. It's 3:09AM PST on" << endl;
 		cout << "Strange Man: December 12th, 2015. You got this crazy dumb idea to try to" << endl;
 		cout << "Strange Man: release this game in thirteen days. I mean, it's on GitHub," << endl;
@@ -331,10 +357,17 @@ void my_level_zero(string name)
 		cout << "Strange Man: Thanks me. Or you. Us. This is weird. Go on in." << endl;
 		cout << "Strange Man: Have fun. Be safe." << endl;
 		cout << "Strange Man: \t-David Amante" << endl;
-		cout << "\t\t December 24th, 2015, 8:20PM on the night train w/ Max & Dad." << endl;
+		cout << "\t December 24th, 2015, 8:20PM, on the night train w/ Max & Dad." << endl;
+		cout << "\t December 29th, 2015, 2:45AM, you finished completely." << endl;
+		cout << "\t                              now for finishing touches." << endl;
+		getchar();
+		cout << "Strange Man: After you!" << endl;
+		getchar();
 	}
 	else
 	{
+		cout << "No match." << endl;
+		getchar();
 		cout << "Holding a finger to his earpiece, he says," << endl;
 		cout << "Strange Man: 01111001 01101111 01110101";
 		getchar();
@@ -347,7 +380,7 @@ void my_level_zero(string name)
 		
 		cout << "Strange Man: My apologies.";
 		getchar();
-		cout << "Strange Man: Wrong person." << endl;
+		cout << "Strange Man: Wrong person.";
 		getchar();
 		cout << "Strange Man: Please, after you." << endl << endl;
 		sleep(1);
@@ -366,9 +399,9 @@ void my_level_one(string name)
 	
 	cout << "<Answer> the phone?" << endl;
 	getcom(command);
-	checkcom(command, "Answer");
+	checkcom(command, "Answer", "answer");
 	
-	if(command == "Answer")
+	if(command == "Answer" || command == "answer")
 	{
 		cout << "???: Dude! Party on 16th and Oak! That cutie from your Sociology class" << endl;
 		cout << "???: is here! You coming??" << endl << endl;
@@ -392,16 +425,11 @@ void my_level_one(string name)
 				getchar();
 				
 				cout << "you: but--" << endl;
-				sleep(1);
-				cout << "*click*" << endl;
+				getchar();
+				cout << "*click*" << endl << endl;
 				
-				cout << "you: . ";
-				sleep(1);
-				cout << ". ";
-				sleep(1);
-				cout << ".";
-				sleep(1);
-				
+				cout << "you: ...";
+				getchar();
 				cout << "you: Shit." << endl;
 				getchar();		
 			}
@@ -409,6 +437,7 @@ void my_level_one(string name)
 	}
 }
 
+//my_level_two(name); //you need to edit level two to include exposition of future events.
 void my_level_two(string name)
 {
 	bool shower = false;
@@ -495,14 +524,12 @@ void my_level_two(string name)
 	cout << "You're all ready for the party!" << endl;
 	cout << "Ready to <leave>?" << endl;
 	getcom(command);
-	checkcom(command, "leave");
-	if(command == "leave")
-	{
-		cout << "You grab your keys and leave your apartment." << endl;
-	}
+	checkcom(command, "Leave", "leave");
+	cout << "You grab your keys and leave your apartment." << endl;
 	getchar();
 }
 
+//my_level_three(name); //i think this is done. 
 void my_level_three(string name)
 {
 	wipe();
@@ -534,25 +561,21 @@ void my_level_three(string name)
 	
 	getcom(command);
 	checkcom(command, "Ron");
-	if(command == "Ron")
-	{
-		cout << "Shaking your head no, she nods and shouts from across the street," << endl << endl;
-		cout << "???: Well if you see him, be sure to let me know, okay??" << endl << endl;
-		cout << "She hurries off to the liquor store on the corner." << endl;
-		getchar();
-		cout << "*you*: Oh what's her NAME? I remember we had World History in high" << endl;
-		cout << "*you*: school, but ugh, I can't remember her name for the life of" << endl;
-		cout << "*you*: me." << endl;
-		getchar();
-		cout << "*you*: Oh, and Ron? I also remember him from high school. He was" << endl;
-		cout << "*you*: exceptional at hyper-realistic art. I'll be sure to keep" << endl;
-		cout << "*you*: an eye out for him." << endl;
-		getchar();
-		
-		cout << "You turn around to open the door, as--*CRASH*--a raucous noise booms" << endl;
-		cout << "from inside the garage. You open the front door and continue inside." << endl;
-		getchar();
-	}	
+	cout << "Shaking your head no, she nods and shouts from across the street," << endl << endl;
+	cout << "???: Well if you see him, be sure to let me know, okay??" << endl << endl;
+	cout << "She hurries off to the liquor store on the corner." << endl;
+	getchar();
+	cout << "*you*: Oh what's her NAME? I remember we had World History in high" << endl;
+	cout << "*you*: school, but ugh, I can't remember her name for the life of" << endl;
+	cout << "*you*: me." << endl;
+	getchar();
+	cout << "*you*: Oh, and Ron? I also remember him from high school. He was" << endl;
+	cout << "*you*: exceptional at hyper-realistic art. I'll be sure to keep" << endl;
+	cout << "*you*: an eye out for him." << endl;
+	getchar();	
+	cout << "You turn around to open the door, as--*CRASH*--a raucous noise booms" << endl;
+	cout << "from inside the garage. You open the front door and continue inside." << endl;
+	getchar();
 	
 	while(!done)
 	{
@@ -562,18 +585,20 @@ void my_level_three(string name)
 		
 		getcom(command);
 		checkloc(command, "go to stairs", "go to door", "go to room", "go to music");
+		
 		//go upstairs before you meet liz
 		if(command == "go to stairs" && liz == false)
 		{
 			cout << "Upon turning the corner of the stairs, a large man in a suit stops" << endl;
 			cout << "you in your tracks." << endl;
 			getchar();
-			cout << "Guard: <Name>?" << endl;
+			cout << "Guard: Name?" << endl;
 			getcom(command);
-			checkcom(command, "Name");
-			cout << "Stating your name, the guard checks his list." << endl;
+			checkcom(command, name);
+			cout << "The guard checks your name on his clipboard." << endl;
 			getchar();
-			cout << "Guard: Sorry, " << name << ". You're not on the list." << endl;
+			cout << "Guard: You're not on the list." << endl;
+			getchar();
 			cout << "The guard turns you around and sends you back down the stairs." << endl;
 			getchar();
 			cout << "*you*: If only there was some way I could get past this guard." << endl;
@@ -581,6 +606,7 @@ void my_level_three(string name)
 			guard = true;
 			getchar();
 		}
+		
 		//go upstairs after you meet liz
 		else if(command == "go to stairs" && liz == true)
 		{
@@ -601,6 +627,7 @@ void my_level_three(string name)
 				{
 					met_seb = true;
 					seb = true;
+					
 					cout << "As you approach the boy, he gets up in a fit of anger and throws his" << endl;
 					cout << "controller across the room. The controller smashes into the trophy" << endl;
 					cout << "shelf, toppling a large golden football trophy to the floor." << endl;
@@ -641,11 +668,15 @@ void my_level_three(string name)
 					cout << "You return to the middle of the room." << endl;
 					getchar();
 				}
+				
+				//after you talked to Seb
 				else if(command == "go to boy" && seb == true)
 				{
 					cout << "Seb shouts into his mic as you approach. Maybe you shouldn't bother him." << endl;
 					getchar();
 				}
+				
+				//pet the puppies
 				if(command == "go to puppies")
 				{
 					cout << "There are three border collie puppies and one West Highland Terrier." << endl;
@@ -656,20 +687,26 @@ void my_level_three(string name)
 					getchar();
 					cout << "<Pet> the puppies?" << endl;
 					getcom(command);
-					checkcom(command, "Pet");
+					checkcom(command, "Pet", "pet");
 					cout << "The puppies playfully bite your hand, welcoming the attention." << endl;
 					getchar();
 					cout << "You return to the middle of the room." << endl;
 					getchar();
 				}
 				
+				//go to trophies
 				if(command == "go to trophies")
 				{
 					cout << "In front of you are two shelves lined with gold figurines of people with" << endl;
 					cout << "various sports uniforms on." << endl;
 					getchar();
+					
+					//trophies after talking to seb
 					if(seb == true)
 					{
+						met_ruby = true;
+						ruby = true;
+						
 						cout << "There is now a [trophy] on the floor due to Seb's tantrum." << endl;
 						getcom(command);
 						checkloc(command, "go to trophy");
@@ -678,20 +715,20 @@ void my_level_three(string name)
 						cout << "So yes, I guess it is in-fact broken." << endl;
 						cout << "<Fix> it?" << endl;
 						getcom(command);
-						checkcom(command, "Fix");
+						checkcom(command, "Fix", "fix");
 						cout << "You place the trophy back on its base as a flutter catches your eye." << endl;
 						cout << "You look to your left and see a stream of smoke drift off into the" << endl;
 						cout << "atmosphere outside of a [window]." << endl;
 						getcom(command);
-						checkcom(command, "go to window");
+						checkloc(command, "go to window");
 						cout << "The window is just big enough for you to get through." << endl;
 						cout << "<Climb through>?" << endl;
 						getcom(command);
-						checkcom(command, "Climb through");
+						checkcom(command, "Climb through", "climb through");
 						cout << "You climb through the window as cigarette smoke fills the air. On" << endl;
 						cout << "the secret balcony, you see a [woman] with fiery hair and her easel." << endl;
 						getcom(command);
-						checkcom(command, "go to woman");
+						checkloc(command, "go to woman");
 						cout << "You notice she's painting the night's sky. A cigarette smolders" << endl;
 						cout << "quietly in a bunny-shaped ashtray next to her. Behind her is a" << endl;
 						cout << "single framed artwork. You can make out the silhouette of a middle" << endl;
@@ -699,7 +736,7 @@ void my_level_three(string name)
 						cout << "focused on her work. She hasn't noticed you." << endl;
 						cout << "Get her <attention>?" << endl;
 						getcom(command);
-						checkcom(command, "attention");
+						checkcom(command, "attention", "Attention");
 						cout << "You tap the woman's shoulder." << endl;
 						getchar();
 						cout << "She shakes her head and continues painting." << endl;
@@ -707,7 +744,7 @@ void my_level_three(string name)
 						cout << "???: Seb, I'm not gonna vouch for you because you threw another tantrum." << endl;
 						cout << "Get her <ATTENTION>?" << endl;
 						getcom(command);
-						checkcom(command, "ATTENTION");
+						checkcom(command, "ATTENTION", "Attention", "attention");
 						cout << "you: Hey!" << endl;
 						getchar();
 						cout << "The woman jumps from her chair and turns to you mid-jump." << endl;
@@ -715,18 +752,140 @@ void my_level_three(string name)
 						getchar();
 						cout << "???: Hey yourself! What are you doing on <my balcony?>! How did you know!?" << endl;
 						getcom(command);
-						checkcom(command, "my balcony?");
+						checkcom(command, "my balcony?", "My balcony?");
 						cout << "you: Your balcony?!" << endl;
-						cout << "you:
+						cout << "you: Well if you wanted 'your balcony' all to yourself, you would have" << endl;
+						cout << "you: thought to put something over the window so you could smoke in peace!" << endl;
+						getchar();
+						cout << "???: Damn." << endl;
+						getchar();
+						cout << "???: I knew I shouldn't have smoked tonight. Oh well." << endl;
+						cout << "???: What's your name?" << endl;
+						getcom(command);
+						checkcom(command, name);
+						cout << "you: " << name << ". And yours?" << endl;
+						getchar();
+						cout << "???: Ruby." << endl;
+						getchar();
+						cout << "Ruby: I'm Seb's sister. He likes to come over to Heather's and play on their" << endl;
+						cout << "Ruby: big screen. I don't understand why he plays video games. He's so smart." << endl;
+						cout << "Ruby: Dude, he made a flying BIKE for the science fair last year. He's fifteen." << endl;
+						cout << "Ruby: Shit, at my age, I was trying to maintain my sanity during high school." << endl;
+						getchar();
+						cout << "Ruby's cell phone rings." << endl;
+						cout << "She stands up to get her phone out of her pocket. A metallic clang erupts from" << endl;
+						cout << "the backyard. You rush to look over the railing." << endl;
+						getchar();
+						cout << "Before being able to look, Ruby grabs your arm, shaking her head." << endl;
+						getchar();
+						cout << "<did you hear that?>" << endl;
+						getcom(command);
+						checkcom(command, "did you hear that?", "Did you hear that?");
+						cout << "Ruby: I'm gonna take this. Go back downstairs and don't tell anyone about" << endl;
+						cout << "Ruby: this place, <got it>?" << endl;
+						getcom(command);
+						checkcom(command, "got it");
+						cout << "You nod hesitantly." << endl;
+						getchar();
+						cout << "Ruby pushes you toward the window, stopping you just short of it. Taking her" << endl;
+						cout << "phone from her ear, she hushes you and gestures for you to climb back through" << endl;
+						cout << "the window." << endl;
+						getchar();
+						cout << "As you reach the other side, Ruby locks the window behind you." << endl;
+						getchar();
+						cout << "You turn around to feel a gust of wind as you notice the laundry door slam." << endl;
+						cout << "You hear a whirring noise for a second, then," << endl;
+						getchar();
+						cout << "*BANG*" << endl;
+						getchar();
+						cout << "Seb is no longer where he was." << endl;
+						getchar();
+						cout << "You hear Ruby shout," << endl;
+						cout << "Ruby: WHAT?!" << endl;
+						getchar();
+						cout << "That metal clang from before breaches your ears." << endl;
+						getchar();
+						cout << "Then,";
+						getchar();
+						cout << "   silence." << endl;
 					}
 					cout << "You return to where you were." << endl;
+					done = true;
+					leave = true;
 					getchar();
 				}
 				if(command == "go to door")
 				{
+					leave = false;
+					while(!leave)
+					{
+						cout << "You enter a small room with a single light. To the [left], there is another" << endl;
+						cout << "closed door. In front of you is a small cabinet with [pictures] on it. To" << endl;
+						cout << "the [right] of you is another closed door. The door behind you leads back" << endl;
+						cout << "to the [second floor]." << endl;
+						getcom(command);
+						checkloc(command, "go to left", "go to right", "go to pictures", "go to second floor");
 					
+						//seb's symbol
+						if(command == "go to left")
+						{
+							cout << "You open the door to the left and find yourself in a laundry room." << endl;
+							cout << "Standard washer/dryer combo. There's a [backpack] hanging on the wall." << endl;
+							getcom(command);
+							checkloc(command, "go to backpack");
+							cout << "The backpack is made of a thick gray material. There's a vermillion" << endl;
+							cout << "colored symbol on it." << endl;
+							getchar();
+							
+							//SEB'S SYMBOL
+							cout << "|#|=====|#|" << endl;
+							cout << " ||/]|[\\|| " << endl;
+							cout << " ||\\]|[/|| " << endl;
+							cout << "|#|=====|#|" << endl;
+							getchar();
+							cout << "You leave the laundry room." << endl;
+							getchar();
+						}
+						
+						if(command == "go to pictures")
+						{
+							cout << "There are three pictures on the cabinet." << endl;
+							getchar();
+							cout << "The one on the left is of Myrtle, smile full of braces, holding up a" << endl;
+							cout << "blue ribbon. A woman stands beside her holding up a paper with a" << endl;
+							cout << "chemical structure on it. In the background is a banner," << endl;
+							cout << "\t\tFrosh Science Fair" << endl;
+							getchar();
+							cout << "In the middle is a picture of a man in a white lab coat, grinning happily" << endl;
+							cout << "next to a man with a cane." << endl;
+							getchar();
+							cout << "On the right is a picture of Liz, Heather, and Myrtle grinning from ear" << endl;
+							cout << "to ear. The captions reads," << endl;
+							getchar();
+							cout << "\tDecember 25th, 2015 -- Happy Holidays from the Wexington family!" << endl;
+							getchar();
+							cout << "You return to the middle of the hallway." << endl;
+							getchar();
+						}
+						
+						if(command == "go to right")
+						{
+							cout << "Laughter comes from behind the door. It sounds like there's multiple people" << endl;
+							cout << "in there.. Maybe.." << endl;
+							getchar();
+							cout << "Yeah, maybe it's best not to go in there." << endl;
+							getchar();
+							cout << "You return to the middle of the hallway." << endl;
+						}
+						
+						if(command == "go to second floor")
+						{
+							leave = true;
+							cout << "You return to the second floor." << endl;
+							getchar();
+						}
+					}
 				}
-				
 			}
 		}
 		
@@ -736,6 +895,8 @@ void my_level_three(string name)
 			cout << "It's locked. You go back to where you were." << endl;
 			getchar();
 		}
+		
+		//door to garage before you meet the guard
 		else if(command == "go to door" && myrtle == true && guard == false)
 		{
 			cout << "As you're about to put the key in the lock, you hear a cry" << endl;
@@ -743,6 +904,8 @@ void my_level_three(string name)
 			getchar();
 			cout << "You return to where you were." << endl;
 		}
+		
+		//door to garage after you meet the guard
 		else if(command == "go to door" && myrtle == true && guard == true)
 		{
 			leave = false;
@@ -756,12 +919,16 @@ void my_level_three(string name)
 				cout << "The door back to the [front door] is right behind you." << endl;
 				getcom(command);
 				checkloc(command, "go to garage", "go to front door");
+				
+				//go back to front door
 				if(command == "go to front door")
 				{
 					cout << "You leave the stairwell." << endl;
 					leave = true;
 					getchar();
 				}
+				
+				//go to garage
 				else if(command == "go to garage")
 				{
 					leave = false;
@@ -775,6 +942,7 @@ void my_level_three(string name)
 						getcom(command);
 						checkloc(command, "go to cars", "go to door", "go to shelves", "go to people");
 						
+						//garage -- go to cars
 						if(command == "go to cars")
 						{
 							cout << "There are two cars, side by side. A midnight blue Maserati Granturismo" << endl;
@@ -800,6 +968,7 @@ void my_level_three(string name)
 							getchar();
 						}
 						
+						//garage -- go to liz's door
 						if(command == "go to door" && people == false)
 						{
 							cout << "There is a red light on right above the doorway. Underneath it reads," << endl;
@@ -810,6 +979,7 @@ void my_level_three(string name)
 							getchar();
 						}
 						
+						//garage -- shelves
 						if(command == "go to shelves")
 						{
 							cout << "Before you are two large maple bookshelves. One side filled with" << endl;
@@ -821,6 +991,7 @@ void my_level_three(string name)
 							getchar();
 						}
 		
+						//garage -- Q and Richard
 						if(command == "go to people" && liz == false)
 						{
 							cout << "You approach the two. The boy's messy black hair rests on the" << endl;
@@ -830,7 +1001,7 @@ void my_level_three(string name)
 							cout << "You're not quite sure where you've seen this before, but you" << endl;
 							cout << "gather the courage to say <hello>." << endl;
 							getcom(command);
-							checkcom(command, "hello", "hello?");
+							checkcom(command, "hello", "hello?", "Hello", "Hello?");
 							if(command == "hello" || command == "hello?")
 							{
 								cout << "The person turns towards you carefully, not to wake the snoring boy" << endl;
@@ -855,7 +1026,7 @@ void my_level_three(string name)
 								cout << "Q: Here, <sit>. You can help us watch Liz practice." << endl;
 								
 								getcom(command);
-								checkcom(command, "sit");
+								checkcom(command, "sit", "Sit");
 								
 								cout << "You pull up the remaining green-and-white lawn chair and sit next" << endl;
 								cout << "to Richard. He snores quietly on Q's shoulder." << endl;
@@ -884,12 +1055,12 @@ void my_level_three(string name)
 								getchar();
 								cout << "Q: Do you how <her parents passed?>" << endl;
 								getcom(command);
-								checkcom(command, "her parents passed?");
+								checkcom(command, "her parents passed?", "Her parents passed?");
 								
 								cout << "Q: Yeah. Well one day her father had picked her up from second grade" << endl;
 								cout << "Q: because her mother was enduring <chemotherapy>." << endl;
 								getcom(command);
-								checkcom(command, "chemotherapy");
+								checkcom(command, "chemotherapy", "Chemotherapy");
 								cout << "Q: She was diagnosed about a week prior." << endl;
 								getchar();
 								cout << "Q: Nonetheless, she really loved her father. He was the one who would" << endl;
@@ -899,7 +1070,7 @@ void my_level_three(string name)
 								cout << "Q: I remember him too; he was a nice man." << endl;
 								cout << "<so?>" << endl;
 								getcom(command);
-								checkcom(command, "so?");
+								checkcom(command, "so?", "So?");
 								cout << "Q: Oh right. Sad story telling. My bad." << endl;
 								getchar();
 								cout << "Q: So, on the way to the hospital, a strange man in a suit approached" << endl;
@@ -927,7 +1098,7 @@ void my_level_three(string name)
 								getchar();
 								cout << "<reflect>" << endl;
 								getcom(command);
-								checkcom(command, "reflect");
+								checkcom(command, "reflect", "Reflect");
 								cout << "*you*: Wow. That happened to her in second grade? She must've been" << endl;
 								cout << "*you*: what, seven? Eight? That's.. messed up." << endl;
 								getchar();
@@ -970,7 +1141,9 @@ void my_level_three(string name)
 								getchar();
 								cout << "Q swiftly sits up, waking Richard." << endl;
 								getchar();
+								
 								//drunken text script needs creation
+								
 								cout << "Richard (groggily): " << name << "? iS thAt " << name << "?" << endl;
 								cout << "Richard: yOU mAde iT! meEt Q--" << endl;
 								getchar();
@@ -982,17 +1155,17 @@ void my_level_three(string name)
 								cout << "need, just let me know." << endl;
 								cout << "<reflect>" << endl;
 								getcom(command);
-								checkcom(command, "reflect");
+								checkcom(command, "reflect", "Reflect");
 								cout << "*you*: Maybe I could ask her about the <guard> upstairs?" << endl;
 								getcom(command);
-								checkcom(command, "guard");
+								checkcom(command, "guard", "Guard");
 								cout << "You describe the large man in a suit taking names at the top" << endl;
 								cout << "of the stairs." << endl;
 								getchar();
 								cout << "Liz: Wait, what?" << endl;
 								cout << "Liz: What did you say he was wearing? <A suit>?" << endl;
 								getcom(command);
-								checkcom(command, "A suit");
+								checkcom(command, "A suit", "a suit");
 								cout << "Liz: ..." << endl;
 								getchar();
 								cout << "Liz's mood changes tremendously." << endl;
@@ -1053,7 +1226,7 @@ void my_level_three(string name)
 								cout << "Q: I'll be here with Richard. While you're up there, if you could" << endl;
 								cout << "Q: make sure Seb is <okay>, I'd appreciate it." << endl;
 								getcom(command);
-								checkcom(command, "okay");
+								checkcom(command, "okay", "Okay");
 								cout << "Q: Sounds good. We'll be here--" << endl;
 								cout << "Richard throws up in the lawn chair you were sitting in." << endl;
 								getchar();
@@ -1062,6 +1235,7 @@ void my_level_three(string name)
 							}
 						}
 						
+						//garage -- Q and Richard after you've already talked to them
 						else if(command == "go to people" && liz == true)
 						{
 							cout << "Richard bursts from his seat and dry heaves on the floor." << endl;
@@ -1085,6 +1259,7 @@ void my_level_three(string name)
 			cout << "You turn around and go back to where you were." << endl;
 			getchar();	
 		}
+		
 		//myrtle's room after you've talked to her
 		else if(command == "go to room" && ron == true && myrtle == true)
 		{
@@ -1093,6 +1268,7 @@ void my_level_three(string name)
 			cout << "You head back to where you were." << endl;
 			getchar();
 		}
+		
 		//myrtle's room during talking to her
 		else if(command == "go to room" && ron == true)
 		{
@@ -1109,7 +1285,7 @@ void my_level_three(string name)
 			getchar();
 			cout << "<hello?>" << endl;
 			getcom(command);
-			checkcom(command, "hello?");
+			checkcom(command, "hello?", "Hello?", "hello", "Hello");
 			if(command == "hello?")
 			{
 				cout << "you: Uh.. Hi?" << endl;
@@ -1137,7 +1313,7 @@ void my_level_three(string name)
 				getchar();
 				cout << "<wait, what?>" << endl;
 				getcom(command);
-				checkcom(command, "wait, what?");
+				checkcom(command, "wait, what?", "Wait, what?");
 				
 				if(command == "wait, what?")
 				{
@@ -1164,7 +1340,7 @@ void my_level_three(string name)
 					getchar();
 					cout << "<confusion>" << endl;
 					getcom(command);
-					checkcom(command, "confusion");
+					checkcom(command, "confusion", "Confusion");
 					
 					if(command == "confusion")
 					{
@@ -1218,7 +1394,7 @@ void my_level_three(string name)
 						cout << "<r?>" << endl;
 						
 						getcom(command);
-						checkcom(command, "r?");
+						checkcom(command, "r?", "R?");
 						if(command == "r?")
 						{
 							cout << "you: An 'R'?" << endl;
@@ -1229,7 +1405,7 @@ void my_level_three(string name)
 						} 
 						
 						getcom(command);
-						checkcom(command, "no?", "the gas constant?", "the gas constant.", "the gas constant");
+						checkcom(command, "no?", "No?", "the gas constant?", "the gas constant.", "the gas constant");
 						if(command == "no?")
 						{
 							cout << "Myrtle: The GAS CONSTANT made famous by French chemist, Henri Victor" << endl;
@@ -1264,7 +1440,7 @@ void my_level_three(string name)
 				}
 			}
 		}
-		
+
 		//hallway deeper into the house
 		if(command == "go to music")
 		{
@@ -1366,6 +1542,443 @@ void my_level_three(string name)
 	getchar();
 }
 
+void my_level_four(string name)
+{
+	string command;
+	bool done = false;
+	bool leave = false;
+	wipe();
+	
+	while(!done)
+	{
+		bool laundry = false;
+		bool bedroom = false;
+		bool pictures = false;
+		cout << "Back in the middle of the second story, Seb is gone. The [puppies] and" << endl;
+		cout << "[trophies] are still here. Behind you, the same [door] is still there." << endl;
+		cout << "Something feels... off." << endl;
+		getcom(command);
+		checkloc(command, "go to puppies", "go to trophies", "go to door");
+		
+		//puppies
+		if(command == "go to puppies")
+		{
+			cout << "All of the puppies are still here." << endl;
+			cout << "<Pet> the puppies?" << endl;
+			getcom(command);
+			checkcom(command, "Pet");
+			cout << "The puppies cower in the back of the pen. One barks quietly at you." << endl;
+			getchar();
+			cout << "*you*: That's odd. They were friendly a minute ago." << endl;
+			getchar();
+			cout << "You return to where you were." << endl;
+			getchar();
+		}
+		
+		//trophies
+		if(command == "go to trophies")
+		{
+			cout << "The same trophies are still here. The one you picked up--it's" << endl;
+			cout << "base is glowing faintly." << endl;
+			getchar();
+			cout << "You return to where you were." << endl;
+			getchar();
+		}
+		
+		if(command == "go to door")
+		{
+			leave = false;
+			while(!leave)
+			{
+				cout << "The door opens. To the [left] is the laundry room door. To the" << endl;
+				cout << "[right] is the locked door from before. In front of you are" << endl;
+				cout << "three [pictures] on a cabinet." << endl;
+				getcom(command);
+				checkloc(command, "go to left", "go to right", "go to pictures");
+				
+				//laundry room v2
+				if(command == "go to left")
+				{
+					laundry = true;
+					cout << "You find yourself in the laundry room. Standard washer/dryer combo." << endl;
+					cout << "The [backpack] is missing." << endl;
+					getcom(command);
+					checkcom(command, "go to backpack");
+					cout << "*you*: Hmm.. Seb is missing. So is the backpack.";
+					getchar();
+					cout << "*you*: This is kind of creepy." << endl;
+					getchar();
+					cout << "You leave the laundry room and return to the hallway." << endl;
+					getchar();
+				}
+				
+				//hacker script bedroom
+				if(command == "go to right")
+				{
+					bedroom = true;
+					cout << "The door creaks open. Your hand flicks on the light switch." << endl;
+					getchar();
+					cout << "There is a bed in the corner of the room, and a glowing [computer]" << endl;
+					cout << "screen to the right of you." << endl;
+					getcom(command);
+					checkloc(command, "go to computer");
+					
+					cout << "The computer is black with white text. It shows;" << endl;
+					getchar();
+					
+					wipe();
+					hacker_script();
+					
+					cout << "*you*: It looks like something is being installed." << endl;
+					getchar();
+					cout << "You exit the room." << endl;
+					getchar();
+				}
+				
+				//photos v2
+				if(command == "go to pictures")
+				{
+					pictures = true;
+					cout << "The same three pictures are still on the cabinet." << endl;
+					getchar();
+					cout << "Myrtle, winning an award at a science fair with who is assumed" << endl;
+					cout << "to be her mother." << endl;
+					getchar();
+					cout << "A man in a white lab coat grinning next to a man with a cane," << endl;
+					getchar();
+					cout << "and finally, the picture of--" << endl;
+					cout << "the frame." << endl;
+					getchar();
+					cout << "The picture." << endl;
+					getchar();
+					cout << "It's gone." << endl;
+					getchar();
+					cout << "You return to where you were." << endl;
+					getchar();
+				}
+				
+				if(laundry == true && bedroom == true && pictures == true)
+				{
+					leave = true;
+				}
+			}
+			cout << "A noise rings out from the [first floor]." << endl;
+			getcom(command);
+			checkloc(command, "go to first floor");
+			cout << "You arrive at the base of the stairs to feel the bass of the music rattle" << endl;
+			cout << "your bones. It's as if nobody heard that." << endl;
+			getchar();
+			cout << "The front door slams open and Heather bursts in.";
+			getchar();
+			cout << "Heather: Look! I'll call you back!";
+			getchar();
+			cout << "Heather puts her phone away and looks up." << endl;
+			getchar();
+			cout << "Heather: " << name << "! Hey! You haven't seen <Ron> have you??" << endl;
+			getcom(command);
+			checkcom(command, "Ron");
+			cout << "You begin telling Heather of the voice	from inside the bathroom. The" << endl;
+			cout << "terrible heaves you heard from behind the door, and the slurred message," << endl;
+			getchar();
+			cout << "message from Ron" << endl; //message from earlier, capitalize 'get heather' from within the message
+			getchar();
+			cout << "Yup, that's GOTTA be him." << endl;
+			cout << "Heather hurries off to the [bathroom]." << endl;
+			getcom(command);
+			checkloc(command, "go to bathroom");
+			cout << "You follow her, passing the college kids as they scream at the T.V." << endl;
+			getchar();
+			cout << "Heather bangs furiously on the door." << endl << endl;
+			cout << "Heather: RON! You in there?!" << endl;
+			getchar();
+			cout << "Heather continues banging on the door." << endl;
+			cout << "Heather: RON! Open up!" << endl;
+			getchar();
+			cout << "The door clicks and Heather bursts in." << endl;
+			getchar();
+			cout << "Heather: RON!! Ron. Are you okay?!" << endl;
+			cout << "Ron (drunken text): yeah, I just thought I could handle." << endl; //drunken
+			cout << "Heather: Oh dear, I'm just glad you're conscious.";
+			getchar();
+			cout << "Heather: Remember last time at that frat party? Could've been a lot worse." << endl;
+			cout << "Ron: That's true." << endl; //drunken text
+			cout << "Heather: C'mon, " << name << ". Help me get him upstairs." << endl;
+			cout << "Heather: My mom could probably help." << endl;
+			cout << "Heather: <Get his arm>." << endl;
+			getcom(command);
+			checkcom(command, "Get his arm");
+			cout << "You grab Ron's arm and help him to his feet.";
+			getchar();
+			cout << "You notice a symbol on Ron's shoes." << endl;
+			getchar();
+			//symbol from backpack
+			cout << "|#|=====|#|" << endl;
+			cout << " ||/]|[\\|| " << endl;
+			cout << " ||\\]|[/|| " << endl;
+			cout << "|#|=====|#|" << endl;
+			getchar();
+			cout << "What is that from?!" << endl;
+			cout << "<reflect>" << endl;
+			getcom(command);
+			checkcom(command, "reflect");
+			cout << "*you*: THE BACKPACK!" << endl;
+			getchar();
+			cout << "Ron: Heh, you like'm? Seb made'm for me. They're--" << endl; //drunken
+			cout << "Heather: Red! Yeah. See? Ron, your <shoes> are red." << endl;
+			getcom(command);
+			checkcom(command, "shoes");
+			cout << "*you*: What the hell are they hiding?!" << endl;
+			getchar();
+			cout << "You arrive at the top of the stairs with Ron and Heather." << endl;
+			cout << "Heather hurries into the hallway where the pictures are." << endl;
+			cout << "A slight shifting noise is made from inside the hallway." << endl;
+			getchar();
+			cout << "The large mahogany bookshelf moves slightly." << endl << endl;
+			cout << "Heather: C'mon " << name << ", <follow> me." << endl;
+			getcom(command);
+			checkcom(command, "follow");
+			cout << "You pick up Ron and assist him towards the bookshelf." << endl << endl;
+			cout << "Heather: My parents like privacy.";
+			getchar();
+			cout << "Heather: A <lot> of it." << endl;
+			getcom(command);
+			checkcom(command, "lot");
+			cout << "*you*: Gross?" << endl;
+			getchar();
+			cout << "The bookshelf shifts to the left, revealing a room." << endl << endl;
+			cout << "Heather: Hey Ma! Need some help over here." << endl;
+			cout << "???: I'll b-b-be right ou-out!" << endl;
+			getchar();
+			cout << "*you*: What the hell? Why is Heather's mom home during a house party?" << endl;
+			cout << "*you*: Isn't that kind of weird? What parents let their kids throw a" << endl;
+			cout << "*you*: massive house party in their house WHILE they're home?!" << endl;
+			getchar();
+			cout << "Heather: Put Ron on the [bed] over there." << endl;
+			getcom(command);
+			checkloc(command, "go to bed");
+			cout << "You help Ron over to the queen-sized bed on the far side of the room." << endl;
+			cout << "The bed frame is composed of bookshelves. There are tons of thick" << endl;
+			cout << "textbooks lining the bed frame. Organic chemistry, world history," << endl;
+			cout << "data analytics and set theory, the list goes on." << endl;
+			getchar();
+			cout << "A stout woman with horn-rimmed glasses and violet pajamas appears." << endl;
+			getchar();
+			cout << "???: Hi h-h-honey! What's u-up?" << endl;
+			cout << "Heather: Ron drank a bit too--" << endl;
+			cout << "???: Heather! How rude of you not to introduce me to your friend!";
+			getchar();
+			cout << "Heather (mockingly): Mom, " << name << ". " << name << ", Mom." << endl;
+			cout << "Heather: 'Mom' prefers <Willow> though. As that is her name." << endl;
+			cout << "Willow: Thank y-you, dear." << endl;
+			getcom(command);
+			checkcom(command, "Willow");
+			cout << "you: Nice to meet--";
+			getchar();
+			cout << "Heather: Mom! Ron? Dangerously drunk? Hello?" << endl;
+			cout << "Willow: It's n-n-nice to meet y-you too, " << name << "." << endl;
+			getchar();
+			cout << "Willow shoots a glance at Heather as she leaves the room." << endl;
+			getchar();
+			cout << "Sorry, " << name << ". I'm just worried about Ron." << endl;
+			getchar();
+			cout << "Willow returns to the room with a large syringe filled with some kind of" << endl;
+			cout << "orange liquid. She has a disinfectant wipe in her off hand." << endl;
+			getchar();
+			cout << "Heather: Don't worry, I've tried it; it works." << endl << endl;
+			cout << "Heather pulls her shirt up a bit, revealing a tiny tidbit of a scar on the" << endl;
+			cout << "upper right side of her stomach." << endl;
+			getchar();
+			cout << "Willow: See, you inj-j-ject the sobering agent directly in-into the liver;" << endl;
+			cout << "Willow: w-w-works within s-seconds." << endl << endl;
+			cout << "Willow lifts up Ron's shirt and wipes a swatch underneath his rib-cage." << endl << endl;
+			cout << "Willow: I'm working on a p-p-patent f-for it currently, but--" << endl;
+			cout << "Willow jabs the syringe into Ron's abdomen. Ron grunts in pain." << endl;
+			cout << "Willow: those f-fair people at Medi C-C-Co. say it's 't-too dangerous'" << endl;
+			cout << "Willow: and whatnot." << endl;
+			getchar();
+			cout << "Willow: Sure, I'm not e-e-exactly in pharmaceutic-c-cals, but I know" << endl;
+			cout << "Willow: enough ab-b-bout chemistry to know what's 'dangerous.'" << endl;
+			getchar();
+			cout << "Willow leaves the room with the syringe and disinfectant wipe as Heather" << endl;
+			cout << "grabs a textbook." << endl << endl;
+        	cout << "Heather (whispering): My mom has a stutter. You know it. She knows it." << endl;
+			cout << "Heather: Don't <mention it>." << endl;
+			getcom(command);
+			checkcom(command, "mention it");
+			cout << "You nod." << endl;
+			getchar();
+			cout << "Ron awakens violently, as if from a bad dream." << endl << endl;
+			cout << "Ron: Hey! Wha-- What?! I CAN'T SEE!! EVERYTHING'S DARK!!" << endl;
+			cout << "Willow (from the other room): It wears off in a minute, Ron!" << endl;
+			cout << "Ron: Ms. Wexington?!" << endl << endl;
+			cout << "Heather throws the textbook at Ron." << endl << endl;
+			cout << "Ron: OW! WHAT THE HELL?!" << endl;
+			getchar();
+			cout << "Heather: You poop! You passed out in the bathroom with the door LOCKED." << endl;
+			cout << "Heather: AGAIN." << endl;
+			getchar();
+			cout << "Ron: Heather? Look, I'm sorry! I didn't want you to see me like that" << endl;
+			cout << "Ron: because... um.." << endl << endl;
+			cout << "Ron slowly feels his way to the edge of the bed and sits up." << endl << endl;
+			cout << "Heather: Because you messed up?!" << endl;
+			cout << "Ron: Because I messed up." << endl;
+			getchar();
+			cout << "Heather: Yeah well... I'm happy you're okay." << endl;
+			cout << "Ron: Babe.";
+			getchar();
+			cout << "Heather: Yes?";
+			getchar();
+			cout << "Ron: I still can't see." << endl;
+			getchar();
+			cout << "Heather walks up to him, carressing his face, while looking into his eyes." << endl << endl;
+			cout << "Ron: Oh uh... I still can't--" << endl;
+			cout << "Heather: Shh." << endl;
+			cout << "Ron: I uh--" << endl << endl;
+			cout << "Heather kisses Ron." << endl;
+			getchar();
+			cout << "Ron opens his eyes as wide as he can, straining to see." << endl;
+			cout << "Willow enters the room." << endl << endl;
+			cout << "Ron: Oh hey Ms. W!";
+			getchar();
+        	cout << "Willow: G-good e-evening, Ron." << endl;
+        	cout << "Willow: Um, Heather dear, h-have you heard from Ru-b-by late-l-ly?" << endl;
+        	cout << "Willow: I h-heard Seb take off alr-r-rea-ready." << endl;
+        	getchar();
+        	cout << "Ron: HEATHER!" << endl;
+        	getchar();
+        	cout << "Disembodied Voice: WARNING. WARNING.";
+        	getchar();
+        	cout << "Disembodied Voice: Three foreign vectors in air space:" << endl;
+			cout << "Disembodied Voice: Four. Nine. Three. Zero." << endl;
+			cout << "Disembodied Voice: Location: J-76" << endl;
+			getchar();
+			cout << "Heather: Uhhh.." << endl;
+			getchar();
+			cout << "Willow: HEA-TH-THER S-SADIE WEXINGTON!!" << endl;
+			getchar();
+		}
+		done = true;
+	}
+}
+
+void hacker_script()
+{
+	sleep(1);
+	//can put anything relevant to the story herevvv
+	cout << "Updating..." << endl;
+	
+	for(int i = 4; i < 10; i++)
+	{
+		sleep(1);
+		cout << "Fetching: " << package_list(i) << "-1.7." << i << " ";
+		sleep(1);
+		cout << "(100%)" << endl;
+		sleep(.8);
+		cout << "Successfully installed " << package_list(i) << endl;
+		sleep(.3);
+		cout << "Installing mi documentation for storymode-2.4." << (i + 3) << endl;
+		cout << "Parsing documentation for " << program_list(i) << endl;
+		sleep(.5);
+		
+	}
+	cout << "Done installing documentation for diaper, spoon, pocket-2.2, stale-toast-testing, macro_gainz8, lipbalm after 13 seconds" << endl;
+	
+	sleep(1);
+	
+	cout << "Updating tube_socks" << endl;
+	for(int i = 10; i < 13; i++)
+	{
+		sleep(1);
+		cout << "Fetching: " << material_list(i) << "-4." << i << " ";
+		sleep(.7);
+		cout << "(100%)" << endl;
+		sleep(.45);
+		cout << "Parsing documentation for " << material_list(i) << "-4." << i+8 << endl;
+	}
+	sleep(1);
+	
+	cout << "Levels updated: level_three level_four level_five partypack fight-mechanic pillow-fight cooties3" << endl;
+	sleep(2);
+	cout << endl;
+}
+
+//to make this shorter later, just superimpose the three lists and set i or num seperately in-game
+string package_list(int num)
+{
+	string pak;
+	
+	switch(num)
+	{
+		case 4:
+			pak = "diaper";
+			break;
+		case 5:
+			pak = "spoon";
+			break;
+		case 6:
+			pak = "pocket";
+			break;
+		case 7:
+			pak = "stale-toast-testing";
+			break;
+		case 8:
+			pak = "macro_gainz3";
+			break;
+		case 9:
+			pak = "lipbalm";
+			break;
+	}
+	return pak;
+}
+
+string material_list(int num)
+{
+	string ial;
+	
+	switch(num)
+	{
+		case 10:
+			ial = "wool";
+			break;
+		case 11:
+			ial = "cotton";
+			break;
+		case 12:
+			ial = "polyester";
+			break;
+	}
+	return ial;
+}
+
+string program_list(int num)
+{
+	string doc;
+	
+	switch(num)
+	{
+		case 4:
+			doc = "d.cpp";
+			break;
+		case 5:
+			doc = "the_gem_knight.rb";
+			break;
+		case 6:
+			doc = "kith.lsp";
+			break;
+		case 7:
+			doc = "ekans.py";
+			break;
+		case 8:
+			doc = "veranda.java";
+			break;
+		case 9:
+			doc = "Q_necklace.pl";
+			break;
+	}
+	
+	return doc;
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////RUBY STORY FUNCTIONS
 void ruby_story(string name)
 {
@@ -1378,22 +1991,74 @@ void seb_story(string name)
 	;
 }
 
-void credits(bool &done)
+string betas(int count)
 {
-	cout << "\t  Game: 16th & Oak" << endl;
+	string name;
+	
+	switch(count)
+	{
+		case 1: 
+			name = " Nichole Hotrum\t November 07, 2015";
+			break;
+		case 2:
+			name = " Ellen Barabasz\t November 21, 2015";
+			break;
+		case 3:
+			name = " Danielle Gutierrez\t November 26, 2015";
+			break;
+		case 4:
+			name = " Anass Malabeh\t December 5, 2015";
+			break;
+		case 5:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 6:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 7:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 8:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 9:
+			name = " Beta Tester\t\t Month 0, 201X";
+			break;
+		case 10:
+			name = " Beta Tester\t Month 0, 201X";
+			break;				
+	}
+	return name;
+}
+
+void credits(bool &done, string name)
+{
+	cout << "This has been, '16th & Oak.'" << endl;
+	getchar();
+	cout << "\tStory by: David Amante" << endl;
+	cout << "\tSound by: David Amante" << endl;
 	cout << "\tLanguage: C++" << endl;
 	cout << "\tCreated: November 3rd, 2015" << endl;
-	cout << "\tFinished: December 25th, 2015" << endl;
-	cout << "\tAuthor: David Amante" << endl;
-	cout << "\tEmail: davidamante17@yahoo.com" << endl << endl;
+	cout << "\tFinished: December 29th, 2015" << endl;
+	cout << "\tEmail: davidamante17@yahoo.com" << endl;
+	getchar();
+	cout << "Special thanks to all the great people who beta-tested this game!" << endl << endl;
+	cout << "\t x: Name\t\t Date-of-first-play " << endl;
+	for(int i = 1; i < NAMES; i++)
+	{
+		cout << "\t " << i << ":" << betas(i) << endl;
+	}
+	getchar();
+	cout << "Last but not least," << endl;
+	cout << "A special thanks to you, " << name << "." << endl;
+	cout << "For taking time out of your day to play this silly game." << endl;
 	getchar();
 	
-	cout << "\t\t The End!" << endl;
-	getchar();
+	cout << "\t\t\t The End!" << endl;
 	done = true;
 }
 
-/////////////////////////////////////////////////////////////////////text manipulation functions
+///////////////////////////////////////////////////////////////////////////////////////////////////////text manipulation functions
 void wipe()
 {
 	cout << string(30, '\n');
@@ -1410,7 +2075,7 @@ void yesorno(string &command)
 {
 	while(command != "yes" && command != "no")
 	{
-		cout << "Invalid command." << endl;
+		cout << "Invalid command. Type in the word or phrase inside the <>." << endl;
 		getcom(command);
 	}
 }
@@ -1419,7 +2084,7 @@ void checkcom(string &command, string option1)
 {
 	while(command != option1)
 	{
-		cout << "Invalid command." << endl;
+		cout << "Invalid command. Type in the word or phrase inside the <>." << endl;
 		getcom(command);
 	}
 }
@@ -1428,7 +2093,7 @@ void checkcom(string &command, string option1, string option2)
 {
 	while(command != option1 && command != option2)
 	{
-		cout << "Invalid command." << endl;
+		cout << "Invalid command. Type in the word or phrase inside the <>." << endl;
 		getcom(command);
 	}
 }
@@ -1437,7 +2102,7 @@ void checkcom(string &command, string option1, string option2, string option3)
 {
 	while(command != option1 && command != option2 && command != option3)
 	{
-		cout << "Invalid command." << endl;
+		cout << "Invalid command. Type in the word or phrase inside the <>." << endl;
 		getcom(command);
 	}
 }
@@ -1446,7 +2111,7 @@ void checkcom(string &command, string option1, string option2, string option3, s
 {
 	while(command != option1 && command != option2 && command != option3 && command != option4)
 	{
-		cout << "Invalid command." << endl;
+		cout << "Invalid command. Type in the word or phrase inside the <>." << endl;
 		getcom(command);
 	}
 }
@@ -1455,7 +2120,7 @@ void checkcom(string &command, string option1, string option2, string option3, s
 {
 	while(command != option1 && command != option2 && command != option3 && command != option4 && command != option5)
 	{
-		cout << "Invalid command." << endl;
+		cout << "Invalid command. Type in the word or phrase inside the <>." << endl;
 		getcom(command);
 	}
 }
@@ -1464,7 +2129,7 @@ void checkloc(string &command, string location)
 {
 	while(command != location)
 	{
-		cout << "Invalid location." << endl;
+		cout << "Invalid location. Try 'go to' and the word within the [brackets]." << endl;
 		getcom(command);
 	}
 }
@@ -1473,7 +2138,7 @@ void checkloc(string &command, string location1, string location2)
 {
 	while(command != location1 && command != location2)
 	{
-		cout << "Invalid location." << endl;
+		cout << "Invalid location. Try 'go to' and the word within the [brackets]." << endl;
 		getcom(command);
 	}
 }
@@ -1482,7 +2147,7 @@ void checkloc(string &command, string location1, string location2, string locati
 {
 	while(command != location1 && command != location2 && command != location3)
 	{
-		cout << "Invalid location." << endl;
+		cout << "Invalid location. Try 'go to' and the word within the [brackets]." << endl;
 		getcom(command);
 	}
 }
@@ -1491,7 +2156,7 @@ void checkloc(string &command, string location1, string location2, string locati
 {
 	while(command != location1 && command != location2 && command != location3 && command != location4)
 	{
-		cout << "Invalid location." << endl;
+		cout << "Invalid location. Try 'go to' and the word within the [brackets]." << endl;
 		getcom(command);
 	}
 }
@@ -1500,7 +2165,7 @@ void checkloc(string &command, string location1, string location2, string locati
 {
 	while(command != location1 && command != location2 && command != location3 && command != location4 && command != location5)
 	{
-		cout << "Invalid location." << endl;
+		cout << "Invalid location. Try 'go to' and the word within the [brackets]." << endl;
 		getcom(command);
 	}
 }
@@ -1509,7 +2174,7 @@ void checkloc(string &command, string location1, string location2, string locati
 {
 	while(command != location1 && command != location2 && command != location3 && command != location4 && command != location5 && command != location6)
 	{
-		cout << "Invalid location." << endl;
+		cout << "Invalid location. Try 'go to' and the word within the [brackets]." << endl;
 		getcom(command);
 	}
 }
@@ -1528,7 +2193,6 @@ void checkS(string name, bool &s)
 	}
 }
 
-//////////////////////////////////////////////////////////////////////////current date function
 void current_date()
 {
 	time_t t = time(0);
@@ -1706,7 +2370,7 @@ void current_date()
 	}
 }
 
-//////////////////////////////////////////////////////////////////////////musical note functions
+//////////////////////////////////////////////////////////////////////////////////////////////////////musical note functions
 //C
 void c0(double length)  
 {

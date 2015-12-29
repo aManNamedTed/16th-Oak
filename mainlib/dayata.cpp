@@ -1075,10 +1075,10 @@ string betas(int count)
 			name = " Ellen Barabasz\t November 21, 2015";
 			break;
 		case 3:
-			name = " Beta Tester\t\t Month 0, 201X";
+			name = " Anass Malabeh\t December 5, 2015";
 			break;
 		case 4:
-			name = " Beta Tester\t\t Month 0, 201X";
+			name = " Danielle Gutierrez\t Month 0, 2015";
 			break;
 		case 5:
 			name = " Beta Tester\t\t Month 0, 201X";
