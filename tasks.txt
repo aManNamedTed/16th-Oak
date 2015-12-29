@@ -85,11 +85,13 @@ Sunday, December 27th, 2015:
    (2.5hrs) 7:00PM - 9:30PM: started second floor. partway through Ruby
    (1hr) 11:00PM - 12:00AM: finished level three[1:22AM 12-28-15]! woo! on to level four. 
 ======================================================================
-Work Time: x Hours
+Work Time: 6 Hours
 Monday, December 28th, 2015:
    (2.5hrs) 12:00AM - 2:30AM: Finished a most of level four" << endl;
                               ^^^wow i'm tired as hell. good night
-   (xhrs) 11:00PM - X:00PM : I should finish level 4 dialogue between me/heather/ron/willow
+   (3.5hrs) 11:00PM - 3:45AM : I should finish level 4 dialogue between me/heather/ron/willow
                               Should complete my_story entirely
                               should plan a release
                               almost finished, 2:16pm
+                              FINISHED: 3:45PM
+======================================================================
