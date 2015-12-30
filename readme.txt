@@ -16,7 +16,7 @@ Check the story/backlogs/tasks files for information on these sprints.
 
 
 Project: Day at a Party
-Started: December 9, 2015
-Finished:
+Started: December 9th, 2015
+Finished: December 29th, 2015
 Creator: David Amante
 Email: davidamante17@yahoo.com
