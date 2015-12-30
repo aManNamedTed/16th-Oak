@@ -30,7 +30,7 @@ void b0(double); void b1(double); void b2(double); void b3(double); void b4(doub
 //game functions
 void description(); //prints description of game/creator before start of game
 void tutorial(string &, bool &); //prints tutorial screen, gets name of player
-void mainmenu(string); //main menu returns a string that points to which story to play
+void mainmenu(string, bool&); //main menu returns a string that points to which story to play
 void my_story(string); //the main story, using the player's name
 void my_level_zero(string); //level zero of main story
 void my_level_one(string); //level one of main story
@@ -72,7 +72,6 @@ const int NAMES = 5;
 int main()
 {
 	string name;
-	string story;
 	bool done = false;
 	
 	//GAME START
@@ -80,16 +79,17 @@ int main()
 	{
 		description();
 		tutorial(name, s);
-		mainmenu(name);
-		my_story(name);
-		credits(done, name);
+		mainmenu(name, done);
 	}
 	
+	//GAME END
+	credits(done, name);
 	return 0;
 }
 
 void description()
 {
+	cout << string(7, '\n');
 	cout << " \t============================================================" << endl;
 	cout << " \t   #   ####  TTT H H     &&&         OOOO    AAA   KK   KK  " << endl;
  	cout << " \t ###  ######  T  HHH    && &&       OOOOOO  AAAAA  KK  KK   " << endl;
@@ -211,7 +211,7 @@ void tutorial(string &name, bool &s)
 	getchar();
 }
 
-void mainmenu(string name)
+void mainmenu(string name, bool &finished)
 {
 	wipe();
 	bool done;
@@ -222,6 +222,8 @@ void mainmenu(string name)
 	checkS(name, s);
 	do
 	{
+		wipe();
+		
 		cout << "\t\t\t   Main Menu" << endl;
 		cout << "\t\t\t---------------" << endl;
 		if(s == true)
@@ -241,7 +243,7 @@ void mainmenu(string name)
 		}
 		else
 		{
-			cout << "\t\t\t[Ruby's Story]" << endl;
+			cout << "\t\t\t [Ruby's Story]" << endl;
 		}
 		
 		if(met_seb == false)
@@ -250,11 +252,12 @@ void mainmenu(string name)
 		}
 		else
 		{
-			cout << "\t\t\t[Seb's Story]" << endl;
+			cout << "\t\t\t  [Seb's Story]" << endl;
 		}
+		cout << "\t\t\t   [Credits]" << endl;
 		
 		getcom(command);
-		checkloc(command, their_story, "go to Ruby's Story", "go to Seb's Story", "go to Locked!");
+		checkloc(command, their_story, "go to Ruby's Story", "go to Seb's Story", "go to Locked!", "go to Credits");
 		
 		//pick your story
 		if(command == their_story)
@@ -269,12 +272,17 @@ void mainmenu(string name)
 		{
 			seb_story(name);
 		}
+		else if(command == "go to Credits")
+		{
+			done = true;
+			finished = true;
+		}
 		else
 		{	//for those who try to be cheeky. I might let players who've already played get to access these later.
 			//maybe another menu for people who have already beaten the game. post_menu() maybe?
 			cout << "This story is locked!";
 			getchar();
-			cout << "Nice try though!";
+			cout << "Nice try though.";
 			getchar();
 		}
 	}while(!done);
@@ -1275,11 +1283,11 @@ void my_level_three(string name)
 			cout << "You knock on the door." << endl;
 			getchar();
 			cout << ". ";
-			sleep(1);
+			sleep(.5);
 			cout << ". ";
-			sleep(1);
+			sleep(.5);
 			cout << "." << endl;
-			sleep(1);
+			sleep(.5);
 			
 			cout << "The door cracks open and a head peeks out at you." << endl;
 			getchar();
@@ -1515,13 +1523,15 @@ void my_level_three(string name)
 				
 					cout << "you: You alright in there?" << endl;
 					getchar();
-					cout << "???: iusofqwljfoiwej" << endl;
+					cout << "???: *indestinguishable*" << endl;
 					getchar();
 					cout << "you: Hello?";
 					getchar();
-					cout << "???: *dry heaves* Get.";
+					cout << "???: *dry heaves*";
 					getchar();
-					cout << " Heather." << endl;
+					cout << "???: Get.";
+					getchar();
+					cout << "???: Heather." << endl;
 					cout << "???: *even more heaving*" << endl;
 					getchar();
 					cout << "You slowly back away from the door, back to the music." << endl;
@@ -1680,7 +1690,11 @@ void my_level_four(string name)
 			cout << "You begin telling Heather of the voice	from inside the bathroom. The" << endl;
 			cout << "terrible heaves you heard from behind the door, and the slurred message," << endl;
 			getchar();
-			cout << "message from Ron" << endl; //message from earlier, capitalize 'get heather' from within the message
+			cout << "*flashback*" << endl;
+			cout << "???: Get."; 
+			getchar();
+			cout << "???: Heather." << endl;
+			cout << "*end flashback*" << endl;
 			getchar();
 			cout << "Yup, that's GOTTA be him." << endl;
 			cout << "Heather hurries off to the [bathroom]." << endl;
@@ -1982,15 +1996,20 @@ string program_list(int num)
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////RUBY STORY FUNCTIONS
 void ruby_story(string name)
 {
-	;
+	wipe();
+	cout << "Ruby's Story will become available by February 4th, 2016!" << endl;
+	getchar();
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////SEB STORY FUNCTIONS
 void seb_story(string name)
 {
-	;
+	wipe();
+	cout << "Seb's Story will become available by March 3rd, 2016!" << endl;
+	getchar();
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////BETA TESTER & CREDITS FUNCTIONS
 string betas(int count)
 {
 	string name;
@@ -2043,14 +2062,13 @@ void credits(bool &done, string name)
 	cout << "\tEmail: davidamante17@yahoo.com" << endl;
 	getchar();
 	cout << "Special thanks to all the great people who beta-tested this game!" << endl << endl;
-	cout << "\t x: Name\t\t Date-of-first-play " << endl;
+	cout << "\t x: Name\t\t Date-of-first-play " << endl << endl;
 	for(int i = 1; i < NAMES; i++)
 	{
 		cout << "\t " << i << ":" << betas(i) << endl;
 	}
 	getchar();
-	cout << "Last but not least," << endl;
-	cout << "A special thanks to you, " << name << "." << endl;
+	cout << "Last but not least, a special thanks to you, " << name << "." << endl;
 	cout << "For taking time out of your day to play this silly game." << endl;
 	getchar();
 	
@@ -2366,6 +2384,9 @@ void current_date()
 			break;
 		case 2024:
 			cout << "2024";
+			break;
+		default:
+			cout << "and some time later...";
 			break;
 	}
 }
