@@ -1,0 +1,880 @@
+Disclaimer: This file is intended for the use of the developer ONLY. This file contains major spoilers to
+the game, 'Day at a Party.'
+
+Background: I realized I had messed up by trying to implement too many features before actually finishing
+the game. This is my second attempt at creating the story, from start to finish, and then actually
+programming the entire game from start to finish, within 24 hours. So the goal here in dayata 2.0 is to
+create the entire story, hopefully succeeding in 10 full minutes of play time. The story begins here:
+
+Note: ### means this is where i've developed up to
+________________________________________TUTORIAL________________________________________________________
+Classic tutorial, no skipping, primarily the tutorial from the last attempt at this game. Can be found
+in /mainlib. 
+Also add details about these things:
+[x] include something about using the new 'go to + area' mechanic. [finished 1AM 12/24/15]
+[x] include about how there are moments where there will be noise, so use headphones, and be considerate
+    if you're in a setting where others can readily hear what your computer will put out [finished 2:03AM 12/24/15]
+[-] i think? include something about the delay setting, in which no input is required [no more delay setting]
+[x] include something about the [command] response feature [finished 12:32AM 12/24/15]
+--------------------------------------------------------------------------------------------------------
+==========================MAIN MENU=====================================================================
+-Story Mode
+-Locked! (if talk to ruby, unlock ruby story)
+-Locked! (if talk to seb, unlock seb story)
+[finished 2:53AM, December 24th, 2015]
+________________________________________________________STORY___________________________________________
+Get_Name:
+    It's Friday December 25th, 2015. 
+    
+    *ding ding*
+    
+    The train bell wakes you as you realize you've reached your stop.
+    
+    You leave the train and begin your four minute walk back to your apartment complex.
+    
+    (insert some Jolly Oxen here using beeps and frequencies)
+    
+    Wasn't that nice?
+    
+    Anyway.
+    
+    You see a strange man standing outside of your apartment complex.
+    
+    As you approach, the man notices you and stands in front of the door.
+    
+    Strange Man: "Name?"
+        >name[]
+            The man hesitates for a second, looking you up and down.
+            
+            ...
+            
+            if(name == "david amante")
+            {
+                Strange Man: "Apologies, sir. It's you, from the past. It's 3:09AM PST on"
+                Strange Man: "December 12, 2015. You got this crazy dumb idea to try to"
+                Strange Man: "release this game in thirteen days. I mean, it's on GitHub,"
+                Strange Man: "the edits are there. The archiving. Dude you're nuts for"
+                Strange Man: "deciding to finish this game in 13 days. I mean, disregarding the fact"
+                Strange Man: "that you have that hash table project due in 8 days, and a calculus I final"
+                Strange Man: "in 2 days, oh and the CIS in-class final is on the 17th, that final you"
+                Strange Man: "should be studying for.. Well I mean. Priorities, right? Go you. Or well,"
+                Strange Man: "go me? It's late and you/i/we're tired. Good luck finishing this." 
+                Strange Man: "Thanks me. Or you. Us. This is weird. Go on in. Have fun."
+            }
+            else
+            {
+                #you are not him (if you put david amante as the name of your char, special stuff happens)
+                Holding a finger to his earpiece, he says,
+                
+                Strange Man: "01111001 01101111 01110101"
+                delay(1 second)
+                Strange Man: "01100001 01110010 01100101"
+                delay(1 second)
+                Strange Man: "01101110 01101111 01110100"
+                delay(.7)
+                Strange Man: "01101000 01101001 01101101"
+                
+                Strange Man: "My apologies. You must be one of the other 9 people that live here."
+                Strange Man: "Please. After you."
+                
+                The man holds the door open as you enter.
+            }
+    ------------------------------------------------------
+    [finished level zero 9:00PM 12-24-2015]
+========================================================================================================
+Level One:
+    Upon stepping foot in your apartment after a long day at work, your home phone rings. You answer it, 
+    and the voice on the other line says, "Dude! Party on 16th and Oak! That cutie from your sociology 
+    class is here!! You coming?" You are taken aback by the voice. It sounds familiar, but you're not
+    entirely sure who it is. "Who is this?" You ask, to which the voice says, "Richard! C'mon man! Work
+    couldn't've been THAT bad! So are you coming or not??" You reply half-heartedly with a yes. Richard: 
+    GOOD! It's still early--so you probably have an hour before we 'turn up.' I guess that's what this 
+    generation's culture calls it nowadays. Nevertheless, I better see you here tonight! I've got a
+    plan to introduce you two!
+    you: but--
+    *click*
+    you: Shit.[finished level one 3:00PM 12-25-2015]
+    ---------------------------------------------------------------------------------------------------
+=======================================================================================================
+Level Two:
+    Upon hearing the news of an uproarious shindig occurring in the near future, you find yourself tired,
+    surprised, and other words expressing mood.
+      >Shower
+        //set music, during an ad you hear of a medical discovery by a Myrtle Wexington
+      >Get Dressed
+      >Brush Teeth
+      >Leave
+    [you will not be allowed to leave until you have completed all of the above]
+    [finished level two 11:00PM 12-25-2015]
+    ---------------------------------------------------------------------------------------------------
+=======================================================================================================
+Level Three:
+    Upon arriving at 16th and Oak, you see a beautiful two story house. Redwood porch on the right side
+    of the house. Garage/basement combo on the left. A flagpole stands tall to the left of the garage.
+    A flag bearing bright yellow smiles at you from above. You walk up to the house as a familiar face rushes
+    frantically out of the front door. You begin up the steps as she hurries down them. Without missing 
+    a beat, she starts, "Hey /name/! You haven't seen Ron anywhere, have you??" 
+    >no
+      You shake your head, no. She nods and says, "well if you see him, be sure to let me know, okay??"
+      She hurries off around the corner to the gas station.
+      *you*: Oh what's her NAME? I remember we had World History in high school, but ugh, I can't
+      remember her name for the life of me. And Ron? I also remember him from high school. He was 
+      exceptional at hyper-realistic art. Hmm. I'll be sure to keep an eye out for him.
+    ---------------------------------------------------------------------------------------------------
+    You turn around to open the door, as-- *CRASH* --a raucous noise comes from inside the garage. 
+    You open the door and the bass of the music assault your senses. 
+    
+    You are in the hallway by the front door. There is a set of stairs, a door to the left, a room to 
+    the right, and music coming from the end of the hallway.
+    
+    You also notice a poster by the foot of the stairs.
+    
+    Areas:
+        poster
+        door
+        stairs
+        room
+        music
+        
+    >go to poster 
+    {   
+        THE WAY THIS WILL WORK IS IT SHOWS 3 AT A TIME, AFTER YOU FINISH THE TOP-MOST TASK, A BOOL WILL 
+        SWAP VALUES, MAKING THE TOP TASK DISAPPEAR, AND THE NEW (3RD) BOTTOM TASK TO APPEAR. THE USER
+        SHOULD BE ABLE TO ACCESS THIS POSTER FROM ANYWHERE.
+        either:
+        1.  CONSIDERING IT NOW, I THINK I WILL MAKE IT BE SOME HANDOUT FROM SOMEONE AT THE PARTY, IN WHICH
+            YOU TAKE THE POSTER AND FOLD IT AND PUT IT INTO YOUR POCKET,
+        2.  OR IT WILL JUST BE A POSTER THAT IS CONSPICUOUSLY ON EVERY FLOOR
+        3.  OR IT WILL BE ONLY ON THE FIRST FLOOR, (NOT IN BASEMENT/NOT IN SECOND FLOOR
+        4.  OR MAYBE IT WILL JUST BE A COMMAND THAT IS SOMETHING LIKE, "what do i do", WHERE IT WILL CALL
+            THE NARRATOR IN WHICH THEY WILL TELL YOU WHAT TO DO
+    }
+        [x] Go to the bathroom
+        [x] Talk to Myrtle
+        [x] Go to the garage
+        [x] Talk to Q and Richard
+        [x] Meet Liz
+        [x] Liz takes you upstairs (beats up the guard)
+        [x] Meet Seb (unlock Seb's story in the main menu)
+        [x] Look at all those trophies
+        [x] Pull the one that is broken
+        [x] Meet Ruby (unlock Ruby's story in the main menu)
+    ---------------------------------------------------------------------------------------------------------
+    >go to door
+        (WHILE HAVEN'T TALKED TO MYRTLE)
+        It's locked. You go back to where you were.
+        (AFTER YOU HAVE TALKED TO MYRTLE)
+        Using the garage key, the door clicks open. You step into a dimly lit stairwell.
+        //maybe if you beat the game, a bool will flip where a secret door is there, hiding '(idkyet)'
+        
+        Areas:
+        garage
+        
+        >go to garage
+            You descend the staircase and open the door to the garage. You see two cars to the right of you,
+            a door to the left, and a large shelving structure behind you. In front of you, there
+            are two people sitting in lawn chairs looking into a room separated by glass.
+            
+            Areas:
+                cars
+                door
+                shelves
+                people
+            
+            >go to cars
+                There are two cars, side by side. A midnight blue Maserati Granturismo MC Stradale. Absolutely
+                stunning. You circle the car twice. No license plates. Keeping it company is an onyx black Rolls 
+                Royce Wraith with gray trim. It's so shiny. Almost.. abnormally shiny? Too shiny. It's weird.
+                Hmm.. Again, no plates. Odd.
+                You return to where you were.
+            ----------------------------------------------------------------------------------------------------
+            >go to door
+                (WHILE HAVEN'T TALKED TO PEOPLE)
+                There is a red light on right above the doorway. Underneath it reads,
+                "Do not disturb" 
+                Maybe it's a sign to not go in there.
+                You return to where you were.
+            
+            >go to shelves
+                Before you are two book shelves. One side filled with house and art paint, and painting books,
+                while the other side is filled with hand and power tools. Looks like your everyday workbench.
+                You turn back around.
+            
+            >go to people
+                You approach the two. The boy's messy black hair rests on the shoulder of his friend. Thick
+                curly hair runs down the back of the lawn chair. Seems familiar. You're not quite sure where
+                you've seen this scene before, but you gather the courage to say hello.
+                >hello?
+                    The girl turns towards you carefully, not to wake the snoring boy. 
+                    ??? (whispering): "/name/? Shh! He's sleeping."
+                    you (whispering): Whoa. Is that.. Richard?
+                    ???: Of course. He asked me to nanny for him in case he got too drunk. 
+                    ???: He also said you'd be coming to the party around this time, too.
+                    ???: You remember me, right? Q? from sociology?
+                    ???: Richard was telling me about you.. y'know, until he blacked out.
+                    you: Um, well.. it's nice to meet you!
+                    Q: Ditto. Here, sit. Watch Liz practice with us.
+                    >sit
+                        You pull up the remaining green and white lawn chair and sit next to Richard.
+                        He snores quietly on (Liz's)(meant Q) shoulder.
+                        
+                        Q: You know Liz, right?
+                        >no?
+                            Q: Oh! Well she's absolutely obsessed with boxing. Heather and Myrtle's
+                            Q: parents took her in when her parents passed. Tragic accident. Actually, 
+                            Q: it's what--/date/--today? Their deathday is tomorrow. Liz got their 
+                            Q: deathday tattooed on the inside of her wrist. She says it calms her when 
+                            Q: she gets upset. She relishes the fact that they are always watching over her. 
+                            Q: It's around this time that she gets super motivated to practice harder than ever.
+                            Q: Look at her. She's amazing.
+                            
+                            Soft orchestral music emanated from behind the glass. Liz flowed gracefully 
+                            around the ring, like water, dancing in a stream.  
+                            
+                            Q: Do you know how her parents passed? 
+                                [no]
+                            >no
+                                Q: Well, her father had picked her up from second grade because her
+                                Q: mother was enduring chemotherapy. She loved her father so much.
+                                Q: He always supported her and always emphasized the importance of
+                                Q: elegance of and beauty. I remember him too. He was indeed a nice man.
+                                you: So then what happened?
+                                Q: Oh, right. Sad story. Anyway.
+                                Q: On the way to the hospital,
+                                Q: a strange man in a suit approached her father. Her father was the
+                                Q: professor of dance at the local community college so she figured it wasn't
+                                Q: a big deal. She says she had seen this man before, but wasn't
+                                Q: quite sure. 'Something was off,' she would say. Her father told her
+                                Q: to give him and the strange man some time to talk. 
+                                you: ...
+                                Q: Next thing she knew, her father was on the floor gasping for air
+                                Q: as the man fled. She doesn't remember much after that..
+                                Q: Just being in the hospital with her parents laying next to each other..
+                                you: ...
+                                Q: "Be graceful, love." Her father told her with his final breaths.
+                                Q: Both parents passed within minutes of each other.
+                                
+                                You think quietly to yourself.. 
+                                
+                                *you*: Wow. That happened to her in second grade? She must've been what, seven? 
+                                *you*: Eight? That's.. messed up. I hope she doesn't let it get to her too much.
+                                
+                                Lost in thought, completely oblivious to the world, you realize someone quietly 
+                                stands next to you.
+                                
+                                Liz: BOO!
+                                
+                                Startled, you fall from your lawn chair onto the concrete floor.
+                                
+                                Liz: Hi stranger! Q, who's this attractive, yet jumpy human being?
+                                
+                                Q (whispering): Liz! Keep your voice down! Can't you see Richard is sleeping?
+                                Liz: Ooh. My bad. 
+                                Liz (whispering): Q, who's this attractive, yet jumpy human being?
+                                Q: This is /name/. We have sociology together. /name/ and Richard are best buds. 
+                                
+                                Liz: Really? But Richie is on YOUR shoulder, I see?
+                                Q: !!? 
+                                Q: What! Nooo, it's not like that!
+                                
+                                Q swiftly sits up, waking Richard.
+                                
+                                # make sure you customize the name to the drunken text feel
+                                Richard (groggily): /name/? iS thAt /name/? yOU mAde iT! meEt Q--
+                                
+                                Richard vomits onto the floor beside your feet.
+                                
+                                Richard: hnngggh.
+                                
+                                Liz (laughing): /name/ hun, if there's anything you need, just let me know.
+                                
+                                Actually, this would be a great time to [ask about the guard] upstairs.
+                                
+                                >ask about the guard
+                                    You describe the large man in a suit taking names at the top of the stairs.
+                                    
+                                    Liz: Wait. What?
+                                    Liz: What did you say he was wearing?
+                                    Liz: A suit? [yes]
+                                    >yes
+                                        Liz: ...
+                                        
+                                        Liz's mood changes tremendously. She's quiet. Grinning? 
+                                        
+                                        Almost.. happy?
+                                        
+                                        You notice her eyes start to glisten as she turns her back to you.
+                                        She begins unravelling her hand-wraps.
+                                        
+                                        Liz: /name/. Wait here. I'll be right back.
+                                        
+                                        As Liz begins to walk away, the final wrap slides off of her thumb
+                                        and falls to the floor.
+                                        
+                                        (delay printing between each letter)
+                                       
+                                        B
+                                        E
+                                        
+                                        G
+                                        R
+                                        A
+                                        C
+                                        E
+                                        F
+                                        U
+                                        L
+                                        ♥
+                                        
+                                        Cascades down from her elbow to her wrist in Amatic letters.
+                                        
+                                        A few seconds later you hear shouts from the first floor. A door
+                                        opens, and you hear a sound like a sack of potatoes being dragged across the floor.
+                                        
+                                        Moments later, footsteps enter the house. The front door closes, and the garage door
+                                        opens and shuts.
+                                        
+                                        Without saying a word, Liz picks up her hand-wraps and enters the ring.
+                                        The door firmly shuts and the red "Do not disturb" sign illuminates.
+                                        
+                                        Q: Umm.. It's probably safe to say that upstairs is open now.
+                                        you: Yeah..
+                                        Q: I'll be here with Richard. While you're up there, if you could make sure
+                                        Q: Seb is okay, I'd appreciate it. [okay]
+                                        >okay
+                                             Q: Sounds good. We'll be here.
+                                            (MOVE ON TO GO UPSTAIRS)
+                        (AFTER YOU HAVE TALKED)
+                        Richard sits up and promptly throws up on the lawn chair you were sitting in.
+                        Maybe it's best not to bother them.
+                        You go back to where you were.
+                        [finished 1:49PM Dec. 27th, 2015]
+                        ----------------------------------------------------------------------------------------------
+    >go to stairs
+        (WHILE HAVEN'T TALKED TO LIZ) 
+            Upon turning the corner of the stairs, a large man in a suit stops you in your tracks.
+            Guard: Name?
+        //maybe i'll throw shoutouts if you entered certain names, BUT EYES ON THE PRIZE FOR NOW.
+            you: uh.. /name/?
+            The guard searches for your name...
+            Guard: You're not on the list.
+            The guard turns you around and sends you back downstairs.
+    
+        (WHEN YOU HAVE TALKED TO LIZ)
+        Arriving at the second floor, you see a [boy] sitting on a couch staring at a screen, controller in hand.
+        There is a large mahogany bookshelf next to the couch. You notice four [puppies] in a small fenced-off area. 
+        To the right are shelves upon shelves of [trophies]. 
+        Behind you is a closed [door].  
+        [boy]
+        [puppies]
+        [trophies]
+        [door]
+        >go to boy
+            As you approach the boy, he gets up in a fit of anger and throws his controller across the room.
+            The controller smashes into the trophy shelf, toppling a large golden football trophy to the floor.
+            ???: GEORGE!! WHY DID YOU FLANK, GEORGE?! WHY. WHY GEORGE, WHY?! I TOLD YOU I NEEDED COVER FIRE!1!!11
+            
+            The boy shouts into his headset furiously, not noticing you're there.
+            
+            You clear your throat, loudly.
+            
+            ???: I gotta go, George. We'll try again in a few.
+            
+            The boy takes off his headset and tosses it on the couch. He goes to retrieve his
+            controller from across the room.
+            
+            ???: Can I help you?
+            [Seb?]
+            >Seb?
+                you: Are you Seb?
+                Seb: What's it to you?
+                [Q]
+                >Q
+                    you: Q wanted me to make sure you were okay.
+                    Seb: Oh yeah? Well tell Q I'M perfectly fine. GEORGE is the one sucks at this game.
+                    Seb: Go pick up that trophy for me, yeah? I'm gonna try this stupid mission again.
+                    
+                    *you*: Okay?
+                    
+                    Seb replaces the headset back on his head.
+                    You return to where you were.
+                    
+                    (AFTER ALREADY TALKING TO SEB)
+                    You approach Seb.
+                    Seb: GO LEFT, GEORGE. LEFT. YOUR OTHER LEFT.
+                    
+                    Seb waves a hand for you to go away.
+                    You return to the middle of the room.
+        ---------------------------------------------------------------------------------------------------------
+        >go to puppies
+            There's three pitch-black-haired puppies and one West Highland White Terrier. The three border collies 
+            bear collars with the names, 'Myoh,' 'Robin,' and 'Kermit.' The westie's collar bears the name, 'Ruoy.'
+            Kermit the dog. How clever.
+            
+            Pet the puppies? [yes]
+            >yes
+                The puppies playfully bite on your hand and welcome the attention. 
+            
+                You return to where you were.
+        -----------------------------------------------------------------------------------------------------------
+        >go to trophies
+            In front of you are two shelves lined with gold figurines of people with various sports uniforms on.
+            (WHILE YOU HAVEN'T TALKED TO SEB)
+            You go back to where you were.
+            
+            (AFTER YOU HAVE TALKED TO SEB)
+            In front of you are two shelves lined with gold figurines of people with various sports uniforms on.
+            There's a [trophy] on its side due to Seb's tantrum.
+            >go to trophy
+                The trophy doesn't look broken, just fallen over. Fix it? [yes]
+                >yes
+                    You place the trophy back on its base as a flutter catches your eye. You look to your left and
+                    see a stream of smoke drift off into the atmosphere outside of a [window].
+                    >go to window
+                        A single window just about big enough to get through. Open the window? [yes]
+                        >yes
+                            The window is open. Climb through? [yes]
+                            >yes
+                                You climb through the window as cigarette smoke fills the air.
+                                The balcony holds a [woman] with fiery hair and her easel. 
+                                You notice she's painting the night's sky.
+                                A cigarette burns quietly in an bunny-shaped ash tray next to her.
+                                Behind her is a single framed artwork. You can make out a silhouette of
+                                a middle finger against a red background. Her headphones are keeping
+                                her focused on her work. She hasn't noticed you.
+                                >go to woman
+                                    You tap the woman's shoulder. She shakes her head and continues painting,
+                                    
+                                    ???: Seb, I'm not gonna vouch for you because you threw her controller again.
+                                    
+                                    Get her attention? [yes]
+                                    >yes
+                                        you: Hey!
+                                        
+                                        Surprised, she jumps and turns towards you. She takes off her headphones.
+                                        
+                                        ???: Hey yourself! What are you doing on my balcony?! How did you even know?!
+                                        
+                                        You explain how you saw the puff of smoke rise from the other side of the window.
+                                        
+                                        ???: Damn. I knew I shouldn't have smoked tonight. Oh well.
+                                        ???: What's your name?
+                                        you: /name/? And yours?
+                                        ???: Ruby.
+                                        Ruby: I'm Seb's sister. He likes to come over to Heather's and play on their
+                                        Ruby: big screen. I don't understand why he plays video games. He's so smart.
+                                        Ruby: Dude, he made a flying BIKE for the science fair last year. He's fifteen.
+                                        Ruby: Shit, at my age, I was trying to maintain my sanity during high school.
+                                        
+                                        Ruby's phone rings. She stands up to get her phone out her pocket.
+                                        A metallic clang erupts from the backyard. You rush to look over the railing.
+                                        
+                                        Before being able to look, Ruby grabs your arm, shaking her head. 
+                                        
+                                        you: Didn't you hear th--
+                                        Ruby: I'm gonna take this. Go back downstairs and don't tell anyone about this place, got it?
+                                        
+                                        You nod hesitantly.
+                                        
+                                        Ruby pushes you toward the window, stopping you just short of it.
+                                        Taking the phone from her ear, she hushes you and gestures for you to
+                                        climb back through the window.
+                                        As you reach the other side, Ruby locks the window behind you.
+                                        
+                                        getchar();
+                                        
+                                        You turn around to feel a gust of wind as you notice the laundry door slam.
+                                        You hear a whirring noise for a second, then, 
+                                        
+                                        *BANG*
+                                        
+                                        Seb is no longer where he was.
+                                        
+                                        getchar();
+                                        
+                                        You hear Ruby shouting for a second.
+                                        Ruby (from the balcony): WHAT?!--
+                                        That metal clang breaches your ears again. Then, silence.
+                                @@@GO TO LEVEL 4
+                                        (AFTER TALKING TO RUBY)
+                                            Ruby locked the window. There's no way I'm getting back out there.
+                                        [finished 12:00AM december 28th, 2015]
+        ------------------------------------------------------------------------------------------------------
+        >go to door
+            You enter a small room with a single light. To the [left], there is another closed door. In front
+            of you is a small cabinet with [pictures] on it. To the [right] is another closed door.
+            left
+            pictures
+            right
+            leave
+            
+            >go to left
+                You open the door to the door on the left and find yourself in a laundry room.
+                Standard washer/dryer combo. There's a [backpack] on the wall.
+                >go to backpack
+                    The backpack is made of a thick gray material. There's a vermillion colored symbol on it.
+                    
+                    (symbol)
+                    
+                    getchar();
+                    You leave the laundry room.
+            --------------------------------------------------------------------------------------------------
+            >go to pictures
+                Three picture frames stand on the cabinet. 
+                
+                The one on the left is of Myrtle, smile full of braces and holding up a blue ribbon. 
+                A woman stands beside her holding up a paper with a chemical structure on it. 
+                In the background is a banner, "Frosh Science Fair /date-8years/".
+                
+                In the middle is a picture of a man in a white lab coat, smiling happily next to a man with a cane.
+            
+                On the right is a picture of Liz, Heather, and Myrtle grinning from ear to ear. The date shows,
+                'December 25th, 2015.' The caption on the frame reads, "Happy Holidays from the Wexington family!"
+                
+                You return to the middle of the room.
+            --------------------------------------------------------------------------------------------------
+            >go to right
+                Laughter comes from behind the door. It sounds like there's multiple people in there.
+                Maybe... Yeah, maybe it's best not to go in there.
+                
+                You return to the middle of the room.
+                [finished 1:00AM december 28th, 2015]
+    --------------------------------------------------------------------------------------------    
+    >go to room
+        You knock on the door.
+        (WHILE HAVEN'T VISITED THE BATHROOM)
+            ???: Go away.
+            You turn around and go back to where you were.
+        
+        (WHEN YOU HAVE VISITED THE BATHROOM)
+        You knock on the door.
+        . . .
+        The door cracks open and a head peeks out at you.
+        you: ... Hello?
+        ???: /name/?! Oh my! Hi!
+        The girl grabs your wrist and pulls you into the room, slamming the door behind you.
+        ???: /name/! I'm so glad to see you! This dumb party my sister threw is SOOO lame.
+        you: ...?
+        ???: Oh.. uh?
+        
+        She notices your confusion.
+        
+        ???: I'm uh.. We had... organic chem together.
+        You realize who the familiar face from earlier was. Heather! The T.A from World History.
+        Her and her sister come from an iconic family. Dad is the head of Oncology at the local
+        hospital, while Mom is a data analyst for Google. Heather is known for being the ONLY
+        student in county history to score a 5 on the AP World History test. While Myrtle was..
+        *flashback*: a medical breakthrough was discovered today by local student, Myrtle Wexington.
+        
+        In a fit of excitement, you almost shout,
+        you: Myrtle!!
+        you: You were on the news like, a half hour ago!
+        you: You made some sort of medical breakthrough, progressing--
+        Myrtle: Yeah yeah. I know, 'progressing mankind towards superhuman capabilities.'
+        
+        You're confused why she seems disappointed.
+        
+        Myrtle: Literally everyone at the party has been raving to me about how 'amazing' I am. It's
+        Myrtle: not really that amazing. Professor Treuse just made a stupid error in his modeling
+        Myrtle: of five-alpha dihydroprogesterone. He forgot the damn thirtieth carbon
+        Myrtle: resulting in an error with his final calculation. I fixed it, and it just so happens
+        Myrtle: when that specific carbon interacts with an arterial graft, the body
+        Myrtle: merges almost immediately with the artificial limb. Cool, whatever.
+        
+        you: *in awe*
+        
+        Myrtle: Umm.. yeah. Oh! Richard told me that when you showed up, to let you know he'd be in the
+        Myrtle: garage. 
+        
+        *You've gained the garage key!*
+            
+        Myrtle: It's through the door in the hallway. Heather likes to lock it during parties 
+        Myrtle: so no one bothers Liz. 
+        
+            ['expletive' in morse code]
+        
+        Myrtle: Like my new ringtone?! It's a word that holds 'deer' to my heart. Haha, get it? Deer. 
+        Myrtle: Because 'deer' reminds me of 'moose,' and 'moose' and 'morse' are just one letter away
+        Myrtle: from each other. And you know what letter they're differing? R! And THAT is the gas
+        Myrtle: constant made famous by French chemist, Henri Victor Regnault! Haha! Clever, right?
+        Myrtle: Anyway! I'm gonna take this. Make sure Richard is alright for me, okay?
+        Myrtle: He seemed pretty tipsy last I saw him.
+    
+        You reassure her that you will take good care of Richard, and head back to the hallway.
+        
+        (AFTER VISITING MYRTLE AND VIEWING THE CUT SCENE)
+        You knock on the door.
+        
+        Myrtle: I'm busy!
+        [finished 11:56AM December 26th, 2015]
+    ---------------------------------------------------------------------------------------------------    
+    >go to music
+        Arriving in the heart of the party, you see a beer pong table, a kitchen area, a large group of 
+        people gathered around a T.V, and a room toward your right.
+        Areas:
+            beer pong table
+            kitchen
+            T.V
+            room
+            
+            >go to beer pong table
+                As you approach the table, a ball flies across the table, sinking into a cup. A collective
+                cheer erupts from the spectators as the losing team downs a beer in unison.
+                Boy: Hey! No randoms.
+                You retreat back to the music.
+            --------------------------------------------------------------------------------------------------
+            >go to kitchen
+                Upon sneaking past the beer pong crowd, you arrive at an almost industrial size kitchen.
+                Marble countertops, sapphire trim, and TWO refrigerators. TWO. To your right is an
+                inconspicuous table of three. Each person has their left fist outreached, and a glass of 
+                something in their right.
+            
+                Girl: Hey! Welcome to the designated driver table. We like to keep things fun without drinking.
+                Girl: Unfortunately, we're up to capacity for the rest of the night. Three players only. Sorry!
+                You retreat back to the kitchen area.
+            ---------------------------------------------------------------------------------------------------
+            >go to T.V
+                Sports Anchor: The thirty, the twenty, the ten, touchdown!!
+                Sports Anchor: A 97 yard kick return for the Anteaters!
+                College Kids: (collective cheering)
+                It seems they are busy.
+                You retreat to the music.
+            ---------------------------------------------------------------------------------------------------
+            >go to the room
+                Upon reaching the room, you hear noises coming from inside.
+                ???: *heaving*
+                ???: *whimpering*
+                ???: *more heaving*
+                you: You alright in there?
+                ???: [gibberish]
+                you: Hello?
+                ???: GjejkktjkjkjjjjkjkjHejkjkkjajjjkjtjjkhkejjjr--
+                ???: *heaving*
+                You slowly back away from the door back to the music.
+                CHECK_BATHROOM = TRUE; (move on to Myrtle)
+            ---------------------------------------------------------------------------------------------------
+                [finished 1:45AM December 26th, 2015 (just the 'go to music' section)]
+=======================================================================================================
+Level Four:
+    Back in the middle of the second story, Seb is gone. The [puppies] and [trophies] are still here.
+    Behind you, the same [door] is still there. Something feels... off.
+    [puppies]
+    >go to puppies
+        All four puppies are still here. Pet the puppies? [yes]
+        >yes
+            The puppies cower in the back of the pen. One barks quietly at you.
+            
+            *you*: That's odd. They were friendly a minute ago.
+            
+            You return to where you were.
+        -------------------------------------------------------------------------------------------------
+    [trophies]
+    >go to trophies
+        The same trophies are still here. The one you picked up--its base is glowing faintly.
+        
+        You return to where you were.
+        --------------------------------------------------------------------------------------------------
+    [door]
+    >go to door
+        The door opens. To the [left] is the laundry room door. To the [right] is the locked door from before.
+        In front of you are three [pictures].
+        [leave]
+        >leave
+            Upon exiting the hallway, a noise rings out from the [first floor].
+            [first floor]
+            >go to first floor
+                You arrive at the base of the stairs to feel the bass of the music rattle your bones.
+                It's as if nobody heard that.
+                
+                The front door opens and Heather bursts in.
+                
+                Heather: Look! I'll call you back!
+                
+                She puts away her phone and looks up.
+                
+                Heather: /name/! Hey! You haven't seen [Ron] have you??
+                >Ron
+                    You begin telling Heather of the voice from inside the bathroom.
+                    The terrible heaves you heard from behind the door, and the slurred message,
+                    
+                    "(message from earlier)"
+                    "(capitalize get heather from within the message)"
+                    
+                    Heather: Yup, that's GOTTA be him.
+                    Heather hurries off to the bathroom.
+        getchar();
+        You follow her, passing the college kids as they scream at the T.V.
+        
+        Heather bangs furiously on the door.
+        Heather: RON! You in there?!
+        
+        Heather continues banging on the door.
+        
+        Heather: RON! Open up!
+        
+        The door clicks and Heather bursts in.
+        
+        Heather: RON! Ron. Are you okay?!
+        Ron (drunken text): yeah, i just.. i thought i could handle.
+        Heather: Oh dear, I'm just glad you're concious.
+        Heather: Remember last time at that frat party? It could've been a lot worse.
+        Ron: that's true.
+        Heather: C'mon /name/. Help me get him upstairs. My mom can probably help us.
+        
+        You grab Ron's arm and help him to his [feet].
+        >feet
+            You notice a symbol on Ron's shoes. 
+            (symbol)
+            *you*: What is that from?
+            *you*: THE BACKPACK.
+        
+        Ron: Heh, you like'm? Seb made'm for me. They're--
+        Heather: Red! Yeah. See? Ron, your shoes are red. 
+        
+        *you*: What the hell are they hiding?
+        
+        You arrive at the top of the stairs with Ron and Heather. 
+        Heather hurries into the hallway where the pictures are.
+        A slight shifting noise is made from inside the hallway.
+        
+        The large mahogany bookshelf moves slightly.
+        Heather: C'mon /name/, follow me.
+        
+        You pick up Ron and assist him towards the bookshelf.
+        Heather: My parents like privacy.
+        Heather: A lot of it.
+        
+        *you*: Gross?
+        
+        The bookshelf shifts to the left, revealing a room.
+        
+        Heather: Hey Ma! Need some help over here.
+        
+        ???: I'll b-b-be right ou-out!
+        
+        *you*: What the hell? Why is Heather's mom home during a house party? Isn't that kind
+        of weird? What parents let their kids throw a massive house party in their house,
+        WHILE they're home?
+        
+        Heather: Put Ron on the bed over there.
+        
+        You help Ron over to the queen-sized bed on the far side of the room. The bed frame
+        is composed of bookshelves. There are tons of thick textbooks lining the bed frame.
+        Organic chemistry, world history, data analytics, the list goes on.
+        
+        A stout woman with horn-rimmed glasses and a violet pajamas appears.
+        
+        ???: Hi h-h-honey! What's u-up?
+        Heather: Ron drank a bit too--
+        ???: Heather! How rude of you not to introduce me to your friend!
+        Heather (mockingly): Mom, /name/. /name/, Mom. 'Mom' prefers Willow though. As that is her name.
+        Willow: Thank y-you, dear.
+        
+        you: Nice to meet--
+        Heather: Mom! Ron? Dangerously drunk? Hello?
+        Willow: It's n-n-nice to meet y-you too, /name/.
+
+        Willow shoots a glance at Heather as she walks out of the room.
+        Heather: Sorry, /name/. I'm just worried about Ron.
+        Willow returns to the room with a large syringe and a disinfectant wipe.
+        Heather: Don't worry, I've tried it, it works.
+        Heather pulls up her shirt a bit, revealing a tiny tidbit of a scar on the upper right side of her stomach.
+        Willow: See, you inj-j-ject the sobering agent d-directly in-into the liver; w-w-works withthin s-seconds.
+        Willow lifts up Ron's shirt and wipes a swatch underneath his rib cage.
+        Willow: I'm working on a p-p-patent f-for it currently, but--
+        Willow jabs the syringe into Ron's abdomen. Ron grunts in pain.
+        Willow: those f-fair people at Medi C-C-Co. say it's 't-too dangerous' and whatnot.
+        Willow: Sure, I'm not e-e-exactly in pharmaceutic-c-cals, but I know enough ab-b-bout chemistry to know
+        Willow: what's 'dangerous.'
+        Willow leaves the room with the syringe and disinfectant wipe as Heather grabs a textbook.
+        Heather (whispering): My mom has a stutter. You know it. She knows it. Don't mention it.
+        You nod.
+        Ron awakens violently, as if from a bad dream.
+        Ron: Hey! Wha-- WHAT?! I CAN'T SEE!! EVERYTHINGS DARK!!
+        Willow (from the other room): It wears off in a minute, Ron!
+        Ron: Mrs. Wexington??
+        Heather throws the textbook at Ron.
+        Ron: OW! WHAT THE HELL?!
+        Heather: You poop! You passed out in the bathroom with the door LOCKED. AGAIN.
+        Ron: Heather? Look, I'm sorry! I didn't want you to see me like that because... um..
+        Ron slowly feels his way to the edge of the bed and sits up.
+        Heather: Because you messed up?!
+        Ron: Because I messed up.
+        getchar();
+        Heather: Yeah well... I'm happy you're okay.
+        Ron: Babe.
+        Heather: Yes?
+        Ron: I still can't see.
+        Heather walks up to him and caresses his face and looks deep into his eyes.
+        Ron: Oh uh.. I still can't--
+        Heather: Shhh.
+        Ron: I uh--
+        Heather kisses Ron.
+        Ron opens his eyes as wide as he can, straining to see.
+        Willow enters the room.
+        Ron: Oh hey Ms. W!
+        Willow: G-good e-evening, Ron.
+        Willow: Heather, h-have you heard from Ru-b-by late-l-ly? Seb alrea-d-dy t-took off.
+        Ron: HEATHER!
+        Disembodied Voice: WARNING. WARNING.
+        Disembodied Voice: Three foreign vectors in air space: Four. Nine. Three. Zero.
+        Disembodied Voice: Location: J-76.
+        Heather: Uhhh..
+        Willow: HEA-TH-THER S-SADIE WEXINGTON!!
+        
+        -------------------------------------------------------------------------------------------------
+        >go to left
+            You find yourself in the laundry room. Standard washer/dryer combo. The backpack is missing.
+            
+            *you* Hmm. Seb is missing, and the backpack.. This is kinda creepy, not gonna lie.
+            
+            You leave the laundry room and return to the hallway.
+        --------------------------------------------------------------------------------------------------
+        >go to right
+            The door creaks open. Your hand flicks on the light switch.
+            getchar();
+            There is a bed in the corner of the room, and a glowing [computer] screen to the right of you.
+            [computer]
+                The computer screen is black with white text. It shows;
+                (mock update script)
+                
+                *you*: It looks like something is being installed.
+                
+                You leave the room.
+        --------------------------------------------------------------------------------------------------
+        >go to pictures
+            Same three pictures:
+            Myrtle, winning an award at a science fair.
+            A man in a white lab coat smiling next to a man with a cane,
+            and the holiday picture with Liz, Myrtle, and Heather.
+            Nothing seems different.
+            
+            You return to where you were.
+        ---------------------------------------------------------------------------------------------------
+        [x] Run into Heather on the first floor
+        [x] Bring Heather to the bathroom where Ron is
+        [x] Heather bangs on the door, waking Ron
+        [x] Ron opens the door
+        [x] Heather wants help getting Ron upstairs to her Mom
+        [x] The door opens and you meet Willow
+        [x] Willow is Myrtle & Heather's mom
+        [x] Willow cures Ron's drunkeness
+        =====================================================================================================
+        (I AM RESERVING THESE EVENTS FOR A FURTHER RELEASE OF THIS GAME.)
+        *update^^^: I will save these tasks for a 'lost episode' series.
+        
+        (FOR NOW I WILL OUTLINE RUBY/SEB'S STORY, AS WELL AS BEGIN PROGRAMMING THE GAME..)
+        
+        [] You land in Liz's dance room, where she is still practicing.
+        [] You warn her of the impending raid
+        [] Willow insists on everyone, Fen, You, Q, Richard, and Liz, to get in the Rolls Royce
+        [] (crazy ass cut scene)
+        [] You appear in the back seat with Q and Richard, Liz in the front seat, and Fen and Willow driving
+        [] Closure about every other character
+        [] Willow drops you off at your apartment
+        [] Richard and Q tag along
+        [] You enter your apartment and Richard passes out on the couch. 
+        [] You and Q nanny Richard for the last time
+        [] You invite Q into your room to sleep
+        [] LEVEL FOUR (FINAL LEVEL) maybe.
+~~~~~~~~LET THE GAMES BEGIN~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
