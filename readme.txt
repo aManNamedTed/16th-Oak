@@ -15,7 +15,7 @@ Check the story/backlogs/tasks files for information on these sprints.
 *in viewing progress, but not as helpful as the tasks.txt file.
 
 
-Project: Day at a Party
+Project: 16th & Oak (formerly Day at a Party)
 Started: December 9th, 2015
 Finished: December 29th, 2015
 Creator: David Amante
