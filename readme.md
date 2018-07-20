@@ -14,8 +14,8 @@ Check the story/backlogs/tasks files for information on these sprints.
 > Check the tasks.txt file for more information. Right now, backlogs are redundant. the story is also helpful in viewing progress, but not as helpful as the tasks.txt file.
 
 
-Project: 16th & Oak (formerly Day at a Party)
-Started: December 9th, 2015
-Finished: December 29th, 2015
-Creator: David Amante
-Email: hi@davidamante.com
+# Project: 16th & Oak (formerly Day at a Party)
+## Started: December 9th, 2015
+## Finished: December 29th, 2015
+#### Creator: David Amante
+#### Email: hi@davidamante.com
